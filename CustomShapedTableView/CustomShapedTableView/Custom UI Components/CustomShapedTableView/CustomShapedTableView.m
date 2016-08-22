@@ -1,9 +1,9 @@
 //
 //  CustomShapedTableView.m
-//  App Rede
+//  CustomShapedTableView
 //
-//  Created by Ticket Services on 4/1/16.
-//  Copyright © 2016 Ticket Serviços. All rights reserved.
+//  Created by UedaSoft IT Solutions on 4/1/16.
+//  Copyright © 2016  UedaSoft IT Solutions. All rights reserved.
 //
 
 #import "CustomShapedTableView.h"

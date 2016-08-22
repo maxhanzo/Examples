@@ -1,6 +1,6 @@
 //
 //  TermsAndConditionsTableViewCell.m
-//  App Rede
+//  Custom Shaped Table View
 //
 //  Created by Max Ueda on 2/1/16.
 //  Copyright © 2016 UedaSoft IT Solutions. All rights reserved.
