@@ -1,0 +1,548 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FF33D2AA1D6AB76A00347496 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF33D2A91D6AB76A00347496 /* Default-568h@2x.png */; };
+		FFC15BD61D3B2EF2000ABDF3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC15BD51D3B2EF2000ABDF3 /* main.m */; };
+		FFC15BD91D3B2EF2000ABDF3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC15BD81D3B2EF2000ABDF3 /* AppDelegate.m */; };
+		FFC15BDC1D3B2EF2000ABDF3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC15BDB1D3B2EF2000ABDF3 /* ViewController.m */; };
+		FFC15BDF1D3B2EF2000ABDF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFC15BDD1D3B2EF2000ABDF3 /* Main.storyboard */; };
+		FFC15BE11D3B2EF2000ABDF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFC15BE01D3B2EF2000ABDF3 /* Assets.xcassets */; };
+		FFC15BE41D3B2EF2000ABDF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFC15BE21D3B2EF2000ABDF3 /* LaunchScreen.storyboard */; };
+		FFC15BEF1D3B2EF3000ABDF3 /* CustomBracketViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC15BEE1D3B2EF3000ABDF3 /* CustomBracketViewTests.m */; };
+		FFC15BFA1D3B2EF3000ABDF3 /* CustomBracketViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC15BF91D3B2EF3000ABDF3 /* CustomBracketViewUITests.m */; };
+		FFC15C0B1D3B2F6F000ABDF3 /* BracketView.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC15C0A1D3B2F6F000ABDF3 /* BracketView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FFC15BEB1D3B2EF3000ABDF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFC15BC91D3B2EF2000ABDF3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFC15BD01D3B2EF2000ABDF3;
+			remoteInfo = CustomBracketView;
+		};
+		FFC15BF61D3B2EF3000ABDF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFC15BC91D3B2EF2000ABDF3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFC15BD01D3B2EF2000ABDF3;
+			remoteInfo = CustomBracketView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FF33D2A91D6AB76A00347496 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FFC15BD11D3B2EF2000ABDF3 /* CustomBracketView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomBracketView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFC15BD51D3B2EF2000ABDF3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FFC15BD71D3B2EF2000ABDF3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FFC15BD81D3B2EF2000ABDF3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FFC15BDA1D3B2EF2000ABDF3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FFC15BDB1D3B2EF2000ABDF3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FFC15BDE1D3B2EF2000ABDF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FFC15BE01D3B2EF2000ABDF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FFC15BE31D3B2EF2000ABDF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FFC15BE51D3B2EF2000ABDF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFC15BEA1D3B2EF3000ABDF3 /* CustomBracketViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomBracketViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFC15BEE1D3B2EF3000ABDF3 /* CustomBracketViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomBracketViewTests.m; sourceTree = "<group>"; };
+		FFC15BF01D3B2EF3000ABDF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFC15BF51D3B2EF3000ABDF3 /* CustomBracketViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomBracketViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFC15BF91D3B2EF3000ABDF3 /* CustomBracketViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomBracketViewUITests.m; sourceTree = "<group>"; };
+		FFC15BFB1D3B2EF3000ABDF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFC15C091D3B2F6F000ABDF3 /* BracketView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BracketView.h; sourceTree = "<group>"; };
+		FFC15C0A1D3B2F6F000ABDF3 /* BracketView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BracketView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FFC15BCE1D3B2EF2000ABDF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFC15BE71D3B2EF3000ABDF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFC15BF21D3B2EF3000ABDF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FFC15BC81D3B2EF2000ABDF3 = {
+			isa = PBXGroup;
+			children = (
+				FF33D2A91D6AB76A00347496 /* Default-568h@2x.png */,
+				FFC15BD31D3B2EF2000ABDF3 /* CustomBracketView */,
+				FFC15BED1D3B2EF3000ABDF3 /* CustomBracketViewTests */,
+				FFC15BF81D3B2EF3000ABDF3 /* CustomBracketViewUITests */,
+				FFC15BD21D3B2EF2000ABDF3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FFC15BD21D3B2EF2000ABDF3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FFC15BD11D3B2EF2000ABDF3 /* CustomBracketView.app */,
+				FFC15BEA1D3B2EF3000ABDF3 /* CustomBracketViewTests.xctest */,
+				FFC15BF51D3B2EF3000ABDF3 /* CustomBracketViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FFC15BD31D3B2EF2000ABDF3 /* CustomBracketView */ = {
+			isa = PBXGroup;
+			children = (
+				FFC15C071D3B2F6F000ABDF3 /* Custom UI Components */,
+				FFC15BD71D3B2EF2000ABDF3 /* AppDelegate.h */,
+				FFC15BD81D3B2EF2000ABDF3 /* AppDelegate.m */,
+				FFC15BDA1D3B2EF2000ABDF3 /* ViewController.h */,
+				FFC15BDB1D3B2EF2000ABDF3 /* ViewController.m */,
+				FFC15BDD1D3B2EF2000ABDF3 /* Main.storyboard */,
+				FFC15BE01D3B2EF2000ABDF3 /* Assets.xcassets */,
+				FFC15BE21D3B2EF2000ABDF3 /* LaunchScreen.storyboard */,
+				FFC15BE51D3B2EF2000ABDF3 /* Info.plist */,
+				FFC15BD41D3B2EF2000ABDF3 /* Supporting Files */,
+			);
+			path = CustomBracketView;
+			sourceTree = "<group>";
+		};
+		FFC15BD41D3B2EF2000ABDF3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FFC15BD51D3B2EF2000ABDF3 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FFC15BED1D3B2EF3000ABDF3 /* CustomBracketViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				FFC15BEE1D3B2EF3000ABDF3 /* CustomBracketViewTests.m */,
+				FFC15BF01D3B2EF3000ABDF3 /* Info.plist */,
+			);
+			path = CustomBracketViewTests;
+			sourceTree = "<group>";
+		};
+		FFC15BF81D3B2EF3000ABDF3 /* CustomBracketViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FFC15BF91D3B2EF3000ABDF3 /* CustomBracketViewUITests.m */,
+				FFC15BFB1D3B2EF3000ABDF3 /* Info.plist */,
+			);
+			path = CustomBracketViewUITests;
+			sourceTree = "<group>";
+		};
+		FFC15C071D3B2F6F000ABDF3 /* Custom UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				FFC15C081D3B2F6F000ABDF3 /* BracketView */,
+			);
+			path = "Custom UI Components";
+			sourceTree = "<group>";
+		};
+		FFC15C081D3B2F6F000ABDF3 /* BracketView */ = {
+			isa = PBXGroup;
+			children = (
+				FFC15C091D3B2F6F000ABDF3 /* BracketView.h */,
+				FFC15C0A1D3B2F6F000ABDF3 /* BracketView.m */,
+			);
+			path = BracketView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FFC15BD01D3B2EF2000ABDF3 /* CustomBracketView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFC15BFE1D3B2EF3000ABDF3 /* Build configuration list for PBXNativeTarget "CustomBracketView" */;
+			buildPhases = (
+				FFC15BCD1D3B2EF2000ABDF3 /* Sources */,
+				FFC15BCE1D3B2EF2000ABDF3 /* Frameworks */,
+				FFC15BCF1D3B2EF2000ABDF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CustomBracketView;
+			productName = CustomBracketView;
+			productReference = FFC15BD11D3B2EF2000ABDF3 /* CustomBracketView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FFC15BE91D3B2EF3000ABDF3 /* CustomBracketViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFC15C011D3B2EF3000ABDF3 /* Build configuration list for PBXNativeTarget "CustomBracketViewTests" */;
+			buildPhases = (
+				FFC15BE61D3B2EF3000ABDF3 /* Sources */,
+				FFC15BE71D3B2EF3000ABDF3 /* Frameworks */,
+				FFC15BE81D3B2EF3000ABDF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FFC15BEC1D3B2EF3000ABDF3 /* PBXTargetDependency */,
+			);
+			name = CustomBracketViewTests;
+			productName = CustomBracketViewTests;
+			productReference = FFC15BEA1D3B2EF3000ABDF3 /* CustomBracketViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FFC15BF41D3B2EF3000ABDF3 /* CustomBracketViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFC15C041D3B2EF3000ABDF3 /* Build configuration list for PBXNativeTarget "CustomBracketViewUITests" */;
+			buildPhases = (
+				FFC15BF11D3B2EF3000ABDF3 /* Sources */,
+				FFC15BF21D3B2EF3000ABDF3 /* Frameworks */,
+				FFC15BF31D3B2EF3000ABDF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FFC15BF71D3B2EF3000ABDF3 /* PBXTargetDependency */,
+			);
+			name = CustomBracketViewUITests;
+			productName = CustomBracketViewUITests;
+			productReference = FFC15BF51D3B2EF3000ABDF3 /* CustomBracketViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FFC15BC91D3B2EF2000ABDF3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "UedaSoft IT Solutions";
+				TargetAttributes = {
+					FFC15BD01D3B2EF2000ABDF3 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					FFC15BE91D3B2EF3000ABDF3 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = FFC15BD01D3B2EF2000ABDF3;
+					};
+					FFC15BF41D3B2EF3000ABDF3 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = FFC15BD01D3B2EF2000ABDF3;
+					};
+				};
+			};
+			buildConfigurationList = FFC15BCC1D3B2EF2000ABDF3 /* Build configuration list for PBXProject "CustomBracketView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FFC15BC81D3B2EF2000ABDF3;
+			productRefGroup = FFC15BD21D3B2EF2000ABDF3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FFC15BD01D3B2EF2000ABDF3 /* CustomBracketView */,
+				FFC15BE91D3B2EF3000ABDF3 /* CustomBracketViewTests */,
+				FFC15BF41D3B2EF3000ABDF3 /* CustomBracketViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FFC15BCF1D3B2EF2000ABDF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFC15BE41D3B2EF2000ABDF3 /* LaunchScreen.storyboard in Resources */,
+				FF33D2AA1D6AB76A00347496 /* Default-568h@2x.png in Resources */,
+				FFC15BE11D3B2EF2000ABDF3 /* Assets.xcassets in Resources */,
+				FFC15BDF1D3B2EF2000ABDF3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFC15BE81D3B2EF3000ABDF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFC15BF31D3B2EF3000ABDF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FFC15BCD1D3B2EF2000ABDF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFC15BDC1D3B2EF2000ABDF3 /* ViewController.m in Sources */,
+				FFC15BD91D3B2EF2000ABDF3 /* AppDelegate.m in Sources */,
+				FFC15BD61D3B2EF2000ABDF3 /* main.m in Sources */,
+				FFC15C0B1D3B2F6F000ABDF3 /* BracketView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFC15BE61D3B2EF3000ABDF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFC15BEF1D3B2EF3000ABDF3 /* CustomBracketViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFC15BF11D3B2EF3000ABDF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFC15BFA1D3B2EF3000ABDF3 /* CustomBracketViewUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FFC15BEC1D3B2EF3000ABDF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFC15BD01D3B2EF2000ABDF3 /* CustomBracketView */;
+			targetProxy = FFC15BEB1D3B2EF3000ABDF3 /* PBXContainerItemProxy */;
+		};
+		FFC15BF71D3B2EF3000ABDF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFC15BD01D3B2EF2000ABDF3 /* CustomBracketView */;
+			targetProxy = FFC15BF61D3B2EF3000ABDF3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FFC15BDD1D3B2EF2000ABDF3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFC15BDE1D3B2EF2000ABDF3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FFC15BE21D3B2EF2000ABDF3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFC15BE31D3B2EF2000ABDF3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FFC15BFC1D3B2EF3000ABDF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FFC15BFD1D3B2EF3000ABDF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FFC15BFF1D3B2EF3000ABDF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CustomBracketView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "UedaSoft-IT-Solutions.CustomBracketView";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FFC15C001D3B2EF3000ABDF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CustomBracketView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "UedaSoft-IT-Solutions.CustomBracketView";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FFC15C021D3B2EF3000ABDF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CustomBracketViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "UedaSoft-IT-Solutions.CustomBracketViewTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CustomBracketView.app/CustomBracketView";
+			};
+			name = Debug;
+		};
+		FFC15C031D3B2EF3000ABDF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CustomBracketViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "UedaSoft-IT-Solutions.CustomBracketViewTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CustomBracketView.app/CustomBracketView";
+			};
+			name = Release;
+		};
+		FFC15C051D3B2EF3000ABDF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CustomBracketViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "UedaSoft-IT-Solutions.CustomBracketViewUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CustomBracketView;
+			};
+			name = Debug;
+		};
+		FFC15C061D3B2EF3000ABDF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CustomBracketViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "UedaSoft-IT-Solutions.CustomBracketViewUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CustomBracketView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FFC15BCC1D3B2EF2000ABDF3 /* Build configuration list for PBXProject "CustomBracketView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFC15BFC1D3B2EF3000ABDF3 /* Debug */,
+				FFC15BFD1D3B2EF3000ABDF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFC15BFE1D3B2EF3000ABDF3 /* Build configuration list for PBXNativeTarget "CustomBracketView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFC15BFF1D3B2EF3000ABDF3 /* Debug */,
+				FFC15C001D3B2EF3000ABDF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFC15C011D3B2EF3000ABDF3 /* Build configuration list for PBXNativeTarget "CustomBracketViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFC15C021D3B2EF3000ABDF3 /* Debug */,
+				FFC15C031D3B2EF3000ABDF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFC15C041D3B2EF3000ABDF3 /* Build configuration list for PBXNativeTarget "CustomBracketViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFC15C051D3B2EF3000ABDF3 /* Debug */,
+				FFC15C061D3B2EF3000ABDF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FFC15BC91D3B2EF2000ABDF3 /* Project object */;
+}
