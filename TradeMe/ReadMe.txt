@@ -15,7 +15,7 @@ This will open the finder window and will show these folders: Build and Checkout
 Next, follow these steps in this animated gif: http://www.raywenderlich.com/wp-content/uploads/2015/06/carthage-settings.gif
 but choosing AFNetworking.framework & dragging it to the Linked Frameworks and Libraries section in XCode (On the project navigator's root).
 
-The Run Script on the "Build Phases" section should be there. If not. please add a new Run Script:
+The Run Script on the "Build Phases" section should be there. If not, please add a new Run Script:
     /usr/local/bin/carthage copy-frameworks
 
 The input files should be like this:
