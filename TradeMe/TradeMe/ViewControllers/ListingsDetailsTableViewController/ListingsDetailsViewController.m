@@ -50,6 +50,11 @@
 
     }
     
+    else
+    {
+        [self loadSelectedListingData: listingDetails];
+    }
+    
 }
 
 #pragma mark - CategorySelectionDelegate
@@ -101,6 +106,12 @@
                  
                  [self stopSpinning];
              }];
+        }
+        
+        else
+        {
+            [self.imgThumbnail setImage: [UIImage imageWithData: imageData]];
+            [self stopSpinning];
         }
     }
     else

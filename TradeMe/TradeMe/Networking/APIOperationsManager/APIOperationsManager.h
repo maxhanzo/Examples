@@ -19,6 +19,7 @@
 @property(nonatomic, strong) NSOperationQueue *operationQueue;
 @property(nonatomic, strong) NSMutableArray *operationsArray;
 @property(nonatomic, strong) NSError *operationError;
+@property(nonatomic, strong) NSDate *lastRefresh;
 
 
 + (APIOperationsManager*)getSharedInstance;

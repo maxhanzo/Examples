@@ -32,7 +32,7 @@
     self.refreshControl.backgroundColor = [UIColor lightGrayColor];
     self.refreshControl.tintColor = [UIColor whiteColor];
     [self.refreshControl addTarget:self
-                            action:@selector(retrieveCategories)
+                            action:@selector(refreshAll)
                   forControlEvents:UIControlEventValueChanged];
     
 
@@ -49,6 +49,8 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     if([self.categoriesArray count]>0)
     {
+        //Remove background message
+        self.tableView.backgroundView = nil;
         return 1;
     }
     
@@ -119,20 +121,53 @@
              self.categoriesArray = [DatabaseManager retrieveListingCategories];
              [self.tableView reloadData];
              [self retrieveListings];
-             [self.refreshControl endRefreshing];
          } failure:^(NSError *error) {
              NSLog(@"Error: %@", error);
-             [self.refreshControl endRefreshing];
-             
-         
      }];
     }
     
     else
     {
-        [self.refreshControl endRefreshing];
         [self retrieveListings];
     }
+}
+
+//Pull refresh event. Time limit: 5 min
+-(void) refreshAll
+{
+    APIOperationsManager *apiOperationsManager = [APIOperationsManager getSharedInstance];
+    
+    NSInteger refreshTimeInterval = 0;
+    if(apiOperationsManager.lastRefresh)
+    {
+        NSTimeInterval secondsNow = [[NSDate date] timeIntervalSinceReferenceDate];
+        NSInteger timeStamp = [apiOperationsManager.lastRefresh timeIntervalSinceReferenceDate];
+        refreshTimeInterval = secondsNow - timeStamp;
+    }
+    
+    else
+    {
+        apiOperationsManager.lastRefresh = [NSDate date];
+    }
+    
+    if(refreshTimeInterval > 300)
+    {
+        [DatabaseManager deleteAllData];
+        apiOperationsManager.lastRefresh = [NSDate date];
+        [apiOperationsManager retrieveDataFromNetworkWithOperation: [apiOperationsManager retrieveCategories] success:^(BOOL result)
+         {
+             NSLog(@"Success!");
+             self.categoriesArray = [DatabaseManager retrieveListingCategories];
+             [self.tableView reloadData];
+             self.tableView.backgroundView = nil;
+             [self retrieveListings];
+             
+         } failure:^(NSError *error) {
+             NSLog(@"Error: %@", error);
+         }];
+    }
+    
+    [self.refreshControl endRefreshing];
 }
 
 -(void) retrieveListings

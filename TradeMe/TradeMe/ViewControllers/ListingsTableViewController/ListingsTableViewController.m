@@ -40,6 +40,8 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if([self.listings count]>0)
     {
+        //Remove background message
+        self.tableView.backgroundView = nil;
         return [self.listings count];
     }
   

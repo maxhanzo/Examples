@@ -1,6 +1,6 @@
 Requisites: Carthage
 
-This project makes use of AFNetworking via Carthage. For more information on how to install Cartague: https://github.com/Carthage/Carthage
+This project makes use of AFNetworking via Carthage. For more information on how to install Carthage: https://github.com/Carthage/Carthage
 
 Once Carthage is installed, please follow these steps:
 
