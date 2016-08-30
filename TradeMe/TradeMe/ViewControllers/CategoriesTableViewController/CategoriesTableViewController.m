@@ -125,11 +125,6 @@
              NSLog(@"Error: %@", error);
      }];
     }
-    
-    else
-    {
-        [self retrieveListings];
-    }
 }
 
 //Pull refresh event. Time limit: 5 min
