@@ -19,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.dataHasBeenLoadedOnce = NO;
  
 }
 
@@ -49,6 +50,11 @@
     UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
     
     messageLabel.text = @"Please choose an item!";
+    if(self.dataHasBeenLoadedOnce)
+    {
+        messageLabel.text = @"Category has no data!";
+    }
+    
     messageLabel.textColor = [UIColor blackColor];
     messageLabel.numberOfLines = 0;
     messageLabel.textAlignment = NSTextAlignmentCenter;
@@ -95,9 +101,10 @@
 #pragma mark - CategorySelectionDelegate
 -(void)selectedCategory:(ListingCategory *)category
 {
-
+    [self.navigationItem setTitle:category.title];
     [self setListings: [DatabaseManager retrieveListingsWithCategoryID:category.ID]];
     [self.tableView reloadData];
+    self.dataHasBeenLoadedOnce = YES;
     
 }
 

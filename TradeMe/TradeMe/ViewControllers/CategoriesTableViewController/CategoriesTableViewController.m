@@ -167,6 +167,12 @@
          }];
     }
     
+    //I know this is terrible! There are situations in which data may not have been loaded.
+    else
+    {
+        [self retrieveCategories];
+    }
+    
     [self.refreshControl endRefreshing];
 }
 

@@ -14,4 +14,5 @@
 @interface ListingsTableViewController : UITableViewController<CategorySelectionDelegate, UISplitViewControllerDelegate>
 @property(nonatomic, strong) NSArray* listings; 
 
+@property(nonatomic, assign) BOOL dataHasBeenLoadedOnce;
 @end
