@@ -1,0 +1,836 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B82FB001D74AD81006994B5 /* TradeMe.db in Resources */ = {isa = PBXBuildFile; fileRef = 2B82FAFF1D74AD81006994B5 /* TradeMe.db */; };
+		2B82FB0E1D74ADC7006994B5 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B82FB031D74ADC7006994B5 /* FMDatabase.m */; };
+		2B82FB0F1D74ADC7006994B5 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B82FB051D74ADC7006994B5 /* FMDatabaseAdditions.m */; };
+		2B82FB101D74ADC7006994B5 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B82FB071D74ADC7006994B5 /* FMDatabasePool.m */; };
+		2B82FB111D74ADC7006994B5 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B82FB091D74ADC7006994B5 /* FMDatabaseQueue.m */; };
+		2B82FB121D74ADC7006994B5 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B82FB0C1D74ADC7006994B5 /* FMResultSet.m */; };
+		2B82FB131D74ADC7006994B5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B82FB0D1D74ADC7006994B5 /* Info.plist */; };
+		2B82FB171D74AE14006994B5 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B82FB161D74AE14006994B5 /* DatabaseManager.m */; };
+		2B82FB191D74B02C006994B5 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B82FB181D74B02C006994B5 /* libsqlite3.tbd */; };
+		FF42A7661D741A2800C13772 /* SelectedListingSharedInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = FF42A7651D741A2800C13772 /* SelectedListingSharedInstance.m */; };
+		FF42A7681D741FBF00C13772 /* CartFile in Resources */ = {isa = PBXBuildFile; fileRef = FF42A7671D741FBF00C13772 /* CartFile */; };
+		FF42A76A1D74214100C13772 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF42A7691D74214100C13772 /* AFNetworking.framework */; };
+		FF42A7781D7424D200C13772 /* APIOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = FF42A7741D7424D200C13772 /* APIOperations.m */; };
+		FF42A7791D7424D200C13772 /* APIOperationsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FF42A7771D7424D200C13772 /* APIOperationsManager.m */; };
+		FF42A7811D74261C00C13772 /* AFHTTPSessionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FF42A77C1D74261C00C13772 /* AFHTTPSessionOperation.m */; };
+		FF42A7821D74261C00C13772 /* AFURLSessionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FF42A77E1D74261C00C13772 /* AFURLSessionOperation.m */; };
+		FF42A7831D74261C00C13772 /* AsynchronousOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FF42A7801D74261C00C13772 /* AsynchronousOperation.m */; };
+		FF6637951D728DFF00D8DD7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6637941D728DFF00D8DD7D /* main.m */; };
+		FF6637981D728DFF00D8DD7D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6637971D728DFF00D8DD7D /* AppDelegate.m */; };
+		FF66379E1D728DFF00D8DD7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF66379C1D728DFF00D8DD7D /* Main.storyboard */; };
+		FF6637A01D728DFF00D8DD7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF66379F1D728DFF00D8DD7D /* Assets.xcassets */; };
+		FF6637A31D728DFF00D8DD7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF6637A11D728DFF00D8DD7D /* LaunchScreen.storyboard */; };
+		FF6637AE1D728DFF00D8DD7D /* TradeMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6637AD1D728DFF00D8DD7D /* TradeMeTests.m */; };
+		FF6637B91D728DFF00D8DD7D /* TradeMeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6637B81D728DFF00D8DD7D /* TradeMeUITests.m */; };
+		FF6637D31D7292C800D8DD7D /* ListingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6637D21D7292C800D8DD7D /* ListingsTableViewController.m */; };
+		FF6637D91D7294C400D8DD7D /* Listing.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6637D81D7294C400D8DD7D /* Listing.m */; };
+		FF6637E51D72B50000D8DD7D /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6637E41D72B50000D8DD7D /* Utilities.m */; };
+		FF6637EF1D73EE0400D8DD7D /* ListingsDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6637EE1D73EE0400D8DD7D /* ListingsDetailsViewController.m */; };
+		FF6637F61D740F7A00D8DD7D /* CategoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6637F51D740F7A00D8DD7D /* CategoriesTableViewController.m */; };
+		FFC4F89C1D751FF800E06B4F /* ListingDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC4F89B1D751FF800E06B4F /* ListingDetails.m */; };
+		FFC4F89F1D75204200E06B4F /* ListingCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC4F89E1D75204200E06B4F /* ListingCategory.m */; };
+		FFC4F8A11D755E9900E06B4F /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = FFC4F8A01D755E9900E06B4F /* ReadMe.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FF6637AA1D728DFF00D8DD7D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF6637881D728DFF00D8DD7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF66378F1D728DFF00D8DD7D;
+			remoteInfo = TradeMe;
+		};
+		FF6637B51D728DFF00D8DD7D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF6637881D728DFF00D8DD7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF66378F1D728DFF00D8DD7D;
+			remoteInfo = TradeMe;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2B82FAFF1D74AD81006994B5 /* TradeMe.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = TradeMe.db; sourceTree = "<group>"; };
+		2B82FB021D74ADC7006994B5 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		2B82FB031D74ADC7006994B5 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		2B82FB041D74ADC7006994B5 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		2B82FB051D74ADC7006994B5 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		2B82FB061D74ADC7006994B5 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		2B82FB071D74ADC7006994B5 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		2B82FB081D74ADC7006994B5 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		2B82FB091D74ADC7006994B5 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		2B82FB0A1D74ADC7006994B5 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		2B82FB0B1D74ADC7006994B5 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		2B82FB0C1D74ADC7006994B5 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		2B82FB0D1D74ADC7006994B5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B82FB151D74AE14006994B5 /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
+		2B82FB161D74AE14006994B5 /* DatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
+		2B82FB181D74B02C006994B5 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		FF42A7641D741A2800C13772 /* SelectedListingSharedInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectedListingSharedInstance.h; sourceTree = "<group>"; };
+		FF42A7651D741A2800C13772 /* SelectedListingSharedInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedListingSharedInstance.m; sourceTree = "<group>"; };
+		FF42A7671D741FBF00C13772 /* CartFile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CartFile; path = ../CartFile; sourceTree = "<group>"; };
+		FF42A7691D74214100C13772 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
+		FF42A7731D7424D200C13772 /* APIOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIOperations.h; sourceTree = "<group>"; };
+		FF42A7741D7424D200C13772 /* APIOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIOperations.m; sourceTree = "<group>"; };
+		FF42A7761D7424D200C13772 /* APIOperationsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIOperationsManager.h; sourceTree = "<group>"; };
+		FF42A7771D7424D200C13772 /* APIOperationsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIOperationsManager.m; sourceTree = "<group>"; };
+		FF42A77B1D74261C00C13772 /* AFHTTPSessionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionOperation.h; sourceTree = "<group>"; };
+		FF42A77C1D74261C00C13772 /* AFHTTPSessionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionOperation.m; sourceTree = "<group>"; };
+		FF42A77D1D74261C00C13772 /* AFURLSessionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionOperation.h; sourceTree = "<group>"; };
+		FF42A77E1D74261C00C13772 /* AFURLSessionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionOperation.m; sourceTree = "<group>"; };
+		FF42A77F1D74261C00C13772 /* AsynchronousOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsynchronousOperation.h; sourceTree = "<group>"; };
+		FF42A7801D74261C00C13772 /* AsynchronousOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsynchronousOperation.m; sourceTree = "<group>"; };
+		FF6637901D728DFF00D8DD7D /* TradeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF6637941D728DFF00D8DD7D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FF6637961D728DFF00D8DD7D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FF6637971D728DFF00D8DD7D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FF66379D1D728DFF00D8DD7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FF66379F1D728DFF00D8DD7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FF6637A21D728DFF00D8DD7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FF6637A41D728DFF00D8DD7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF6637A91D728DFF00D8DD7D /* TradeMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TradeMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF6637AD1D728DFF00D8DD7D /* TradeMeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TradeMeTests.m; sourceTree = "<group>"; };
+		FF6637AF1D728DFF00D8DD7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF6637B41D728DFF00D8DD7D /* TradeMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TradeMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF6637B81D728DFF00D8DD7D /* TradeMeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TradeMeUITests.m; sourceTree = "<group>"; };
+		FF6637BA1D728DFF00D8DD7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF6637D11D7292C800D8DD7D /* ListingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListingsTableViewController.h; path = ViewControllers/ListingsTableViewController/ListingsTableViewController.h; sourceTree = "<group>"; };
+		FF6637D21D7292C800D8DD7D /* ListingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListingsTableViewController.m; path = ViewControllers/ListingsTableViewController/ListingsTableViewController.m; sourceTree = "<group>"; };
+		FF6637D71D7294C400D8DD7D /* Listing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Listing.h; path = Models/Listing/Listing.h; sourceTree = "<group>"; };
+		FF6637D81D7294C400D8DD7D /* Listing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Listing.m; path = Models/Listing/Listing.m; sourceTree = "<group>"; };
+		FF6637DF1D72A70E00D8DD7D /* CategorySelectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategorySelectionDelegate.h; path = ViewControllers/CategoriesTableViewController/CategorySelectionDelegate.h; sourceTree = "<group>"; };
+		FF6637E31D72B50000D8DD7D /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utilities.h; path = Utilities/Utilities.h; sourceTree = "<group>"; };
+		FF6637E41D72B50000D8DD7D /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utilities.m; path = Utilities/Utilities.m; sourceTree = "<group>"; };
+		FF6637ED1D73EE0400D8DD7D /* ListingsDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListingsDetailsViewController.h; path = ViewControllers/ListingsDetailsTableViewController/ListingsDetailsViewController.h; sourceTree = "<group>"; };
+		FF6637EE1D73EE0400D8DD7D /* ListingsDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListingsDetailsViewController.m; path = ViewControllers/ListingsDetailsTableViewController/ListingsDetailsViewController.m; sourceTree = "<group>"; };
+		FF6637F41D740F7A00D8DD7D /* CategoriesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoriesTableViewController.h; path = ViewControllers/CategoriesTableViewController/CategoriesTableViewController.h; sourceTree = "<group>"; };
+		FF6637F51D740F7A00D8DD7D /* CategoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoriesTableViewController.m; path = ViewControllers/CategoriesTableViewController/CategoriesTableViewController.m; sourceTree = "<group>"; };
+		FFC4F89A1D751FF800E06B4F /* ListingDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListingDetails.h; path = Models/ListingDetails/ListingDetails.h; sourceTree = "<group>"; };
+		FFC4F89B1D751FF800E06B4F /* ListingDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListingDetails.m; path = Models/ListingDetails/ListingDetails.m; sourceTree = "<group>"; };
+		FFC4F89D1D75204200E06B4F /* ListingCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListingCategory.h; path = Models/ListingCategory/ListingCategory.h; sourceTree = "<group>"; };
+		FFC4F89E1D75204200E06B4F /* ListingCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListingCategory.m; path = Models/ListingCategory/ListingCategory.m; sourceTree = "<group>"; };
+		FFC4F8A01D755E9900E06B4F /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FF66378D1D728DFF00D8DD7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B82FB191D74B02C006994B5 /* libsqlite3.tbd in Frameworks */,
+				FF42A76A1D74214100C13772 /* AFNetworking.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF6637A61D728DFF00D8DD7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF6637B11D728DFF00D8DD7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B82FAFE1D74AD81006994B5 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				2B82FB141D74AE14006994B5 /* DatabaseManager */,
+				2B82FAFF1D74AD81006994B5 /* TradeMe.db */,
+			);
+			name = Database;
+			path = TradeMe/Database;
+			sourceTree = "<group>";
+		};
+		2B82FB011D74ADC7006994B5 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				2B82FB021D74ADC7006994B5 /* FMDatabase.h */,
+				2B82FB031D74ADC7006994B5 /* FMDatabase.m */,
+				2B82FB041D74ADC7006994B5 /* FMDatabaseAdditions.h */,
+				2B82FB051D74ADC7006994B5 /* FMDatabaseAdditions.m */,
+				2B82FB061D74ADC7006994B5 /* FMDatabasePool.h */,
+				2B82FB071D74ADC7006994B5 /* FMDatabasePool.m */,
+				2B82FB081D74ADC7006994B5 /* FMDatabaseQueue.h */,
+				2B82FB091D74ADC7006994B5 /* FMDatabaseQueue.m */,
+				2B82FB0A1D74ADC7006994B5 /* FMDB.h */,
+				2B82FB0B1D74ADC7006994B5 /* FMResultSet.h */,
+				2B82FB0C1D74ADC7006994B5 /* FMResultSet.m */,
+				2B82FB0D1D74ADC7006994B5 /* Info.plist */,
+			);
+			name = FMDB;
+			path = Frameworks/FMDB;
+			sourceTree = "<group>";
+		};
+		2B82FB141D74AE14006994B5 /* DatabaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				2B82FB151D74AE14006994B5 /* DatabaseManager.h */,
+				2B82FB161D74AE14006994B5 /* DatabaseManager.m */,
+			);
+			path = DatabaseManager;
+			sourceTree = "<group>";
+		};
+		FF42A7631D741A2800C13772 /* SelectedListingSharedInstance */ = {
+			isa = PBXGroup;
+			children = (
+				FF42A7641D741A2800C13772 /* SelectedListingSharedInstance.h */,
+				FF42A7651D741A2800C13772 /* SelectedListingSharedInstance.m */,
+			);
+			name = SelectedListingSharedInstance;
+			path = ViewControllers/ListingsTableViewController/SelectedListingSharedInstance;
+			sourceTree = "<group>";
+		};
+		FF42A76C1D74219800C13772 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B82FB181D74B02C006994B5 /* libsqlite3.tbd */,
+				2B82FB011D74ADC7006994B5 /* FMDB */,
+				FF42A77A1D74261C00C13772 /* AFHTTPSessionOperation */,
+				FF42A7691D74214100C13772 /* AFNetworking.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF42A76D1D7423A900C13772 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FF42A7721D7424D200C13772 /* APIOperations */,
+				FF42A7751D7424D200C13772 /* APIOperationsManager */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		FF42A7721D7424D200C13772 /* APIOperations */ = {
+			isa = PBXGroup;
+			children = (
+				FF42A7731D7424D200C13772 /* APIOperations.h */,
+				FF42A7741D7424D200C13772 /* APIOperations.m */,
+			);
+			name = APIOperations;
+			path = TradeMe/Networking/APIOperations;
+			sourceTree = "<group>";
+		};
+		FF42A7751D7424D200C13772 /* APIOperationsManager */ = {
+			isa = PBXGroup;
+			children = (
+				FF42A7761D7424D200C13772 /* APIOperationsManager.h */,
+				FF42A7771D7424D200C13772 /* APIOperationsManager.m */,
+			);
+			name = APIOperationsManager;
+			path = TradeMe/Networking/APIOperationsManager;
+			sourceTree = "<group>";
+		};
+		FF42A77A1D74261C00C13772 /* AFHTTPSessionOperation */ = {
+			isa = PBXGroup;
+			children = (
+				FF42A77B1D74261C00C13772 /* AFHTTPSessionOperation.h */,
+				FF42A77C1D74261C00C13772 /* AFHTTPSessionOperation.m */,
+				FF42A77D1D74261C00C13772 /* AFURLSessionOperation.h */,
+				FF42A77E1D74261C00C13772 /* AFURLSessionOperation.m */,
+				FF42A77F1D74261C00C13772 /* AsynchronousOperation.h */,
+				FF42A7801D74261C00C13772 /* AsynchronousOperation.m */,
+			);
+			name = AFHTTPSessionOperation;
+			path = Frameworks/AFHTTPSessionOperation;
+			sourceTree = "<group>";
+		};
+		FF6637871D728DFF00D8DD7D = {
+			isa = PBXGroup;
+			children = (
+				FFC4F8A01D755E9900E06B4F /* ReadMe.txt */,
+				2B82FAFE1D74AD81006994B5 /* Database */,
+				FF42A76D1D7423A900C13772 /* Networking */,
+				FF42A76C1D74219800C13772 /* Frameworks */,
+				FF6637921D728DFF00D8DD7D /* TradeMe */,
+				FF6637AC1D728DFF00D8DD7D /* TradeMeTests */,
+				FF6637B71D728DFF00D8DD7D /* TradeMeUITests */,
+				FF6637911D728DFF00D8DD7D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FF6637911D728DFF00D8DD7D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF6637901D728DFF00D8DD7D /* TradeMe.app */,
+				FF6637A91D728DFF00D8DD7D /* TradeMeTests.xctest */,
+				FF6637B41D728DFF00D8DD7D /* TradeMeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FF6637921D728DFF00D8DD7D /* TradeMe */ = {
+			isa = PBXGroup;
+			children = (
+				FF6637E01D72B4A100D8DD7D /* Utilities */,
+				FF6637D51D72949400D8DD7D /* Models */,
+				FF6637C91D72909F00D8DD7D /* ViewControllers */,
+				FF6637961D728DFF00D8DD7D /* AppDelegate.h */,
+				FF6637971D728DFF00D8DD7D /* AppDelegate.m */,
+				FF66379C1D728DFF00D8DD7D /* Main.storyboard */,
+				FF66379F1D728DFF00D8DD7D /* Assets.xcassets */,
+				FF6637A11D728DFF00D8DD7D /* LaunchScreen.storyboard */,
+				FF6637A41D728DFF00D8DD7D /* Info.plist */,
+				FF6637931D728DFF00D8DD7D /* Supporting Files */,
+			);
+			path = TradeMe;
+			sourceTree = "<group>";
+		};
+		FF6637931D728DFF00D8DD7D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF42A7671D741FBF00C13772 /* CartFile */,
+				FF6637941D728DFF00D8DD7D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FF6637AC1D728DFF00D8DD7D /* TradeMeTests */ = {
+			isa = PBXGroup;
+			children = (
+				FF6637AD1D728DFF00D8DD7D /* TradeMeTests.m */,
+				FF6637AF1D728DFF00D8DD7D /* Info.plist */,
+			);
+			path = TradeMeTests;
+			sourceTree = "<group>";
+		};
+		FF6637B71D728DFF00D8DD7D /* TradeMeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FF6637B81D728DFF00D8DD7D /* TradeMeUITests.m */,
+				FF6637BA1D728DFF00D8DD7D /* Info.plist */,
+			);
+			path = TradeMeUITests;
+			sourceTree = "<group>";
+		};
+		FF6637C91D72909F00D8DD7D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FF6637E91D73ED7900D8DD7D /* ListingsDetailsTableViewController */,
+				FF6637D41D7292F600D8DD7D /* ListingsTableViewController */,
+				FF6637CA1D7290A500D8DD7D /* CategoriesTableViewController */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FF6637CA1D7290A500D8DD7D /* CategoriesTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FF6637F41D740F7A00D8DD7D /* CategoriesTableViewController.h */,
+				FF6637F51D740F7A00D8DD7D /* CategoriesTableViewController.m */,
+				FF6637DF1D72A70E00D8DD7D /* CategorySelectionDelegate.h */,
+			);
+			name = CategoriesTableViewController;
+			sourceTree = "<group>";
+		};
+		FF6637D41D7292F600D8DD7D /* ListingsTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FF42A7631D741A2800C13772 /* SelectedListingSharedInstance */,
+				FF6637D11D7292C800D8DD7D /* ListingsTableViewController.h */,
+				FF6637D21D7292C800D8DD7D /* ListingsTableViewController.m */,
+			);
+			name = ListingsTableViewController;
+			sourceTree = "<group>";
+		};
+		FF6637D51D72949400D8DD7D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FFC4F8991D751FD100E06B4F /* ListingDetails */,
+				FF6637DA1D72951400D8DD7D /* ListingCategory */,
+				FF6637D61D72949C00D8DD7D /* Listing */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		FF6637D61D72949C00D8DD7D /* Listing */ = {
+			isa = PBXGroup;
+			children = (
+				FF6637D71D7294C400D8DD7D /* Listing.h */,
+				FF6637D81D7294C400D8DD7D /* Listing.m */,
+			);
+			name = Listing;
+			sourceTree = "<group>";
+		};
+		FF6637DA1D72951400D8DD7D /* ListingCategory */ = {
+			isa = PBXGroup;
+			children = (
+				FFC4F89D1D75204200E06B4F /* ListingCategory.h */,
+				FFC4F89E1D75204200E06B4F /* ListingCategory.m */,
+			);
+			name = ListingCategory;
+			sourceTree = "<group>";
+		};
+		FF6637E01D72B4A100D8DD7D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FF6637E31D72B50000D8DD7D /* Utilities.h */,
+				FF6637E41D72B50000D8DD7D /* Utilities.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		FF6637E91D73ED7900D8DD7D /* ListingsDetailsTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FF6637ED1D73EE0400D8DD7D /* ListingsDetailsViewController.h */,
+				FF6637EE1D73EE0400D8DD7D /* ListingsDetailsViewController.m */,
+			);
+			name = ListingsDetailsTableViewController;
+			sourceTree = "<group>";
+		};
+		FFC4F8991D751FD100E06B4F /* ListingDetails */ = {
+			isa = PBXGroup;
+			children = (
+				FFC4F89A1D751FF800E06B4F /* ListingDetails.h */,
+				FFC4F89B1D751FF800E06B4F /* ListingDetails.m */,
+			);
+			name = ListingDetails;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FF66378F1D728DFF00D8DD7D /* TradeMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF6637BD1D728DFF00D8DD7D /* Build configuration list for PBXNativeTarget "TradeMe" */;
+			buildPhases = (
+				FF66378C1D728DFF00D8DD7D /* Sources */,
+				FF66378D1D728DFF00D8DD7D /* Frameworks */,
+				FF66378E1D728DFF00D8DD7D /* Resources */,
+				FF42A76B1D74215C00C13772 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TradeMe;
+			productName = TradeMe;
+			productReference = FF6637901D728DFF00D8DD7D /* TradeMe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FF6637A81D728DFF00D8DD7D /* TradeMeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF6637C01D728DFF00D8DD7D /* Build configuration list for PBXNativeTarget "TradeMeTests" */;
+			buildPhases = (
+				FF6637A51D728DFF00D8DD7D /* Sources */,
+				FF6637A61D728DFF00D8DD7D /* Frameworks */,
+				FF6637A71D728DFF00D8DD7D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF6637AB1D728DFF00D8DD7D /* PBXTargetDependency */,
+			);
+			name = TradeMeTests;
+			productName = TradeMeTests;
+			productReference = FF6637A91D728DFF00D8DD7D /* TradeMeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FF6637B31D728DFF00D8DD7D /* TradeMeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF6637C31D728DFF00D8DD7D /* Build configuration list for PBXNativeTarget "TradeMeUITests" */;
+			buildPhases = (
+				FF6637B01D728DFF00D8DD7D /* Sources */,
+				FF6637B11D728DFF00D8DD7D /* Frameworks */,
+				FF6637B21D728DFF00D8DD7D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF6637B61D728DFF00D8DD7D /* PBXTargetDependency */,
+			);
+			name = TradeMeUITests;
+			productName = TradeMeUITests;
+			productReference = FF6637B41D728DFF00D8DD7D /* TradeMeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF6637881D728DFF00D8DD7D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "UedaSoft IT Solutions";
+				TargetAttributes = {
+					FF66378F1D728DFF00D8DD7D = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					FF6637A81D728DFF00D8DD7D = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = FF66378F1D728DFF00D8DD7D;
+					};
+					FF6637B31D728DFF00D8DD7D = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = FF66378F1D728DFF00D8DD7D;
+					};
+				};
+			};
+			buildConfigurationList = FF66378B1D728DFF00D8DD7D /* Build configuration list for PBXProject "TradeMe" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FF6637871D728DFF00D8DD7D;
+			productRefGroup = FF6637911D728DFF00D8DD7D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF66378F1D728DFF00D8DD7D /* TradeMe */,
+				FF6637A81D728DFF00D8DD7D /* TradeMeTests */,
+				FF6637B31D728DFF00D8DD7D /* TradeMeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FF66378E1D728DFF00D8DD7D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B82FB001D74AD81006994B5 /* TradeMe.db in Resources */,
+				FF6637A31D728DFF00D8DD7D /* LaunchScreen.storyboard in Resources */,
+				2B82FB131D74ADC7006994B5 /* Info.plist in Resources */,
+				FF6637A01D728DFF00D8DD7D /* Assets.xcassets in Resources */,
+				FF42A7681D741FBF00C13772 /* CartFile in Resources */,
+				FFC4F8A11D755E9900E06B4F /* ReadMe.txt in Resources */,
+				FF66379E1D728DFF00D8DD7D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF6637A71D728DFF00D8DD7D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF6637B21D728DFF00D8DD7D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FF42A76B1D74215C00C13772 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/AFNetworking.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FF66378C1D728DFF00D8DD7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF42A7781D7424D200C13772 /* APIOperations.m in Sources */,
+				FF6637D31D7292C800D8DD7D /* ListingsTableViewController.m in Sources */,
+				2B82FB0E1D74ADC7006994B5 /* FMDatabase.m in Sources */,
+				FF6637D91D7294C400D8DD7D /* Listing.m in Sources */,
+				2B82FB121D74ADC7006994B5 /* FMResultSet.m in Sources */,
+				FF6637981D728DFF00D8DD7D /* AppDelegate.m in Sources */,
+				FF42A7831D74261C00C13772 /* AsynchronousOperation.m in Sources */,
+				2B82FB171D74AE14006994B5 /* DatabaseManager.m in Sources */,
+				2B82FB0F1D74ADC7006994B5 /* FMDatabaseAdditions.m in Sources */,
+				FF6637EF1D73EE0400D8DD7D /* ListingsDetailsViewController.m in Sources */,
+				FFC4F89F1D75204200E06B4F /* ListingCategory.m in Sources */,
+				FF6637951D728DFF00D8DD7D /* main.m in Sources */,
+				FF6637E51D72B50000D8DD7D /* Utilities.m in Sources */,
+				FFC4F89C1D751FF800E06B4F /* ListingDetails.m in Sources */,
+				FF42A7821D74261C00C13772 /* AFURLSessionOperation.m in Sources */,
+				FF6637F61D740F7A00D8DD7D /* CategoriesTableViewController.m in Sources */,
+				FF42A7661D741A2800C13772 /* SelectedListingSharedInstance.m in Sources */,
+				FF42A7791D7424D200C13772 /* APIOperationsManager.m in Sources */,
+				FF42A7811D74261C00C13772 /* AFHTTPSessionOperation.m in Sources */,
+				2B82FB101D74ADC7006994B5 /* FMDatabasePool.m in Sources */,
+				2B82FB111D74ADC7006994B5 /* FMDatabaseQueue.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF6637A51D728DFF00D8DD7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF6637AE1D728DFF00D8DD7D /* TradeMeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF6637B01D728DFF00D8DD7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF6637B91D728DFF00D8DD7D /* TradeMeUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FF6637AB1D728DFF00D8DD7D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF66378F1D728DFF00D8DD7D /* TradeMe */;
+			targetProxy = FF6637AA1D728DFF00D8DD7D /* PBXContainerItemProxy */;
+		};
+		FF6637B61D728DFF00D8DD7D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF66378F1D728DFF00D8DD7D /* TradeMe */;
+			targetProxy = FF6637B51D728DFF00D8DD7D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FF66379C1D728DFF00D8DD7D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF66379D1D728DFF00D8DD7D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FF6637A11D728DFF00D8DD7D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF6637A21D728DFF00D8DD7D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FF6637BB1D728DFF00D8DD7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FF6637BC1D728DFF00D8DD7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF6637BE1D728DFF00D8DD7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = TradeMe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "UedaSoft-IT-Solutions.TradeMe";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FF6637BF1D728DFF00D8DD7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = TradeMe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "UedaSoft-IT-Solutions.TradeMe";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FF6637C11D728DFF00D8DD7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TradeMeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "UedaSoft-IT-Solutions.TradeMeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TradeMe.app/TradeMe";
+			};
+			name = Debug;
+		};
+		FF6637C21D728DFF00D8DD7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TradeMeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "UedaSoft-IT-Solutions.TradeMeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TradeMe.app/TradeMe";
+			};
+			name = Release;
+		};
+		FF6637C41D728DFF00D8DD7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TradeMeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "UedaSoft-IT-Solutions.TradeMeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TradeMe;
+			};
+			name = Debug;
+		};
+		FF6637C51D728DFF00D8DD7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TradeMeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "UedaSoft-IT-Solutions.TradeMeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TradeMe;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FF66378B1D728DFF00D8DD7D /* Build configuration list for PBXProject "TradeMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF6637BB1D728DFF00D8DD7D /* Debug */,
+				FF6637BC1D728DFF00D8DD7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF6637BD1D728DFF00D8DD7D /* Build configuration list for PBXNativeTarget "TradeMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF6637BE1D728DFF00D8DD7D /* Debug */,
+				FF6637BF1D728DFF00D8DD7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF6637C01D728DFF00D8DD7D /* Build configuration list for PBXNativeTarget "TradeMeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF6637C11D728DFF00D8DD7D /* Debug */,
+				FF6637C21D728DFF00D8DD7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF6637C31D728DFF00D8DD7D /* Build configuration list for PBXNativeTarget "TradeMeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF6637C41D728DFF00D8DD7D /* Debug */,
+				FF6637C51D728DFF00D8DD7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FF6637881D728DFF00D8DD7D /* Project object */;
+}
