@@ -812,41 +812,52 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="aow-ta-mLk" kind="relationship" relationship="rootViewController" id="7cP-3g-5Vd"/>
+                        <segue destination="5Fk-rP-OV3" kind="relationship" relationship="rootViewController" id="wky-vS-Mhx"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y7l-K9-dnE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-354" y="1891"/>
         </scene>
-        <!--PrefectureDetailsViewController-->
-        <scene sceneID="lqJ-R2-ADs">
+        <!--PrefectureDetailsTableViewController-->
+        <scene sceneID="mnM-Nq-Kzx">
             <objects>
-                <viewController storyboardIdentifier="PrefectureDetailsViewController" title="PrefectureDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aow-ta-mLk" customClass="PrefectureDetailsViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="m8a-5K-HFb"/>
-                        <viewControllerLayoutGuide type="bottom" id="I5N-dR-Zmj"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="VyP-Pj-OKl">
+                <tableViewController storyboardIdentifier="PrefectureDetailsTableViewController" title="PrefectureDetailsTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5Fk-rP-OV3" customClass="PrefectureDetailsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="RMf-GE-SDX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Prefecture Details" id="WOM-RD-rJH">
-                        <barButtonItem key="leftBarButtonItem" image="Arrows-Back-icon" id="A58-ki-bsN">
+                        <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="K5t-9j-Zhg">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K5t-9j-Zhg" id="DJb-xT-Nwi">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5Fk-rP-OV3" id="nCK-cq-0fd"/>
+                            <outlet property="delegate" destination="5Fk-rP-OV3" id="A1t-wX-92i"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Okinawa" id="CzR-aG-J6a">
+                        <barButtonItem key="leftBarButtonItem" image="Arrows-Back-icon" id="iOw-fC-FbX">
                             <connections>
-                                <action selector="returnToPrefectureList:" destination="aow-ta-mLk" id="eYu-iH-her"/>
+                                <segue destination="h7L-cN-B2b" kind="unwind" unwindAction="prepareForUnwind:" id="9zg-ib-zXh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="sbp-hS-RPY" kind="unwind" identifier="UnwindToPrefectureListSegue" unwindAction="prepareForUnwind:" id="clU-Qg-IC5"/>
+                        <segue destination="h7L-cN-B2b" kind="unwind" identifier="BackToPrefectureListSegue" unwindAction="prepareForUnwind:" id="h5q-f3-tfD"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qDe-QF-qzC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="sbp-hS-RPY" userLabel="Exit" sceneMemberID="exit"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="REg-WO-Hiq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="h7L-cN-B2b" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="483.75" y="1894.0140845070423"/>
+            <point key="canvasLocation" x="463" y="1888"/>
         </scene>
         <!--Name/Surname-->
         <scene sceneID="XPx-jM-RmW">

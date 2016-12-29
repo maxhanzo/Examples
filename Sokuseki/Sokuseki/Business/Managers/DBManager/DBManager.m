@@ -340,12 +340,13 @@ static DBManager *sharedInstance = nil;
     FMResultSet *resultsWithPrefectureData = [db executeQuery:sqlSelectQuery];
     
     NSNumberFormatter *areaFormatter = [[NSNumberFormatter alloc] init];
-    [areaFormatter setLocale: [NSLocale currentLocale]];
+    [areaFormatter setLocale: [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"]];
     [areaFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
     [areaFormatter setMinimumFractionDigits:2];
     [areaFormatter setMaximumFractionDigits:2];
     [areaFormatter setGeneratesDecimalNumbers:YES];
     [areaFormatter setAlwaysShowsDecimalSeparator:YES];
+    
 
     PrefectureInfo *prefectureInfo = nil;
     // Query result
@@ -353,7 +354,10 @@ static DBManager *sharedInstance = nil;
     {
         NSString* prefectureName = [resultsWithPrefectureData stringForColumn: @"Name"];
         NSString* prefectureCapital = [resultsWithPrefectureData stringForColumn: @"Capital"];
-        NSNumber* prefectureArea = [areaFormatter numberFromString:[resultsWithPrefectureData stringForColumn: @"Area"]];
+        
+        NSString *strPrefectureArea =[resultsWithPrefectureData stringForColumn: @"Area"];
+
+        NSNumber* prefectureArea = [areaFormatter numberFromString:strPrefectureArea];
         NSString* prefectureMap = [resultsWithPrefectureData stringForColumn: @"Map"];
         NSString* prefectureFlag = [resultsWithPrefectureData stringForColumn: @"Flag"];
         NSString* prefectureRegion = [resultsWithPrefectureData stringForColumn: @"Region"];

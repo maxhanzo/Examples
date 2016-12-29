@@ -159,9 +159,7 @@
 
             }
             
-        }
-        [self clearAllTapped:nil];
-        
+        }        
     }
     
 }

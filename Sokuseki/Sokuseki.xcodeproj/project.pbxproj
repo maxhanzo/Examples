@@ -43,6 +43,17 @@
 		2B4E21051E0354A000502C32 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E21041E0354A000502C32 /* SWRevealViewController.m */; };
 		2B4E21091E035D7800502C32 /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E21081E035D7800502C32 /* MenuTableViewController.m */; };
 		2B4E210D1E035E5300502C32 /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E210C1E035E5300502C32 /* IntroViewController.m */; };
+		2B5947911E1476CD002AADC8 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B59478F1E1476CD002AADC8 /* Fabric.framework */; };
+		2B5947921E1476CD002AADC8 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B5947901E1476CD002AADC8 /* Crashlytics.framework */; };
+		2B5947961E148571002AADC8 /* PrefectureDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5947951E148571002AADC8 /* PrefectureDetailsTableViewController.m */; };
+		2B59479B1E14883E002AADC8 /* PrefectureMapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5947991E14883E002AADC8 /* PrefectureMapTableViewCell.m */; };
+		2B59479C1E14883E002AADC8 /* PrefectureMapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B59479A1E14883E002AADC8 /* PrefectureMapTableViewCell.xib */; };
+		2B5947A11E148891002AADC8 /* PrefectureNameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B59479F1E148891002AADC8 /* PrefectureNameTableViewCell.m */; };
+		2B5947A21E148891002AADC8 /* PrefectureNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B5947A01E148891002AADC8 /* PrefectureNameTableViewCell.xib */; };
+		2B5947A71E1488E0002AADC8 /* PrefectureRegionDetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5947A51E1488E0002AADC8 /* PrefectureRegionDetailsTableViewCell.m */; };
+		2B5947A81E1488E0002AADC8 /* PrefectureRegionDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B5947A61E1488E0002AADC8 /* PrefectureRegionDetailsTableViewCell.xib */; };
+		2B5947AC1E14892B002AADC8 /* PrefectureFlagTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5947AA1E14892B002AADC8 /* PrefectureFlagTableViewCell.m */; };
+		2B5947AD1E14892B002AADC8 /* PrefectureFlagTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B5947AB1E14892B002AADC8 /* PrefectureFlagTableViewCell.xib */; };
 		2B76BDF91E01D02500E85BC7 /* ImmigrantResultsViewControllerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B76BDF81E01D02500E85BC7 /* ImmigrantResultsViewControllerTableViewController.m */; };
 		2B76BDFC1E01D05800E85BC7 /* ParameterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B76BDFB1E01D05800E85BC7 /* ParameterViewController.m */; };
 		2B7D96EE1E11CC8900818754 /* PrefectureListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7D96ED1E11CC8900818754 /* PrefectureListTableViewController.m */; };
@@ -55,7 +66,6 @@
 		2B7D97161E11E36A00818754 /* PrefectureStatsTableViewFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B7D97141E11E36A00818754 /* PrefectureStatsTableViewFooter.xib */; };
 		2B8DAE571E10C466007603F2 /* GroupDetailTableViewFooterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8DAE551E10C466007603F2 /* GroupDetailTableViewFooterCell.m */; };
 		2B8DAE581E10C466007603F2 /* GroupDetailTableViewFooterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B8DAE561E10C466007603F2 /* GroupDetailTableViewFooterCell.xib */; };
-		2BB864131E1320C4001CB208 /* PrefectureDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB864121E1320C4001CB208 /* PrefectureDetailsViewController.m */; };
 		2BB948131E05D478003E1310 /* OpenCloseBlurredViewControllerSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB948121E05D478003E1310 /* OpenCloseBlurredViewControllerSegue.m */; };
 		2BB9481A1E05D5D9003E1310 /* UIView+View2Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB948161E05D5D9003E1310 /* UIView+View2Image.m */; };
 		2BB9481B1E05D5D9003E1310 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB948191E05D5D9003E1310 /* UIImage+ImageEffects.m */; };
@@ -162,6 +172,22 @@
 		2B4E21081E035D7800502C32 /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuTableViewController.m; path = ViewControllers/MenuTableViewController/MenuTableViewController.m; sourceTree = "<group>"; };
 		2B4E210B1E035E5300502C32 /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IntroViewController.h; path = ViewControllers/IntroViewController/IntroViewController.h; sourceTree = "<group>"; };
 		2B4E210C1E035E5300502C32 /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IntroViewController.m; path = ViewControllers/IntroViewController/IntroViewController.m; sourceTree = "<group>"; };
+		2B59478F1E1476CD002AADC8 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		2B5947901E1476CD002AADC8 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		2B5947941E148571002AADC8 /* PrefectureDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefectureDetailsTableViewController.h; path = "ViewControllers/Immigration Details/Prefectures/PrefectureDetailsTableViewController/PrefectureDetailsTableViewController.h"; sourceTree = "<group>"; };
+		2B5947951E148571002AADC8 /* PrefectureDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrefectureDetailsTableViewController.m; path = "ViewControllers/Immigration Details/Prefectures/PrefectureDetailsTableViewController/PrefectureDetailsTableViewController.m"; sourceTree = "<group>"; };
+		2B5947981E14883E002AADC8 /* PrefectureMapTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefectureMapTableViewCell.h; path = "ViewControllers/Immigration Details/Prefectures/PrefectureDetailsTableViewController/PrefectureMapTableViewCell/PrefectureMapTableViewCell.h"; sourceTree = "<group>"; };
+		2B5947991E14883E002AADC8 /* PrefectureMapTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrefectureMapTableViewCell.m; path = "ViewControllers/Immigration Details/Prefectures/PrefectureDetailsTableViewController/PrefectureMapTableViewCell/PrefectureMapTableViewCell.m"; sourceTree = "<group>"; };
+		2B59479A1E14883E002AADC8 /* PrefectureMapTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PrefectureMapTableViewCell.xib; path = "ViewControllers/Immigration Details/Prefectures/PrefectureDetailsTableViewController/PrefectureMapTableViewCell/PrefectureMapTableViewCell.xib"; sourceTree = "<group>"; };
+		2B59479E1E148891002AADC8 /* PrefectureNameTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefectureNameTableViewCell.h; path = "ViewControllers/Immigration Details/Prefectures/PrefectureDetailsTableViewController/PrefectureNameTableViewCell/PrefectureNameTableViewCell.h"; sourceTree = "<group>"; };
+		2B59479F1E148891002AADC8 /* PrefectureNameTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrefectureNameTableViewCell.m; path = "ViewControllers/Immigration Details/Prefectures/PrefectureDetailsTableViewController/PrefectureNameTableViewCell/PrefectureNameTableViewCell.m"; sourceTree = "<group>"; };
+		2B5947A01E148891002AADC8 /* PrefectureNameTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PrefectureNameTableViewCell.xib; path = "ViewControllers/Immigration Details/Prefectures/PrefectureDetailsTableViewController/PrefectureNameTableViewCell/PrefectureNameTableViewCell.xib"; sourceTree = "<group>"; };
+		2B5947A41E1488E0002AADC8 /* PrefectureRegionDetailsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefectureRegionDetailsTableViewCell.h; path = "ViewControllers/Immigration Details/Prefectures/PrefectureDetailsTableViewController/PrefectureRegionDetailsTableViewCell/PrefectureRegionDetailsTableViewCell.h"; sourceTree = "<group>"; };
+		2B5947A51E1488E0002AADC8 /* PrefectureRegionDetailsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrefectureRegionDetailsTableViewCell.m; path = "ViewControllers/Immigration Details/Prefectures/PrefectureDetailsTableViewController/PrefectureRegionDetailsTableViewCell/PrefectureRegionDetailsTableViewCell.m"; sourceTree = "<group>"; };
+		2B5947A61E1488E0002AADC8 /* PrefectureRegionDetailsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PrefectureRegionDetailsTableViewCell.xib; path = "ViewControllers/Immigration Details/Prefectures/PrefectureDetailsTableViewController/PrefectureRegionDetailsTableViewCell/PrefectureRegionDetailsTableViewCell.xib"; sourceTree = "<group>"; };
+		2B5947A91E14892B002AADC8 /* PrefectureFlagTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefectureFlagTableViewCell.h; path = "ViewControllers/Immigration Details/Prefectures/PrefectureDetailsTableViewController/PrefectureFlagTableViewCell/PrefectureFlagTableViewCell.h"; sourceTree = "<group>"; };
+		2B5947AA1E14892B002AADC8 /* PrefectureFlagTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrefectureFlagTableViewCell.m; path = "ViewControllers/Immigration Details/Prefectures/PrefectureDetailsTableViewController/PrefectureFlagTableViewCell/PrefectureFlagTableViewCell.m"; sourceTree = "<group>"; };
+		2B5947AB1E14892B002AADC8 /* PrefectureFlagTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PrefectureFlagTableViewCell.xib; path = "ViewControllers/Immigration Details/Prefectures/PrefectureDetailsTableViewController/PrefectureFlagTableViewCell/PrefectureFlagTableViewCell.xib"; sourceTree = "<group>"; };
 		2B76BDF71E01D02500E85BC7 /* ImmigrantResultsViewControllerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImmigrantResultsViewControllerTableViewController.h; path = ViewControllers/ImmigrantResultsViewController/ImmigrantResultsViewControllerTableViewController.h; sourceTree = "<group>"; };
 		2B76BDF81E01D02500E85BC7 /* ImmigrantResultsViewControllerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImmigrantResultsViewControllerTableViewController.m; path = ViewControllers/ImmigrantResultsViewController/ImmigrantResultsViewControllerTableViewController.m; sourceTree = "<group>"; };
 		2B76BDFA1E01D05800E85BC7 /* ParameterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParameterViewController.h; path = ViewControllers/ParameterViewController/ParameterViewController.h; sourceTree = "<group>"; };
@@ -182,8 +208,6 @@
 		2B8DAE541E10C466007603F2 /* GroupDetailTableViewFooterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GroupDetailTableViewFooterCell.h; path = ViewControllers/GroupDetailTableViewController/GroupDetailTableViewFooterCell/GroupDetailTableViewFooterCell.h; sourceTree = "<group>"; };
 		2B8DAE551E10C466007603F2 /* GroupDetailTableViewFooterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GroupDetailTableViewFooterCell.m; path = ViewControllers/GroupDetailTableViewController/GroupDetailTableViewFooterCell/GroupDetailTableViewFooterCell.m; sourceTree = "<group>"; };
 		2B8DAE561E10C466007603F2 /* GroupDetailTableViewFooterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GroupDetailTableViewFooterCell.xib; path = ViewControllers/GroupDetailTableViewController/GroupDetailTableViewFooterCell/GroupDetailTableViewFooterCell.xib; sourceTree = "<group>"; };
-		2BB864111E1320C4001CB208 /* PrefectureDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefectureDetailsViewController.h; path = "ViewControllers/Immigration Details/Prefectures/PrefectureDetailsViewController/PrefectureDetailsViewController.h"; sourceTree = "<group>"; };
-		2BB864121E1320C4001CB208 /* PrefectureDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrefectureDetailsViewController.m; path = "ViewControllers/Immigration Details/Prefectures/PrefectureDetailsViewController/PrefectureDetailsViewController.m"; sourceTree = "<group>"; };
 		2BB948111E05D478003E1310 /* OpenCloseBlurredViewControllerSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenCloseBlurredViewControllerSegue.h; path = Frameworks/OpenCloseBlurredViewControllerSegue/OpenCloseBlurredViewControllerSegue.h; sourceTree = "<group>"; };
 		2BB948121E05D478003E1310 /* OpenCloseBlurredViewControllerSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenCloseBlurredViewControllerSegue.m; path = Frameworks/OpenCloseBlurredViewControllerSegue/OpenCloseBlurredViewControllerSegue.m; sourceTree = "<group>"; };
 		2BB948151E05D5D9003E1310 /* UIView+View2Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+View2Image.h"; sourceTree = "<group>"; };
@@ -240,6 +264,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BB948EA1E05F800003E1310 /* libsqlite3.tbd in Frameworks */,
+				2B5947921E1476CD002AADC8 /* Crashlytics.framework in Frameworks */,
+				2B5947911E1476CD002AADC8 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,7 +438,6 @@
 				2B4872AB1E006A8800A41572 /* Info.plist */,
 				2B48729A1E006A8800A41572 /* Supporting Files */,
 			);
-			name = Sokuseki;
 			path = Sokuseki;
 			sourceTree = "<group>";
 		};
@@ -430,7 +455,6 @@
 				2B4872B41E006A8800A41572 /* TagTestTests.m */,
 				2B4872B61E006A8800A41572 /* Info.plist */,
 			);
-			name = SokusekiTests;
 			path = SokusekiTests;
 			sourceTree = "<group>";
 		};
@@ -440,7 +464,6 @@
 				2B4872BF1E006A8800A41572 /* TagTestUITests.m */,
 				2B4872C11E006A8800A41572 /* Info.plist */,
 			);
-			name = SokusekiUITests;
 			path = SokusekiUITests;
 			sourceTree = "<group>";
 		};
@@ -527,6 +550,59 @@
 			name = IntroViewController;
 			sourceTree = "<group>";
 		};
+		2B5947931E148532002AADC8 /* PrefectureDetailsTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2B5947AE1E148939002AADC8 /* PrefectureFlagTableViewCell */,
+				2B5947A31E1488A1002AADC8 /* PrefectureRegionDetailsTableViewCell */,
+				2B59479D1E148845002AADC8 /* PrefectureNameTableViewCell */,
+				2B5947971E1486BD002AADC8 /* PrefectureMapTableViewCell */,
+				2B5947941E148571002AADC8 /* PrefectureDetailsTableViewController.h */,
+				2B5947951E148571002AADC8 /* PrefectureDetailsTableViewController.m */,
+			);
+			name = PrefectureDetailsTableViewController;
+			sourceTree = "<group>";
+		};
+		2B5947971E1486BD002AADC8 /* PrefectureMapTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2B5947981E14883E002AADC8 /* PrefectureMapTableViewCell.h */,
+				2B5947991E14883E002AADC8 /* PrefectureMapTableViewCell.m */,
+				2B59479A1E14883E002AADC8 /* PrefectureMapTableViewCell.xib */,
+			);
+			name = PrefectureMapTableViewCell;
+			sourceTree = "<group>";
+		};
+		2B59479D1E148845002AADC8 /* PrefectureNameTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2B59479E1E148891002AADC8 /* PrefectureNameTableViewCell.h */,
+				2B59479F1E148891002AADC8 /* PrefectureNameTableViewCell.m */,
+				2B5947A01E148891002AADC8 /* PrefectureNameTableViewCell.xib */,
+			);
+			name = PrefectureNameTableViewCell;
+			sourceTree = "<group>";
+		};
+		2B5947A31E1488A1002AADC8 /* PrefectureRegionDetailsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2B5947A41E1488E0002AADC8 /* PrefectureRegionDetailsTableViewCell.h */,
+				2B5947A51E1488E0002AADC8 /* PrefectureRegionDetailsTableViewCell.m */,
+				2B5947A61E1488E0002AADC8 /* PrefectureRegionDetailsTableViewCell.xib */,
+			);
+			name = PrefectureRegionDetailsTableViewCell;
+			sourceTree = "<group>";
+		};
+		2B5947AE1E148939002AADC8 /* PrefectureFlagTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2B5947A91E14892B002AADC8 /* PrefectureFlagTableViewCell.h */,
+				2B5947AA1E14892B002AADC8 /* PrefectureFlagTableViewCell.m */,
+				2B5947AB1E14892B002AADC8 /* PrefectureFlagTableViewCell.xib */,
+			);
+			name = PrefectureFlagTableViewCell;
+			sourceTree = "<group>";
+		};
 		2B76BDF61E01CFF300E85BC7 /* ImmigrantResultsTableViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -566,7 +642,7 @@
 		2B7D96E91E11CBE000818754 /* Prefectures */ = {
 			isa = PBXGroup;
 			children = (
-				2BB864101E132097001CB208 /* PrefectureDetailsViewController */,
+				2B5947931E148532002AADC8 /* PrefectureDetailsTableViewController */,
 				2B7D96FB1E11CE6900818754 /* PrefectureStatistic */,
 				2B7D96EB1E11CC2B00818754 /* PrefectureListTableViewController */,
 			);
@@ -640,15 +716,6 @@
 				2B8DAE561E10C466007603F2 /* GroupDetailTableViewFooterCell.xib */,
 			);
 			name = GroupDetailTableViewFooterCell;
-			sourceTree = "<group>";
-		};
-		2BB864101E132097001CB208 /* PrefectureDetailsViewController */ = {
-			isa = PBXGroup;
-			children = (
-				2BB864111E1320C4001CB208 /* PrefectureDetailsViewController.h */,
-				2BB864121E1320C4001CB208 /* PrefectureDetailsViewController.m */,
-			);
-			name = PrefectureDetailsViewController;
 			sourceTree = "<group>";
 		};
 		2BB948101E05D42C003E1310 /* OpenCloseBlurredViewControllerSegue */ = {
@@ -884,6 +951,8 @@
 		2BB948E81E05F800003E1310 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2B59478F1E1476CD002AADC8 /* Fabric.framework */,
+				2B5947901E1476CD002AADC8 /* Crashlytics.framework */,
 				2BB948E91E05F800003E1310 /* libsqlite3.tbd */,
 			);
 			name = Frameworks;
@@ -899,6 +968,7 @@
 				2B4872931E006A8800A41572 /* Sources */,
 				2B4872941E006A8800A41572 /* Frameworks */,
 				2B4872951E006A8800A41572 /* Resources */,
+				2B59478E1E1476A3002AADC8 /* Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -1000,6 +1070,7 @@
 				2B7D97161E11E36A00818754 /* PrefectureStatsTableViewFooter.xib in Resources */,
 				2B4872D81E00820700A41572 /* Resources.bundle in Resources */,
 				2B8DAE581E10C466007603F2 /* GroupDetailTableViewFooterCell.xib in Resources */,
+				2B5947AD1E14892B002AADC8 /* PrefectureFlagTableViewCell.xib in Resources */,
 				2BB948DA1E05F55A003E1310 /* Info.plist in Resources */,
 				2B46BC3D1E0204C6007C244E /* YearTableViewCell.xib in Resources */,
 				2B7D970F1E11DFC600818754 /* PrefectureStatsTopTableViewCell.xib in Resources */,
@@ -1008,12 +1079,15 @@
 				2B4872D61E00820700A41572 /* ASJTag.xib in Resources */,
 				2B4872A71E006A8800A41572 /* Assets.xcassets in Resources */,
 				2B4089D81E060BF8000B645E /* ImmigrantsResultsTableViewFooter.xib in Resources */,
+				2B5947A81E1488E0002AADC8 /* PrefectureRegionDetailsTableViewCell.xib in Resources */,
 				2B4872A51E006A8800A41572 /* Main.storyboard in Resources */,
 				2B46BC371E020127007C244E /* ShipTableViewCell.xib in Resources */,
 				2B039B9C1E06EAF600C778AB /* ImmigrantDetailTableViewCell.xib in Resources */,
 				2B039BA51E0727E000C778AB /* ShinAshiato.db in Resources */,
 				2B4089D21E060028000B645E /* ImmigrantsResultsTableViewCell.xib in Resources */,
+				2B5947A21E148891002AADC8 /* PrefectureNameTableViewCell.xib in Resources */,
 				2B039BA21E06EB1E00C778AB /* GroupDetailTableViewHeaderCell.xib in Resources */,
+				2B59479C1E14883E002AADC8 /* PrefectureMapTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1032,6 +1106,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B59478E1E1476A3002AADC8 /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Crashlytics;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run ccb1bccf02067e148436f937cf7c38e1626da0ec b6df2e654d3bedc35799d6ba372f593d46005df0b552a826b65227565dfec8c7\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2B4872931E006A8800A41572 /* Sources */ = {
@@ -1053,9 +1144,12 @@
 				2B46BC261E020079007C244E /* PrefectureShipInputTableViewController.m in Sources */,
 				2B46BC311E02010C007C244E /* PrefectureTableViewCell.m in Sources */,
 				2BB948D51E05F55A003E1310 /* FMDatabase.m in Sources */,
+				2B5947961E148571002AADC8 /* PrefectureDetailsTableViewController.m in Sources */,
 				2B4872D71E00820700A41572 /* ASJTagsView.m in Sources */,
+				2B5947A71E1488E0002AADC8 /* PrefectureRegionDetailsTableViewCell.m in Sources */,
 				2B8DAE571E10C466007603F2 /* GroupDetailTableViewFooterCell.m in Sources */,
 				2BB948681E05EE11003E1310 /* Passenger.m in Sources */,
+				2B5947A11E148891002AADC8 /* PrefectureNameTableViewCell.m in Sources */,
 				2B7D97031E11CF6F00818754 /* PrefectureStatsTableViewCell.m in Sources */,
 				2BB948701E05EE11003E1310 /* DBManager.m in Sources */,
 				2B4872D51E00820700A41572 /* ASJTag.m in Sources */,
@@ -1077,10 +1171,10 @@
 				2BB948E71E05F784003E1310 /* NSString+Score.m in Sources */,
 				2B48729F1E006A8800A41572 /* AppDelegate.m in Sources */,
 				2B4E21051E0354A000502C32 /* SWRevealViewController.m in Sources */,
+				2B5947AC1E14892B002AADC8 /* PrefectureFlagTableViewCell.m in Sources */,
 				2BB948131E05D478003E1310 /* OpenCloseBlurredViewControllerSegue.m in Sources */,
 				2B76BDF91E01D02500E85BC7 /* ImmigrantResultsViewControllerTableViewController.m in Sources */,
 				2B7D970A1E11D79600818754 /* PrefectureStatistics.m in Sources */,
-				2BB864131E1320C4001CB208 /* PrefectureDetailsViewController.m in Sources */,
 				2B4E210D1E035E5300502C32 /* IntroViewController.m in Sources */,
 				2BB948651E05EE11003E1310 /* Group.m in Sources */,
 				2B4E21011E034F1700502C32 /* SearchParameters.m in Sources */,
@@ -1090,6 +1184,7 @@
 				2BB948D71E05F55A003E1310 /* FMDatabasePool.m in Sources */,
 				2B48729C1E006A8800A41572 /* main.m in Sources */,
 				2B4E21091E035D7800502C32 /* MenuTableViewController.m in Sources */,
+				2B59479B1E14883E002AADC8 /* PrefectureMapTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1237,6 +1332,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 628CH5N6UW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				INFOPLIST_FILE = Sokuseki/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1250,6 +1349,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 628CH5N6UW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				INFOPLIST_FILE = Sokuseki/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -10,7 +10,7 @@
 #import "PrefectureStatsTableViewCell.h"
 #import "PrefectureStatsTopTableViewCell.h"
 #import "PrefectureStatsTableViewFooter.h"
-#import "PrefectureDetailsViewController.h"
+#import "PrefectureDetailsTableViewController.h"
 #import "PrefectureInfo.h"
 #import "DBManager.h"
 
@@ -260,10 +260,11 @@
         if(prefectureDetailsNavigationController){
             
             
-            PrefectureDetailsViewController *prefectureDetailsViewController = (PrefectureDetailsViewController*)[prefectureDetailsNavigationController.childViewControllers firstObject];
+            PrefectureDetailsTableViewController *prefectureDetailsTableViewController = (PrefectureDetailsTableViewController*)[prefectureDetailsNavigationController.childViewControllers firstObject];
             
-            if(prefectureDetailsViewController){
-                [prefectureDetailsViewController setPrefectureInfo:self.prefectureInfo];
+            
+            if(prefectureDetailsTableViewController){
+                [prefectureDetailsTableViewController setPrefectureInfo:self.prefectureInfo];
             }
         
         }
