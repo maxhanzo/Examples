@@ -26,10 +26,6 @@
 
 @implementation MainViewController
 
-
-
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self customSetup];
@@ -76,31 +72,31 @@
              {
                  case NAMETAG:
                  {
-                     [self.filterTypeSelectionTableView deselectRowAtIndexPath: [NSIndexPath indexPathForRow:2 inSection:0] animated:YES];
+                     [self.filterTypeSelectionTableView deselectRowAtIndexPath: [NSIndexPath indexPathForRow:1 inSection:0] animated:YES];
                  } break;
                  case SURNAMETAG:
                  {
-                     [self.filterTypeSelectionTableView deselectRowAtIndexPath: [NSIndexPath indexPathForRow:3 inSection:0] animated:YES];
+                     [self.filterTypeSelectionTableView deselectRowAtIndexPath: [NSIndexPath indexPathForRow:2 inSection:0] animated:YES];
                  } break;
                  case NAMEKANJITAG:
                  {
-                     [self.filterTypeSelectionTableView deselectRowAtIndexPath: [NSIndexPath indexPathForRow:9 inSection:0] animated:YES];
+                     [self.filterTypeSelectionTableView deselectRowAtIndexPath: [NSIndexPath indexPathForRow:8 inSection:0] animated:YES];
                  } break;
                  case SURNAMEKANJITAG:
                  {
-                     [self.filterTypeSelectionTableView deselectRowAtIndexPath: [NSIndexPath indexPathForRow:10 inSection:0] animated:YES];
+                     [self.filterTypeSelectionTableView deselectRowAtIndexPath: [NSIndexPath indexPathForRow:9 inSection:0] animated:YES];
                  } break;
                  case PREFECTURETAG:
                  {
-                     [self.filterTypeSelectionTableView deselectRowAtIndexPath: [NSIndexPath indexPathForRow:5 inSection:0] animated:YES];
+                     [self.filterTypeSelectionTableView deselectRowAtIndexPath: [NSIndexPath indexPathForRow:4 inSection:0] animated:YES];
                  } break;
                  case SHIPTAG:
                  {
-                     [self.filterTypeSelectionTableView deselectRowAtIndexPath: [NSIndexPath indexPathForRow:6 inSection:0] animated:YES];
+                     [self.filterTypeSelectionTableView deselectRowAtIndexPath: [NSIndexPath indexPathForRow:5 inSection:0] animated:YES];
                  } break;
                  case YEARTAG:
                  {
-                     [self.filterTypeSelectionTableView deselectRowAtIndexPath: [NSIndexPath indexPathForRow:7 inSection:0] animated:YES];
+                     [self.filterTypeSelectionTableView deselectRowAtIndexPath: [NSIndexPath indexPathForRow:6 inSection:0] animated:YES];
                  } break;
                  default:
                  {
@@ -248,7 +244,7 @@
             NSString* parameter = tagParameters.parameter;
             
             if(![self.tagTypes objectForKey: parameter]){
-                //[self.tagTypes setObject: [NSNumber numberWithInt: SHIPTAG] forKey: @"America Maru"];
+                [self addTagWithTitle:tagParameters.parameter];
                 [self.tagTypes setObject: [NSNumber numberWithInt: SHIPTAG] forKey: tagParameters.parameter];
             }
         }
@@ -270,22 +266,22 @@
         
         if([sourceIdentifier isEqualToString:@"InputNameSegue"])
         {
-            [self.filterTypeSelectionTableView deselectRowAtIndexPath: [NSIndexPath indexPathForRow:2 inSection:0] animated:YES];
+            [self.filterTypeSelectionTableView deselectRowAtIndexPath: [NSIndexPath indexPathForRow:1 inSection:0] animated:YES];
         }
         
         if([sourceIdentifier isEqualToString:@"InputSurnameSegue"])
         {
-            [self.filterTypeSelectionTableView deselectRowAtIndexPath: [NSIndexPath indexPathForRow:3 inSection:0] animated:YES];
+            [self.filterTypeSelectionTableView deselectRowAtIndexPath: [NSIndexPath indexPathForRow:2 inSection:0] animated:YES];
         }
         
         if([sourceIdentifier isEqualToString:@"InputNameKanjiSegue"])
         {
-            [self.filterTypeSelectionTableView deselectRowAtIndexPath: [NSIndexPath indexPathForRow:9 inSection:0] animated:YES];
+            [self.filterTypeSelectionTableView deselectRowAtIndexPath: [NSIndexPath indexPathForRow:8 inSection:0] animated:YES];
         }
         
         if([sourceIdentifier isEqualToString:@"InputSurnameKanjiSegue"])
         {
-            [self.filterTypeSelectionTableView deselectRowAtIndexPath: [NSIndexPath indexPathForRow:10 inSection:0] animated:YES];
+            [self.filterTypeSelectionTableView deselectRowAtIndexPath: [NSIndexPath indexPathForRow:9 inSection:0] animated:YES];
         }
     }
     
@@ -294,9 +290,9 @@
         YearInputTableViewController* inputViewController = (YearInputTableViewController*)segue.sourceViewController;
         NSString *sourceIdentifier = inputViewController.segueID;
 
-        if([sourceIdentifier isEqualToString:@"YearUnwindSegue"])
+        if([sourceIdentifier isEqualToString:@"InputYearSegue"])
         {
-            [self.filterTypeSelectionTableView deselectRowAtIndexPath: [NSIndexPath indexPathForRow:7 inSection:0] animated:YES];
+            [self.filterTypeSelectionTableView deselectRowAtIndexPath: [NSIndexPath indexPathForRow:6 inSection:0] animated:YES];
         }
     }
     
@@ -308,12 +304,12 @@
         
         if([sourceIdentifier isEqualToString:@"InputPrefectureSegue"])
         {
-            [self.filterTypeSelectionTableView deselectRowAtIndexPath: [NSIndexPath indexPathForRow:5 inSection:0] animated:YES];
+            [self.filterTypeSelectionTableView deselectRowAtIndexPath: [NSIndexPath indexPathForRow:4 inSection:0] animated:YES];
         }
         
         if([sourceIdentifier isEqualToString:@"InputShipSegue"])
         {
-            [self.filterTypeSelectionTableView deselectRowAtIndexPath: [NSIndexPath indexPathForRow:6 inSection:0] animated:YES];
+            [self.filterTypeSelectionTableView deselectRowAtIndexPath: [NSIndexPath indexPathForRow:5 inSection:0] animated:YES];
         }
     }
     
@@ -334,7 +330,6 @@
     [self.tagTypes removeAllObjects];
     for (NSInteger i = 0; i<11; i++)
     {
-        
         [self.filterTypeSelectionTableView deselectRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0] animated:NO];
     }
 }
@@ -431,39 +426,39 @@
     NSString *cellIdentifier = nil;
     switch (indexPath.row)
     {
+       
         case 0:
-            cellIdentifier = @"ClearAllTableViewCell";
-            break;
-        case 1:
             cellIdentifier = @"NameSurnameSection";
             break;
-        case 2:
+        case 1:
             cellIdentifier = @"NameTableViewCell";
             break;
-        case 3:
+        case 2:
             cellIdentifier = @"SurnameTableViewCell";
             break;
-        case 4:
+        case 3:
             cellIdentifier = @"TripDetailsSection";
             break;
-        case 5:
+        case 4:
             cellIdentifier = @"PrefectureTableViewCell";
             break;
-        case 6:
+        case 5:
             cellIdentifier = @"ShipTableViewCell";
             break;
-        case 7:
+        case 6:
             cellIdentifier = @"YearTableViewCell";
             break;
-
-        case 8:
+        case 7:
             cellIdentifier = @"NihongoSection";
             break;
-        case 9:
+        case 8:
             cellIdentifier = @"NamaeTableViewCell";
             break;
-        case 10:
+        case 9:
             cellIdentifier = @"MyoujiTableViewCell";
+            break;
+        case 10:
+            cellIdentifier = @"ClearAllTableViewCell";
             break;
         default:
             break;
@@ -490,10 +485,9 @@
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(indexPath.row == 0)
+    if(indexPath.row == 10)
     {
         [self clearAllTapped:nil];
-        [tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
 }
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -509,9 +503,9 @@
 {
     switch(indexPath.row)
     {
-        case 1:
-        case 4:
-        case 8:
+        case 0:
+        case 3:
+        case 7:
             return 15.0f;
         default:
             return 35.0f;

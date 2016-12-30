@@ -96,7 +96,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-
     NSInteger footerIndex = [self.immigrantResults count];
     
     if(indexPath.row != footerIndex)
@@ -115,7 +114,7 @@
         return cell;
     }
     
-    ImmigrantsResultsTableViewFooter *cell = (ImmigrantsResultsTableViewFooter*)[tableView dequeueReusableCellWithIdentifier:@"ImmigraImmigrantsResultsTableViewFooterntsResultsTableViewCell"];
+    ImmigrantsResultsTableViewFooter *cell = (ImmigrantsResultsTableViewFooter*)[tableView dequeueReusableCellWithIdentifier:@"ImmigrantsResultsTableViewFooter"];
     
     if(!cell)
     {
@@ -125,7 +124,9 @@
     
     NSNumber *totalResults = [NSNumber numberWithInteger: [self.immigrantResults count]];
     [cell.lblTotalRecords setText: [totalResults stringValue]];
-    
+    if(footerIndex==0) {
+        [cell setHidden:YES];
+    }
     return cell;
 
 }
