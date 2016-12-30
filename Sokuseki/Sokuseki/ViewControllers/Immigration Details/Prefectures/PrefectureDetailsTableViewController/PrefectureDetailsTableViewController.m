@@ -29,6 +29,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationItem.title = [self.prefectureInfo.name uppercaseString];
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -81,7 +83,8 @@
             }
             
             [cell.lblPrefectureKanjiName setText: self.prefectureInfo.kanji];
-            [cell.lblPrefectureRomajiName setText: self.prefectureInfo.name];
+            NSString *prefectureSuffix = [Utilities prefectureSuffix:[self.prefectureInfo.name uppercaseString]];
+            [cell.lblPrefectureRomajiName setText: [NSString stringWithFormat: @"%@%@", self.prefectureInfo.name, [prefectureSuffix lowercaseString]]];
             
             return cell;
         } break;

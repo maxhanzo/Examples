@@ -54,6 +54,9 @@
 		2B5947A81E1488E0002AADC8 /* PrefectureRegionDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B5947A61E1488E0002AADC8 /* PrefectureRegionDetailsTableViewCell.xib */; };
 		2B5947AC1E14892B002AADC8 /* PrefectureFlagTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5947AA1E14892B002AADC8 /* PrefectureFlagTableViewCell.m */; };
 		2B5947AD1E14892B002AADC8 /* PrefectureFlagTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B5947AB1E14892B002AADC8 /* PrefectureFlagTableViewCell.xib */; };
+		2B5947B71E154E7D002AADC8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B5947B61E154E7D002AADC8 /* CoreGraphics.framework */; };
+		2B5947B91E154E92002AADC8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B5947B81E154E92002AADC8 /* Foundation.framework */; };
+		2B5947BB1E154E9D002AADC8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B5947BA1E154E9D002AADC8 /* UIKit.framework */; };
 		2B76BDF91E01D02500E85BC7 /* ImmigrantResultsViewControllerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B76BDF81E01D02500E85BC7 /* ImmigrantResultsViewControllerTableViewController.m */; };
 		2B76BDFC1E01D05800E85BC7 /* ParameterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B76BDFB1E01D05800E85BC7 /* ParameterViewController.m */; };
 		2B7D96EE1E11CC8900818754 /* PrefectureListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7D96ED1E11CC8900818754 /* PrefectureListTableViewController.m */; };
@@ -188,6 +191,9 @@
 		2B5947A91E14892B002AADC8 /* PrefectureFlagTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefectureFlagTableViewCell.h; path = "ViewControllers/Immigration Details/Prefectures/PrefectureDetailsTableViewController/PrefectureFlagTableViewCell/PrefectureFlagTableViewCell.h"; sourceTree = "<group>"; };
 		2B5947AA1E14892B002AADC8 /* PrefectureFlagTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrefectureFlagTableViewCell.m; path = "ViewControllers/Immigration Details/Prefectures/PrefectureDetailsTableViewController/PrefectureFlagTableViewCell/PrefectureFlagTableViewCell.m"; sourceTree = "<group>"; };
 		2B5947AB1E14892B002AADC8 /* PrefectureFlagTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PrefectureFlagTableViewCell.xib; path = "ViewControllers/Immigration Details/Prefectures/PrefectureDetailsTableViewController/PrefectureFlagTableViewCell/PrefectureFlagTableViewCell.xib"; sourceTree = "<group>"; };
+		2B5947B61E154E7D002AADC8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2B5947B81E154E92002AADC8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2B5947BA1E154E9D002AADC8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2B76BDF71E01D02500E85BC7 /* ImmigrantResultsViewControllerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImmigrantResultsViewControllerTableViewController.h; path = ViewControllers/ImmigrantResultsViewController/ImmigrantResultsViewControllerTableViewController.h; sourceTree = "<group>"; };
 		2B76BDF81E01D02500E85BC7 /* ImmigrantResultsViewControllerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImmigrantResultsViewControllerTableViewController.m; path = ViewControllers/ImmigrantResultsViewController/ImmigrantResultsViewControllerTableViewController.m; sourceTree = "<group>"; };
 		2B76BDFA1E01D05800E85BC7 /* ParameterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParameterViewController.h; path = ViewControllers/ParameterViewController/ParameterViewController.h; sourceTree = "<group>"; };
@@ -263,6 +269,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B5947BB1E154E9D002AADC8 /* UIKit.framework in Frameworks */,
+				2B5947B91E154E92002AADC8 /* Foundation.framework in Frameworks */,
+				2B5947B71E154E7D002AADC8 /* CoreGraphics.framework in Frameworks */,
 				2BB948EA1E05F800003E1310 /* libsqlite3.tbd in Frameworks */,
 				2B5947921E1476CD002AADC8 /* Crashlytics.framework in Frameworks */,
 				2B5947911E1476CD002AADC8 /* Fabric.framework in Frameworks */,
@@ -430,8 +439,6 @@
 				2B4872CD1E0081BD00A41572 /* Frameworks */,
 				2B48729D1E006A8800A41572 /* AppDelegate.h */,
 				2B48729E1E006A8800A41572 /* AppDelegate.m */,
-				2B4872A01E006A8800A41572 /* MainViewController.h */,
-				2B4872A11E006A8800A41572 /* MainViewController.m */,
 				2B4872A31E006A8800A41572 /* Main.storyboard */,
 				2B4872A61E006A8800A41572 /* Assets.xcassets */,
 				2B4872A81E006A8800A41572 /* LaunchScreen.storyboard */,
@@ -497,6 +504,9 @@
 		2B4872D91E0095F600A41572 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2B4E21061E035D5600502C32 /* MenuTableViewController */,
+				2B4872A01E006A8800A41572 /* MainViewController.h */,
+				2B4872A11E006A8800A41572 /* MainViewController.m */,
 				2B7D96E81E11CBD600818754 /* Immigration Details */,
 			);
 			name = ViewControllers;
@@ -619,7 +629,6 @@
 			children = (
 				2B039B901E06EA5E00C778AB /* GroupDetailTableViewController */,
 				2B4E210A1E035E3100502C32 /* IntroViewController */,
-				2B4E21061E035D5600502C32 /* MenuTableViewController */,
 				2B46BC271E020080007C244E /* PrefectureShipTableViewController */,
 				2B46BC201E02002C007C244E /* YearInputTableViewController */,
 				2B46BC1C1E01E93A007C244E /* NameSurnameViewController */,
@@ -951,6 +960,9 @@
 		2BB948E81E05F800003E1310 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2B5947BA1E154E9D002AADC8 /* UIKit.framework */,
+				2B5947B81E154E92002AADC8 /* Foundation.framework */,
+				2B5947B61E154E7D002AADC8 /* CoreGraphics.framework */,
 				2B59478F1E1476CD002AADC8 /* Fabric.framework */,
 				2B5947901E1476CD002AADC8 /* Crashlytics.framework */,
 				2BB948E91E05F800003E1310 /* libsqlite3.tbd */,

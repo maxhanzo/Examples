@@ -365,172 +365,270 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wXm-i4-UTO">
-                                <rect key="frame" x="0.0" y="66" width="320" height="83"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hy-cR-oWm">
-                                        <rect key="frame" x="81" y="13" width="80" height="30"/>
-                                        <color key="backgroundColor" red="0.090196078430000007" green="0.42745098040000001" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="voi-eG-5Yl"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                        <state key="normal" title="Surname">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="disabled">
-                                            <color key="titleColor" red="0.74908639020000001" green="1" blue="0.71635190719999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3I-KM-u5i">
+                                <rect key="frame" x="137" y="269" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="35" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h3f-3g-rWQ">
+                                <rect key="frame" x="0.0" y="215" width="320" height="353"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ClearAllTableViewCell" rowHeight="35" id="J0n-la-jg7">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="35"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J0n-la-jg7" id="G06-4L-919">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clear All" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WuT-lg-WGT">
+                                                    <rect key="frame" x="69" y="8" width="182" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.25467037809999998" green="0.84100207390000004" blue="0.58844568090000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NameSurnameSection" rowHeight="15" id="vol-be-Off">
+                                        <rect key="frame" x="0.0" y="63" width="320" height="15"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vol-be-Off" id="RoL-z9-jPs">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="14"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name &amp; Surname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24x-I7-weG">
+                                                    <rect key="frame" x="8" y="0.0" width="282" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NameTableViewCell" rowHeight="35" id="5C1-vh-g4c">
+                                        <rect key="frame" x="0.0" y="78" width="320" height="35"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5C1-vh-g4c" id="ddW-xa-cgk">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYJ-gD-jFT">
+                                                    <rect key="frame" x="58" y="6" width="182" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mfh-bf-yJ8">
+                                                    <rect key="frame" x="14" y="2" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="qlG-eu-Idm" kind="presentation" identifier="InputSurnameSegue" id="GPz-iy-XcC"/>
+                                            <segue destination="qlG-eu-Idm" kind="presentation" identifier="InputNameSegue" id="mwL-zF-jkZ"/>
                                         </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQz-Jx-uUR">
-                                        <rect key="frame" x="0.0" y="13" width="80" height="30"/>
-                                        <color key="backgroundColor" red="0.090196078430000007" green="0.42745098040000001" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="2Eq-un-Q6O"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                        <state key="normal" title="Name">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="disabled">
-                                            <color key="titleColor" red="0.74908639020000001" green="1" blue="0.71635190719999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SurnameTableViewCell" rowHeight="35" id="Lae-se-MQF">
+                                        <rect key="frame" x="0.0" y="113" width="320" height="35"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lae-se-MQF" id="zbq-oW-18S">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="APK-h0-a0X">
+                                                    <rect key="frame" x="14" y="2" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Surname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOh-nq-Mct">
+                                                    <rect key="frame" x="57" y="6" width="182" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="qlG-eu-Idm" kind="presentation" identifier="InputNameSegue" id="GTH-wm-Nty"/>
+                                            <segue destination="qlG-eu-Idm" kind="presentation" identifier="InputSurnameSegue" id="rtZ-Sf-v3D"/>
                                         </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eef-a9-v4U">
-                                        <rect key="frame" x="243" y="13" width="77" height="30"/>
-                                        <color key="backgroundColor" red="0.090196078430000007" green="0.42745098040000001" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="77" id="VA6-wQ-FbV"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                        <state key="normal" title="Myoji">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="disabled">
-                                            <color key="titleColor" red="0.74908639020000001" green="1" blue="0.71635190719999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TripDetailsSection" rowHeight="15" id="Z8b-Z4-Ofx">
+                                        <rect key="frame" x="0.0" y="148" width="320" height="15"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z8b-Z4-Ofx" id="yAs-Cl-Yxb">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="14"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trip Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZeO-9I-dha">
+                                                    <rect key="frame" x="8" y="0.0" width="282" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PrefectureTableViewCell" rowHeight="35" id="GBm-FQ-pcA">
+                                        <rect key="frame" x="0.0" y="163" width="320" height="35"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GBm-FQ-pcA" id="Ggt-4v-Hec">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wEU-lD-6uE">
+                                                    <rect key="frame" x="14" y="2" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Prefecture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DD-9z-nsw">
+                                                    <rect key="frame" x="58" y="7" width="182" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="qlG-eu-Idm" kind="presentation" identifier="InputSurnameKanjiSegue" id="JOR-Wz-dci"/>
+                                            <segue destination="eSG-VW-baR" kind="presentation" identifier="InputPrefectureSegue" id="PxB-us-Zq3"/>
                                         </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HM9-0W-lLR">
-                                        <rect key="frame" x="162" y="13" width="80" height="30"/>
-                                        <color key="backgroundColor" red="0.090196078430000007" green="0.42745098040000001" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                        <state key="normal" title="Namae">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="disabled">
-                                            <color key="titleColor" red="0.74908639020000001" green="1" blue="0.71635190719999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ShipTableViewCell" rowHeight="35" id="SAK-NW-eNp">
+                                        <rect key="frame" x="0.0" y="198" width="320" height="35"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SAK-NW-eNp" id="v8K-uR-8eC">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HdR-xE-zRn">
+                                                    <rect key="frame" x="14" y="2" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ship" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDY-Ug-1aw">
+                                                    <rect key="frame" x="58" y="6" width="182" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="qlG-eu-Idm" kind="presentation" identifier="InputNameKanjiSegue" id="cix-oD-vIM"/>
+                                            <segue destination="eSG-VW-baR" kind="presentation" identifier="InputShipSegue" id="VoH-Fj-A6o"/>
                                         </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waw-JB-RM4">
-                                        <rect key="frame" x="81" y="44" width="80" height="30"/>
-                                        <color key="backgroundColor" red="0.090196078430000007" green="0.42745098040000001" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                        <state key="normal" title="Ship">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="disabled">
-                                            <color key="titleColor" red="0.74908639020000001" green="1" blue="0.71635190719999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="YearTableViewCell" rowHeight="35" id="HGi-NE-NSU">
+                                        <rect key="frame" x="0.0" y="233" width="320" height="35"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HGi-NE-NSU" id="K2J-G5-KEh">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Im2-Rg-Sek">
+                                                    <rect key="frame" x="14" y="2" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBx-ng-Fgf">
+                                                    <rect key="frame" x="58" y="6" width="182" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="eSG-VW-baR" kind="presentation" identifier="InputShipSegue" customClass="OpenCloseBlurredViewControllerSegue" id="ni6-5f-Ajy"/>
+                                            <segue destination="9Xk-1z-OUf" kind="presentation" identifier="InputYearSegue" id="hlv-bR-kJH"/>
                                         </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WU7-7B-xPR">
-                                        <rect key="frame" x="0.0" y="44" width="80" height="30"/>
-                                        <color key="backgroundColor" red="0.090196078430000007" green="0.42745098040000001" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                        <state key="normal" title="Year">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="disabled">
-                                            <color key="titleColor" red="0.74908639020000001" green="1" blue="0.71635190719999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NihongoSection" rowHeight="15" id="dFj-RB-KjU">
+                                        <rect key="frame" x="0.0" y="268" width="320" height="15"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dFj-RB-KjU" id="gKM-z0-wRx">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="14"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="日本語" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1u-DU-gXv">
+                                                    <rect key="frame" x="8" y="0.0" width="282" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NamaeTableViewCell" rowHeight="35" id="uiK-8q-kfp">
+                                        <rect key="frame" x="0.0" y="283" width="320" height="35"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uiK-8q-kfp" id="iOZ-iD-O65">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VpT-9p-nVC">
+                                                    <rect key="frame" x="14" y="2" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEQ-pD-M3D">
+                                                    <rect key="frame" x="58" y="7" width="182" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="9Xk-1z-OUf" kind="presentation" identifier="InputYearSegue" id="52m-5Z-aTS"/>
+                                            <segue destination="qlG-eu-Idm" kind="presentation" identifier="InputNameKanjiSegue" id="5Np-En-NeB"/>
                                         </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jc1-xM-rvv">
-                                        <rect key="frame" x="243" y="44" width="77" height="30"/>
-                                        <color key="backgroundColor" red="0.090196078430000007" green="0.42745098040000001" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                        <state key="normal" title="Clear">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="disabled">
-                                            <color key="titleColor" red="0.74908639020000001" green="1" blue="0.71635190719999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MyoujiTableViewCell" rowHeight="35" id="tBm-dw-ie2">
+                                        <rect key="frame" x="0.0" y="318" width="320" height="35"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tBm-dw-ie2" id="NO5-V8-KTK">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="名字" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sm-mc-fgb">
+                                                    <rect key="frame" x="58" y="6" width="182" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Gn-pv-gR9">
+                                                    <rect key="frame" x="14" y="2" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
                                         <connections>
-                                            <action selector="clearAllTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UvC-fY-cFk"/>
+                                            <segue destination="qlG-eu-Idm" kind="presentation" identifier="InputSurnameKanjiSegue" id="kBy-rS-ev4"/>
                                         </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="df2-Aw-7I4">
-                                        <rect key="frame" x="162" y="44" width="80" height="30"/>
-                                        <color key="backgroundColor" red="0.090196078430000007" green="0.42745098040000001" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                        <state key="normal" title="Prefecture">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="disabled">
-                                            <color key="titleColor" red="0.74908639020000001" green="1" blue="0.71635190719999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="eSG-VW-baR" kind="presentation" identifier="InputPrefectureSegue" id="lSt-FL-bbu"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="eef-a9-v4U" firstAttribute="leading" secondItem="HM9-0W-lLR" secondAttribute="trailing" constant="1" id="38Q-Z5-TaY"/>
-                                    <constraint firstItem="HM9-0W-lLR" firstAttribute="leading" secondItem="3hy-cR-oWm" secondAttribute="trailing" constant="1" id="3yf-n0-QX9"/>
-                                    <constraint firstItem="WU7-7B-xPR" firstAttribute="top" secondItem="qQz-Jx-uUR" secondAttribute="bottom" constant="1" id="5c5-Re-299"/>
-                                    <constraint firstItem="3hy-cR-oWm" firstAttribute="leading" secondItem="waw-JB-RM4" secondAttribute="leading" id="6LH-ET-zwL"/>
-                                    <constraint firstItem="3hy-cR-oWm" firstAttribute="baseline" secondItem="HM9-0W-lLR" secondAttribute="baseline" id="89a-fP-lY9"/>
-                                    <constraint firstAttribute="trailing" secondItem="eef-a9-v4U" secondAttribute="trailing" id="FGQ-bq-CFX"/>
-                                    <constraint firstItem="3hy-cR-oWm" firstAttribute="trailing" secondItem="waw-JB-RM4" secondAttribute="trailing" id="Hjq-lI-xRx"/>
-                                    <constraint firstItem="3hy-cR-oWm" firstAttribute="leading" secondItem="qQz-Jx-uUR" secondAttribute="trailing" constant="1" id="IiT-zb-hbA"/>
-                                    <constraint firstItem="qQz-Jx-uUR" firstAttribute="leading" secondItem="wXm-i4-UTO" secondAttribute="leading" id="Ix4-V7-0Hn"/>
-                                    <constraint firstItem="eef-a9-v4U" firstAttribute="leading" secondItem="Jc1-xM-rvv" secondAttribute="leading" id="Npf-jJ-E0f"/>
-                                    <constraint firstItem="HM9-0W-lLR" firstAttribute="leading" secondItem="df2-Aw-7I4" secondAttribute="leading" id="SVy-FP-mdk"/>
-                                    <constraint firstItem="qQz-Jx-uUR" firstAttribute="leading" secondItem="WU7-7B-xPR" secondAttribute="leading" id="Zl4-fU-iR1"/>
-                                    <constraint firstItem="df2-Aw-7I4" firstAttribute="baseline" secondItem="Jc1-xM-rvv" secondAttribute="baseline" id="b2J-Mt-oF0"/>
-                                    <constraint firstItem="qQz-Jx-uUR" firstAttribute="top" secondItem="wXm-i4-UTO" secondAttribute="top" constant="13" id="boT-ic-qlQ"/>
-                                    <constraint firstItem="qQz-Jx-uUR" firstAttribute="baseline" secondItem="3hy-cR-oWm" secondAttribute="baseline" id="hzd-5Q-3mz"/>
-                                    <constraint firstItem="qQz-Jx-uUR" firstAttribute="trailing" secondItem="WU7-7B-xPR" secondAttribute="trailing" id="kgf-6O-75F"/>
-                                    <constraint firstAttribute="bottom" secondItem="WU7-7B-xPR" secondAttribute="bottom" constant="9" id="lLE-qX-e9x"/>
-                                    <constraint firstItem="eef-a9-v4U" firstAttribute="trailing" secondItem="Jc1-xM-rvv" secondAttribute="trailing" id="nOZ-wK-BGB"/>
-                                    <constraint firstItem="HM9-0W-lLR" firstAttribute="baseline" secondItem="eef-a9-v4U" secondAttribute="baseline" id="sHd-Mz-BWZ"/>
-                                    <constraint firstItem="WU7-7B-xPR" firstAttribute="baseline" secondItem="waw-JB-RM4" secondAttribute="baseline" id="tZ2-Zk-tfB"/>
-                                    <constraint firstItem="HM9-0W-lLR" firstAttribute="trailing" secondItem="df2-Aw-7I4" secondAttribute="trailing" id="vG0-GE-4z8"/>
-                                    <constraint firstItem="waw-JB-RM4" firstAttribute="baseline" secondItem="df2-Aw-7I4" secondAttribute="baseline" id="vWF-oz-0Fr"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6yX-hk-L2H" customClass="ASJTagsView">
-                                <rect key="frame" x="0.0" y="150" width="320" height="418"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Tf3-ow-OlE"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Kyr-k9-bGZ"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6yX-hk-L2H" customClass="ASJTagsView">
+                                <rect key="frame" x="0.0" y="64" width="320" height="136"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.81176470590000005" green="0.81176470590000005" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="wXm-i4-UTO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7eH-Fs-Npj"/>
-                            <constraint firstAttribute="trailing" secondItem="wXm-i4-UTO" secondAttribute="trailing" id="A4i-XX-hog"/>
-                            <constraint firstItem="wXm-i4-UTO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="2" id="DCX-9v-NxZ"/>
-                            <constraint firstItem="6yX-hk-L2H" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Kpc-GG-Xgo"/>
-                            <constraint firstItem="wXm-i4-UTO" firstAttribute="trailing" secondItem="6yX-hk-L2H" secondAttribute="trailing" id="O9J-no-q3N"/>
-                            <constraint firstItem="wXm-i4-UTO" firstAttribute="leading" secondItem="6yX-hk-L2H" secondAttribute="leading" id="c3M-o6-IlV"/>
-                            <constraint firstItem="6yX-hk-L2H" firstAttribute="top" secondItem="wXm-i4-UTO" secondAttribute="bottom" constant="1" id="pyS-05-0BN"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sokuseki" id="ZJ3-01-zFq">
                         <barButtonItem key="leftBarButtonItem" image="reveal-icon" id="0hh-MQ-1lX"/>
@@ -541,13 +639,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="btnNameInput" destination="qQz-Jx-uUR" id="u3T-gf-fQd"/>
-                        <outlet property="btnNameKanjiInput" destination="HM9-0W-lLR" id="2X0-gv-jF9"/>
-                        <outlet property="btnPrefectureInput" destination="df2-Aw-7I4" id="HXR-fH-ohY"/>
-                        <outlet property="btnShipInput" destination="waw-JB-RM4" id="SKO-Cn-6Gf"/>
-                        <outlet property="btnSurnameInput" destination="3hy-cR-oWm" id="qTF-dM-mXr"/>
-                        <outlet property="btnSurnameKanjiInput" destination="eef-a9-v4U" id="AzM-Cb-lg4"/>
-                        <outlet property="btnYearInput" destination="WU7-7B-xPR" id="oKy-LA-qx9"/>
+                        <outlet property="filterTypeSelectionTableView" destination="h3f-3g-rWQ" id="ls7-VT-Bbs"/>
                         <outlet property="revealButtonItem" destination="0hh-MQ-1lX" id="oac-57-x3y"/>
                         <outlet property="tagsView" destination="6yX-hk-L2H" id="aXa-ID-CCr"/>
                         <segue destination="sZl-Kx-DwU" kind="show" identifier="SearchImmigrantSegue" id="lAa-iO-bVo"/>
@@ -719,7 +811,7 @@
                     <navigationItem key="navigationItem" title="Years" id="0JB-0Q-uy7">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="7tN-AA-3aw">
                             <connections>
-                                <segue destination="hc6-pU-bb6" kind="unwind" identifier="" unwindAction="prepareForUnwind:" id="7dR-ga-wgN"/>
+                                <segue destination="hc6-pU-bb6" kind="unwind" identifier="CancelUnwindYearsSegue" unwindAction="prepareForUnwind:" id="7dR-ga-wgN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -774,7 +866,7 @@
                     <navigationItem key="navigationItem" title="Prefecture/Ship" id="R35-11-H2Q">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="kKU-et-N4O">
                             <connections>
-                                <segue destination="xDD-i7-I6t" kind="unwind" identifier="" unwindAction="prepareForUnwind:" id="dNL-lY-g3K"/>
+                                <segue destination="xDD-i7-I6t" kind="unwind" identifier="CancelPrefectureShipUnwindSegue" unwindAction="prepareForUnwind:" id="dNL-lY-g3K"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -812,52 +904,51 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="5Fk-rP-OV3" kind="relationship" relationship="rootViewController" id="wky-vS-Mhx"/>
+                        <segue destination="jyZ-T3-eAE" kind="relationship" relationship="rootViewController" id="KHT-pQ-6es"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y7l-K9-dnE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-354" y="1891"/>
         </scene>
-        <!--PrefectureDetailsTableViewController-->
-        <scene sceneID="mnM-Nq-Kzx">
+        <!--Prefecture Details-->
+        <scene sceneID="QAa-v8-GEs">
             <objects>
-                <tableViewController storyboardIdentifier="PrefectureDetailsTableViewController" title="PrefectureDetailsTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5Fk-rP-OV3" customClass="PrefectureDetailsTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="RMf-GE-SDX">
+                <tableViewController id="jyZ-T3-eAE" customClass="PrefectureDetailsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="OXo-E1-Ak3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="K5t-9j-Zhg">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="btT-fm-94L">
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K5t-9j-Zhg" id="DJb-xT-Nwi">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="btT-fm-94L" id="SpB-BH-6bL">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="5Fk-rP-OV3" id="nCK-cq-0fd"/>
-                            <outlet property="delegate" destination="5Fk-rP-OV3" id="A1t-wX-92i"/>
+                            <outlet property="dataSource" destination="jyZ-T3-eAE" id="fXD-mL-Dxj"/>
+                            <outlet property="delegate" destination="jyZ-T3-eAE" id="Ofo-NN-AeZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Okinawa" id="CzR-aG-J6a">
-                        <barButtonItem key="leftBarButtonItem" image="Arrows-Back-icon" id="iOw-fC-FbX">
+                    <navigationItem key="navigationItem" title="Prefecture Details" id="2wq-7K-klR">
+                        <barButtonItem key="leftBarButtonItem" image="Arrows-Back-icon" id="XNg-Mk-AJo">
                             <connections>
-                                <segue destination="h7L-cN-B2b" kind="unwind" unwindAction="prepareForUnwind:" id="9zg-ib-zXh"/>
+                                <segue destination="K56-FD-rSd" kind="unwind" unwindAction="prepareForUnwind:" id="lME-iH-dXv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="h7L-cN-B2b" kind="unwind" identifier="BackToPrefectureListSegue" unwindAction="prepareForUnwind:" id="h5q-f3-tfD"/>
+                        <segue destination="K56-FD-rSd" kind="unwind" unwindAction="prepareForUnwind:" id="mQT-zW-9zy"/>
                     </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="REg-WO-Hiq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="h7L-cN-B2b" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7My-og-0nf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="K56-FD-rSd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="463" y="1888"/>
+            <point key="canvasLocation" x="459" y="1891"/>
         </scene>
         <!--Name/Surname-->
         <scene sceneID="XPx-jM-RmW">
@@ -962,7 +1053,7 @@
                     <navigationItem key="navigationItem" title="Name/Surname" id="Jhe-Vj-Pgp">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="mMB-NX-gz0">
                             <connections>
-                                <segue destination="4tA-xF-ov6" kind="unwind" unwindAction="prepareForUnwind:" id="mKM-ST-4NF"/>
+                                <segue destination="4tA-xF-ov6" kind="unwind" identifier="CancelInputNameSurnameUnwindSegue" unwindAction="prepareForUnwind:" id="mKM-ST-4NF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -990,7 +1081,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="RNz-BX-h13"/>
-        <segue reference="GPz-iy-XcC"/>
-        <segue reference="lSt-FL-bbu"/>
+        <segue reference="PxB-us-Zq3"/>
+        <segue reference="kBy-rS-ev4"/>
     </inferredMetricsTieBreakers>
 </document>

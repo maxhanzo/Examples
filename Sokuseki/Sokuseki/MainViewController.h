@@ -22,10 +22,12 @@
  */
 #define PREFECTURE_SUFFIX @"-Ken"
 
-@interface MainViewController : UIViewController
+@interface MainViewController : UIViewController<SWRevealViewControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property(nonatomic, strong) NSString* windingActionID;
 @property(nonatomic, strong) NSMutableDictionary* tagTypes;
+@property(nonatomic, weak) IBOutlet UITableView *filterTypeSelectionTableView;
+
 
 @property(nonatomic, weak) IBOutlet UIButton *btnNameInput;
 @property(nonatomic, weak) IBOutlet UIButton *btnSurnameInput;

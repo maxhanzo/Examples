@@ -14,6 +14,7 @@
 #import "PrefectureInfo.h"
 #import "DBManager.h"
 
+
 @interface PrefectureListTableViewController ()
 @property (nonatomic) IBOutlet UIBarButtonItem* revealButtonItem;
 @property (nonatomic, strong) PrefectureInfo* prefectureInfo;
@@ -131,11 +132,11 @@
             
             [cell setPrefectureDataWithPrefecture: prefecture];
             
-            dispatch_queue_t main_queue = dispatch_get_main_queue();
-            dispatch_async(main_queue, ^{
-                NSLog(@"main thread");
+//            dispatch_queue_t main_queue = dispatch_get_main_queue();
+//            dispatch_async(main_queue, ^{
+//                NSLog(@"main thread");
                 [cell resizePercentageBarWithTotalValue: [NSNumber numberWithInteger: self.topMostNumberOfImmigrants]];
-            });
+            //});
             
             return cell;
         }
@@ -192,11 +193,7 @@
                     [self performSegueWithIdentifier: @"PrefectureDetailsSegue" sender:nil];
                    
                 }
-                
-                
-                
             });
-            
         }
     
     }
