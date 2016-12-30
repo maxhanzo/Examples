@@ -89,6 +89,7 @@
 
 -(void) viewWillAppear:(BOOL) animated
 {
+    [super viewWillAppear:animated];
     self.revealViewController.delegate = self;
     [self.revealButtonItem setTarget: self.revealViewController];
     [self.revealButtonItem setAction: @selector( revealToggle: )];

@@ -8,6 +8,8 @@
 
 #import "MenuTableViewController.h"
 #define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+#define URLEMail @"mailto:contact@uedasoft-it.com?subject=title&body=content"
+
 
 @interface MenuTableViewController ()
 
@@ -92,7 +94,7 @@
             CellIdentifier = @"EmailCell";
             break;
         case 11:
-            CellIdentifier = @"FooterCell";
+            CellIdentifier = @"AboutCell";
             break;
     }
     
@@ -121,9 +123,10 @@
         case 7:
         case 9:
         case 10:
+        case 11:
             return 44.0f;
             break;
-        case 11:
+        default:
             return IS_IPHONE_5 ? 100: 200;
             break;
     }
@@ -135,6 +138,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if(indexPath.row == 10)
+    {
+        //Solve deprecations later
+        NSString *url = [URLEMail stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding ];
+        [[UIApplication sharedApplication]  openURL: [NSURL URLWithString: url]];
+    }
 }
 
 //Prevent extra separators from appearing

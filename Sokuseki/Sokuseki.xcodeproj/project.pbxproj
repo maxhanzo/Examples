@@ -93,6 +93,13 @@
 		2BB948E61E05F784003E1310 /* NSString+Japanese.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB948E21E05F784003E1310 /* NSString+Japanese.m */; };
 		2BB948E71E05F784003E1310 /* NSString+Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB948E51E05F784003E1310 /* NSString+Score.m */; };
 		2BB948EA1E05F800003E1310 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BB948E91E05F800003E1310 /* libsqlite3.tbd */; };
+		2BFD5CE31E17015800AF18B9 /* SurnamesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFD5CE21E17015800AF18B9 /* SurnamesTableViewController.m */; };
+		2BFD5CE71E17018300AF18B9 /* SurnameDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFD5CE61E17018300AF18B9 /* SurnameDetailsTableViewController.m */; };
+		2BFD5CEC1E1701D600AF18B9 /* ShipsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFD5CEB1E1701D600AF18B9 /* ShipsTableViewController.m */; };
+		2BFD5CF11E17024200AF18B9 /* ShipDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFD5CF01E17024200AF18B9 /* ShipDetailsTableViewController.m */; };
+		2BFD5CF61E170CCD00AF18B9 /* ImmigrationYearsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFD5CF51E170CCD00AF18B9 /* ImmigrationYearsViewController.m */; };
+		2BFD5CFB1E170D1700AF18B9 /* FacebookTwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFD5CFA1E170D1700AF18B9 /* FacebookTwitterViewController.m */; };
+		2BFD5CFF1E170D3E00AF18B9 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFD5CFE1E170D3E00AF18B9 /* AboutViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -262,6 +269,20 @@
 		2BB948E41E05F784003E1310 /* NSString+Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Score.h"; sourceTree = "<group>"; };
 		2BB948E51E05F784003E1310 /* NSString+Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Score.m"; sourceTree = "<group>"; };
 		2BB948E91E05F800003E1310 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		2BFD5CE11E17015800AF18B9 /* SurnamesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SurnamesTableViewController.h; path = "ViewControllers/Immigration Details/Surnames/SurnamesTableViewController/SurnamesTableViewController.h"; sourceTree = "<group>"; };
+		2BFD5CE21E17015800AF18B9 /* SurnamesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SurnamesTableViewController.m; path = "ViewControllers/Immigration Details/Surnames/SurnamesTableViewController/SurnamesTableViewController.m"; sourceTree = "<group>"; };
+		2BFD5CE51E17018300AF18B9 /* SurnameDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SurnameDetailsTableViewController.h; path = "ViewControllers/Immigration Details/Surnames/SurnameDetailsTableViewController/SurnameDetailsTableViewController.h"; sourceTree = "<group>"; };
+		2BFD5CE61E17018300AF18B9 /* SurnameDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SurnameDetailsTableViewController.m; path = "ViewControllers/Immigration Details/Surnames/SurnameDetailsTableViewController/SurnameDetailsTableViewController.m"; sourceTree = "<group>"; };
+		2BFD5CEA1E1701D600AF18B9 /* ShipsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShipsTableViewController.h; path = "ViewControllers/Immigration Details/Ships/ShipsTableViewController/ShipsTableViewController.h"; sourceTree = "<group>"; };
+		2BFD5CEB1E1701D600AF18B9 /* ShipsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShipsTableViewController.m; path = "ViewControllers/Immigration Details/Ships/ShipsTableViewController/ShipsTableViewController.m"; sourceTree = "<group>"; };
+		2BFD5CEF1E17024200AF18B9 /* ShipDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShipDetailsTableViewController.h; path = "ViewControllers/Immigration Details/Ships/ShipDetailsTableViewController/ShipDetailsTableViewController.h"; sourceTree = "<group>"; };
+		2BFD5CF01E17024200AF18B9 /* ShipDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShipDetailsTableViewController.m; path = "ViewControllers/Immigration Details/Ships/ShipDetailsTableViewController/ShipDetailsTableViewController.m"; sourceTree = "<group>"; };
+		2BFD5CF41E170CCD00AF18B9 /* ImmigrationYearsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImmigrationYearsViewController.h; path = "ViewControllers/Immigration History/ImmigrationYearsViewController/ImmigrationYearsViewController.h"; sourceTree = "<group>"; };
+		2BFD5CF51E170CCD00AF18B9 /* ImmigrationYearsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImmigrationYearsViewController.m; path = "ViewControllers/Immigration History/ImmigrationYearsViewController/ImmigrationYearsViewController.m"; sourceTree = "<group>"; };
+		2BFD5CF91E170D1700AF18B9 /* FacebookTwitterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FacebookTwitterViewController.h; path = ViewControllers/Contact/FacebookTwitterViewController/FacebookTwitterViewController.h; sourceTree = "<group>"; };
+		2BFD5CFA1E170D1700AF18B9 /* FacebookTwitterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FacebookTwitterViewController.m; path = ViewControllers/Contact/FacebookTwitterViewController/FacebookTwitterViewController.m; sourceTree = "<group>"; };
+		2BFD5CFD1E170D3E00AF18B9 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = ViewControllers/Contact/AboutViewController/AboutViewController.h; sourceTree = "<group>"; };
+		2BFD5CFE1E170D3E00AF18B9 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = ViewControllers/Contact/AboutViewController/AboutViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -504,6 +525,8 @@
 		2B4872D91E0095F600A41572 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2BFD5CF71E170CE200AF18B9 /* Contact */,
+				2BFD5CF21E170C7500AF18B9 /* History */,
 				2B4E21061E035D5600502C32 /* MenuTableViewController */,
 				2B4872A01E006A8800A41572 /* MainViewController.h */,
 				2B4872A11E006A8800A41572 /* MainViewController.m */,
@@ -661,6 +684,8 @@
 		2B7D96EA1E11CBE900818754 /* Surnames */ = {
 			isa = PBXGroup;
 			children = (
+				2BFD5CE41E17015D00AF18B9 /* SurnameDetailsTableViewController */,
+				2BFD5CE01E17012000AF18B9 /* SurnamesTableViewController */,
 			);
 			name = Surnames;
 			sourceTree = "<group>";
@@ -970,6 +995,96 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2BFD5CE01E17012000AF18B9 /* SurnamesTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2BFD5CE11E17015800AF18B9 /* SurnamesTableViewController.h */,
+				2BFD5CE21E17015800AF18B9 /* SurnamesTableViewController.m */,
+			);
+			name = SurnamesTableViewController;
+			sourceTree = "<group>";
+		};
+		2BFD5CE41E17015D00AF18B9 /* SurnameDetailsTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2BFD5CE51E17018300AF18B9 /* SurnameDetailsTableViewController.h */,
+				2BFD5CE61E17018300AF18B9 /* SurnameDetailsTableViewController.m */,
+			);
+			name = SurnameDetailsTableViewController;
+			sourceTree = "<group>";
+		};
+		2BFD5CE81E1701A300AF18B9 /* Ships */ = {
+			isa = PBXGroup;
+			children = (
+				2BFD5CED1E1701F300AF18B9 /* ShipDetailsTableViewController */,
+				2BFD5CE91E1701B300AF18B9 /* ShipsTableViewController */,
+			);
+			name = Ships;
+			sourceTree = "<group>";
+		};
+		2BFD5CE91E1701B300AF18B9 /* ShipsTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2BFD5CEA1E1701D600AF18B9 /* ShipsTableViewController.h */,
+				2BFD5CEB1E1701D600AF18B9 /* ShipsTableViewController.m */,
+			);
+			name = ShipsTableViewController;
+			sourceTree = "<group>";
+		};
+		2BFD5CED1E1701F300AF18B9 /* ShipDetailsTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2BFD5CEF1E17024200AF18B9 /* ShipDetailsTableViewController.h */,
+				2BFD5CF01E17024200AF18B9 /* ShipDetailsTableViewController.m */,
+			);
+			name = ShipDetailsTableViewController;
+			sourceTree = "<group>";
+		};
+		2BFD5CF21E170C7500AF18B9 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				2BFD5CF31E170C9500AF18B9 /* ImmigrationYears */,
+				2BFD5CE81E1701A300AF18B9 /* Ships */,
+			);
+			name = History;
+			sourceTree = "<group>";
+		};
+		2BFD5CF31E170C9500AF18B9 /* ImmigrationYears */ = {
+			isa = PBXGroup;
+			children = (
+				2BFD5CF41E170CCD00AF18B9 /* ImmigrationYearsViewController.h */,
+				2BFD5CF51E170CCD00AF18B9 /* ImmigrationYearsViewController.m */,
+			);
+			name = ImmigrationYears;
+			sourceTree = "<group>";
+		};
+		2BFD5CF71E170CE200AF18B9 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				2BFD5CFC1E170D2000AF18B9 /* About */,
+				2BFD5CF81E170CEC00AF18B9 /* Facebook&Twitter */,
+			);
+			name = Contact;
+			sourceTree = "<group>";
+		};
+		2BFD5CF81E170CEC00AF18B9 /* Facebook&Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				2BFD5CF91E170D1700AF18B9 /* FacebookTwitterViewController.h */,
+				2BFD5CFA1E170D1700AF18B9 /* FacebookTwitterViewController.m */,
+			);
+			name = "Facebook&Twitter";
+			sourceTree = "<group>";
+		};
+		2BFD5CFC1E170D2000AF18B9 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				2BFD5CFD1E170D3E00AF18B9 /* AboutViewController.h */,
+				2BFD5CFE1E170D3E00AF18B9 /* AboutViewController.m */,
+			);
+			name = About;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1149,6 +1264,7 @@
 				2B7D97151E11E36A00818754 /* PrefectureStatsTableViewFooter.m in Sources */,
 				2BB9481B1E05D5D9003E1310 /* UIImage+ImageEffects.m in Sources */,
 				2BB948DE1E05F608003E1310 /* Utilities.m in Sources */,
+				2BFD5CF61E170CCD00AF18B9 /* ImmigrationYearsViewController.m in Sources */,
 				2B4872A21E006A8800A41572 /* MainViewController.m in Sources */,
 				2B46BC361E020127007C244E /* ShipTableViewCell.m in Sources */,
 				2BB9486B1E05EE11003E1310 /* Steamer.m in Sources */,
@@ -1157,12 +1273,14 @@
 				2B46BC311E02010C007C244E /* PrefectureTableViewCell.m in Sources */,
 				2BB948D51E05F55A003E1310 /* FMDatabase.m in Sources */,
 				2B5947961E148571002AADC8 /* PrefectureDetailsTableViewController.m in Sources */,
+				2BFD5CE31E17015800AF18B9 /* SurnamesTableViewController.m in Sources */,
 				2B4872D71E00820700A41572 /* ASJTagsView.m in Sources */,
 				2B5947A71E1488E0002AADC8 /* PrefectureRegionDetailsTableViewCell.m in Sources */,
 				2B8DAE571E10C466007603F2 /* GroupDetailTableViewFooterCell.m in Sources */,
 				2BB948681E05EE11003E1310 /* Passenger.m in Sources */,
 				2B5947A11E148891002AADC8 /* PrefectureNameTableViewCell.m in Sources */,
 				2B7D97031E11CF6F00818754 /* PrefectureStatsTableViewCell.m in Sources */,
+				2BFD5CFB1E170D1700AF18B9 /* FacebookTwitterViewController.m in Sources */,
 				2BB948701E05EE11003E1310 /* DBManager.m in Sources */,
 				2B4872D51E00820700A41572 /* ASJTag.m in Sources */,
 				2B4089D11E060028000B645E /* ImmigrantsResultsTableViewCell.m in Sources */,
@@ -1182,10 +1300,14 @@
 				2BB9486E1E05EE11003E1310 /* Voyage.m in Sources */,
 				2BB948E71E05F784003E1310 /* NSString+Score.m in Sources */,
 				2B48729F1E006A8800A41572 /* AppDelegate.m in Sources */,
+				2BFD5CE71E17018300AF18B9 /* SurnameDetailsTableViewController.m in Sources */,
+				2BFD5CFF1E170D3E00AF18B9 /* AboutViewController.m in Sources */,
 				2B4E21051E0354A000502C32 /* SWRevealViewController.m in Sources */,
 				2B5947AC1E14892B002AADC8 /* PrefectureFlagTableViewCell.m in Sources */,
+				2BFD5CEC1E1701D600AF18B9 /* ShipsTableViewController.m in Sources */,
 				2BB948131E05D478003E1310 /* OpenCloseBlurredViewControllerSegue.m in Sources */,
 				2B76BDF91E01D02500E85BC7 /* ImmigrantResultsViewControllerTableViewController.m in Sources */,
+				2BFD5CF11E17024200AF18B9 /* ShipDetailsTableViewController.m in Sources */,
 				2B7D970A1E11D79600818754 /* PrefectureStatistics.m in Sources */,
 				2B4E210D1E035E5300502C32 /* IntroViewController.m in Sources */,
 				2BB948651E05EE11003E1310 /* Group.m in Sources */,

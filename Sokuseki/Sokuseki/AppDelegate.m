@@ -21,6 +21,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    [[UINavigationBar appearance] setTitleTextAttributes: @{
+                                                            NSForegroundColorAttributeName: [UIColor blackColor],
+                                                            NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue" size:17.5f]
+                                                            }];
+    
+    NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary: [[UIBarButtonItem appearance] titleTextAttributesForState:UIControlStateNormal]];
+    [attributes setValue:[UIFont fontWithName:@"HelveticaNeue" size:16] forKey:NSFontAttributeName];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:attributes forState:UIControlStateNormal];
+
+    
     [Fabric with:@[[Crashlytics class]]];
     return YES;
 }
