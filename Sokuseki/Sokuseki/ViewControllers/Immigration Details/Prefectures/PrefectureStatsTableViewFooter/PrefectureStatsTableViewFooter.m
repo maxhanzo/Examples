@@ -2,7 +2,7 @@
 //  PrefectureStatsTableViewFooter.m
 //  Sokuseki
 //
-//  Created by Ticket Services on 26/12/16.
+//  Created by Max Ueda on 26/12/16.
 //  Copyright © 2016 UedaSoft IT Solutions. All rights reserved.
 //
 

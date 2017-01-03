@@ -12,7 +12,7 @@
 //  Ticket_ProjectDefinitions.h
 //  TicketAppPOC
 //
-//  Created by Ticket Services on 4/16/14.
+//  Created by Max Ueda on 4/16/14.
 //  Copyright (c) 2014 Ticket. All rights reserved.
 //
 

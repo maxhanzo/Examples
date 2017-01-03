@@ -2,7 +2,7 @@
 //  PrefectureMapTableViewCell.m
 //  Sokuseki
 //
-//  Created by Ticket Services on 28/12/16.
+//  Created by Max Ueda on 28/12/16.
 //  Copyright © 2016 UedaSoft IT Solutions. All rights reserved.
 //
 
