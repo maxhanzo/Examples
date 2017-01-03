@@ -9,6 +9,7 @@
 #import "NameSurnameInputViewController.h"
 #import "TagParameters.h"
 #import "MainViewController.h"
+
 @interface NameSurnameInputViewController ()
 
 @end
@@ -33,7 +34,37 @@
     [super viewDidLoad];
     self.txtInputNameSurname.delegate =self;
     [self.txtInputNameSurname becomeFirstResponder];
-    // Do any additional setup after loading the view.
+    
+ 
+    //Blurred effect
+    UIBlurEffect * blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight];
+    UIVisualEffectView *beView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+    beView.frame = self.view.bounds;
+    [self.view insertSubview:beView atIndex:0];
+    
+    
+    //Placeholder text
+    NSString *placeHolderText = nil;
+    
+    if([self.segueID isEqualToString:@"InputNameSegue"])
+    {
+        placeHolderText = @"Ex: Toshiro, Hiroko, Yoshio, Akemi";
+    }
+    else if([self.segueID isEqualToString:@"InputSurnameSegue"])
+    {
+        placeHolderText = @"Ex: Sato, Tanaka, Watanabe";
+    }
+    else if([self.segueID isEqualToString:@"InputNameKanjiSegue"])
+    {
+        placeHolderText = @"Ex: 利郎, ひろ子, 義雄, 明美";
+    }
+    else if ([self.segueID isEqualToString:@"InputSurnameKanjiSegue"])
+    {
+        placeHolderText = @"Ex: 佐藤, 田中, 渡邉";
+    }
+    
+    [self.txtInputNameSurname setPlaceholder:placeHolderText];
+    
 }
 
 - (void)didReceiveMemoryWarning {
