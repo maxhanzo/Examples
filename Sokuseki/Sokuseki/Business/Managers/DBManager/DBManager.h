@@ -6,7 +6,9 @@
 //  Copyright (c) 2014 UedaSoft IT Solutions. All rights reserved.
 // - Needs to be refactored!
 //
-#define immigrantSelectFormat @"SELECT immigrantGroupShipPrefecture.immigrantid, immigrantGroupShipPrefecture.groupid, immigrantGroupShipPrefecture.Destination, immigrantGroupShipPrefecture.Year, immigrantGroupShipPrefecture.Farm, immigrantGroupShipPrefecture.ArrivalDate, immigrantGroupShipPrefecture.DepartureDate,immigrantGroupShipPrefecture.ShipName, immigrantGroupShipPrefecture.PrefectureName, immigrantGroupShipPrefecture.NameRomaji, immigrantGroupShipPrefecture.SurnameRomaji,  immigrantGroupShipPrefecture.SurnameKanji, immigrantGroupShipPrefecture.NameKanji, (SELECT COUNT (I2.GroupID) FROM immigrantGroupShipPrefecture I2 WHERE immigrantGroupShipPrefecture.GroupID = I2.GroupID )AS Companions , G.Station  FROM immigrantGroupShipPrefecture INNER JOIN \"Group\" AS G ON G.ID = immigrantGroupShipPrefecture.groupID WHERE ((1=1) %@ %@ %@ %@ %@ %@ %@ %@ %@ %@) %@"
+//#define immigrantSelectFormat @"SELECT immigrantGroupShipPrefecture.immigrantid, immigrantGroupShipPrefecture.groupid, immigrantGroupShipPrefecture.Destination, immigrantGroupShipPrefecture.Year, immigrantGroupShipPrefecture.Farm, immigrantGroupShipPrefecture.ArrivalDate, immigrantGroupShipPrefecture.DepartureDate,immigrantGroupShipPrefecture.ShipName, immigrantGroupShipPrefecture.PrefectureName, immigrantGroupShipPrefecture.NameRomaji, immigrantGroupShipPrefecture.SurnameRomaji,  immigrantGroupShipPrefecture.SurnameKanji, immigrantGroupShipPrefecture.NameKanji, (SELECT COUNT (I2.GroupID) FROM immigrantGroupShipPrefecture I2 WHERE immigrantGroupShipPrefecture.GroupID = I2.GroupID )AS Companions , G.Station  FROM immigrantGroupShipPrefecture INNER JOIN \"Group\" AS G ON G.ID = immigrantGroupShipPrefecture.groupID WHERE ((1=1) %@ %@ %@ %@ %@ %@ %@ %@ %@ %@) %@"
+
+#define immigrantSelectFormat @"SELECT immigrantid, groupid, Destination, Year, Farm, ArrivalDate, DepartureDate,ShipName, PrefectureName, NameRomaji, SurnameRomaji,  SurnameKanji, NameKanji,  Companions , Station  FROM immigrantGroupShipPrefectureComplete  WHERE ((1=1) %@ %@ %@ %@ %@ %@ %@ %@ %@ %@) %@"
 
 
 
@@ -21,8 +23,8 @@
 #define whereClauseDepartureDateFormat @" AND (DepartureDate >= '%@')"
 #define whereClauseArrivalDateFormat @" AND (ArrivalDate <= '%@')"
 #define whereClauseGroupIDFormat @" AND (groupid = %li)"
-#define orderByYearClauseFormat @"ORDER BY immigrantGroupShipPrefecture.Year"
-#define orderByNameRomajiFormat @"ORDER BY immigrantGroupShipPrefecture.NameRomaji"
+#define orderByYearClauseFormat @"ORDER BY Year"
+#define orderByNameRomajiFormat @"ORDER BY NameRomaji"
 #define groupSelectFormat  @"SELECT ID, ShipID, Destination, Station, Farm, ArrivalDate, DepartureDate, Year FROM \"Group\" WHERE ((1=1) %@)"
 #define groupSelectFormatWithPrefecture @"SELECT G.ID, G.ShipID, G.Destination, G.Station, G.Farm, G.ArrivalDate, G.DepartureDate, G.Year, P.Name AS  PrefectureName FROM \"Group\" AS G INNER JOIN Prefecture P ON GroupPrefecture.PrefectureID = P.ID INNER JOIN GroupPrefecture ON G.ID = GroupPrefecture.GroupID WHERE ((1=1) %@)"
 
@@ -53,7 +55,8 @@
 #import "Surname.h"
 #import "SurnameDetail.h"
 
-#define DB_NAME @"ShinAshiato.db"
+//#define DB_NAME @"ShinAshiato.db"
+#define DB_NAME @"Sokuseki.db"
 @interface DBManager : NSObject
 {
     NSString *databasePath;

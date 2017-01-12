@@ -12,11 +12,11 @@
 		2B039B9C1E06EAF600C778AB /* ImmigrantDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B039B9A1E06EAF600C778AB /* ImmigrantDetailTableViewCell.xib */; };
 		2B039BA11E06EB1E00C778AB /* GroupDetailTableViewHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B039B9F1E06EB1E00C778AB /* GroupDetailTableViewHeaderCell.m */; };
 		2B039BA21E06EB1E00C778AB /* GroupDetailTableViewHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B039BA01E06EB1E00C778AB /* GroupDetailTableViewHeaderCell.xib */; };
-		2B039BA51E0727E000C778AB /* ShinAshiato.db in Resources */ = {isa = PBXBuildFile; fileRef = 2B039BA41E0727C600C778AB /* ShinAshiato.db */; };
 		2B4089D11E060028000B645E /* ImmigrantsResultsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4089CF1E060028000B645E /* ImmigrantsResultsTableViewCell.m */; };
 		2B4089D21E060028000B645E /* ImmigrantsResultsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B4089D01E060028000B645E /* ImmigrantsResultsTableViewCell.xib */; };
 		2B4089D71E060BF8000B645E /* ImmigrantsResultsTableViewFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4089D51E060BF8000B645E /* ImmigrantsResultsTableViewFooter.m */; };
 		2B4089D81E060BF8000B645E /* ImmigrantsResultsTableViewFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B4089D61E060BF8000B645E /* ImmigrantsResultsTableViewFooter.xib */; };
+		2B4394671E26E572007A8E56 /* Sokuseki.db in Resources */ = {isa = PBXBuildFile; fileRef = 2B4394661E26E572007A8E56 /* Sokuseki.db */; };
 		2B46BC1F1E01E9B1007C244E /* NameSurnameInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B46BC1E1E01E9B1007C244E /* NameSurnameInputViewController.m */; };
 		2B46BC231E020057007C244E /* YearInputTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B46BC221E020057007C244E /* YearInputTableViewController.m */; };
 		2B46BC261E020079007C244E /* PrefectureShipInputTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B46BC251E020079007C244E /* PrefectureShipInputTableViewController.m */; };
@@ -128,13 +128,13 @@
 		2B039B9E1E06EB1E00C778AB /* GroupDetailTableViewHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GroupDetailTableViewHeaderCell.h; path = ViewControllers/GroupDetailTableViewController/GroupDetailTableViewHeaderCell/GroupDetailTableViewHeaderCell.h; sourceTree = "<group>"; };
 		2B039B9F1E06EB1E00C778AB /* GroupDetailTableViewHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GroupDetailTableViewHeaderCell.m; path = ViewControllers/GroupDetailTableViewController/GroupDetailTableViewHeaderCell/GroupDetailTableViewHeaderCell.m; sourceTree = "<group>"; };
 		2B039BA01E06EB1E00C778AB /* GroupDetailTableViewHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GroupDetailTableViewHeaderCell.xib; path = ViewControllers/GroupDetailTableViewController/GroupDetailTableViewHeaderCell/GroupDetailTableViewHeaderCell.xib; sourceTree = "<group>"; };
-		2B039BA41E0727C600C778AB /* ShinAshiato.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = ShinAshiato.db; path = Resources/Database/ShinAshiato.db; sourceTree = "<group>"; };
 		2B4089CE1E060028000B645E /* ImmigrantsResultsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImmigrantsResultsTableViewCell.h; path = ViewControllers/ImmigrantResultsViewController/ImmigrantsResultsTableViewCell/ImmigrantsResultsTableViewCell.h; sourceTree = "<group>"; };
 		2B4089CF1E060028000B645E /* ImmigrantsResultsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImmigrantsResultsTableViewCell.m; path = ViewControllers/ImmigrantResultsViewController/ImmigrantsResultsTableViewCell/ImmigrantsResultsTableViewCell.m; sourceTree = "<group>"; };
 		2B4089D01E060028000B645E /* ImmigrantsResultsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImmigrantsResultsTableViewCell.xib; path = ViewControllers/ImmigrantResultsViewController/ImmigrantsResultsTableViewCell/ImmigrantsResultsTableViewCell.xib; sourceTree = "<group>"; };
 		2B4089D41E060BF8000B645E /* ImmigrantsResultsTableViewFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImmigrantsResultsTableViewFooter.h; path = ViewControllers/ImmigrantResultsViewController/ImmigrantsResultsTableViewFooter/ImmigrantsResultsTableViewFooter.h; sourceTree = "<group>"; };
 		2B4089D51E060BF8000B645E /* ImmigrantsResultsTableViewFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImmigrantsResultsTableViewFooter.m; path = ViewControllers/ImmigrantResultsViewController/ImmigrantsResultsTableViewFooter/ImmigrantsResultsTableViewFooter.m; sourceTree = "<group>"; };
 		2B4089D61E060BF8000B645E /* ImmigrantsResultsTableViewFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImmigrantsResultsTableViewFooter.xib; path = ViewControllers/ImmigrantResultsViewController/ImmigrantsResultsTableViewFooter/ImmigrantsResultsTableViewFooter.xib; sourceTree = "<group>"; };
+		2B4394661E26E572007A8E56 /* Sokuseki.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = Sokuseki.db; path = Resources/Database/Sokuseki.db; sourceTree = "<group>"; };
 		2B46BC1D1E01E9B1007C244E /* NameSurnameInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NameSurnameInputViewController.h; path = ViewControllers/NameSurnameInputViewController/NameSurnameInputViewController.h; sourceTree = "<group>"; };
 		2B46BC1E1E01E9B1007C244E /* NameSurnameInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NameSurnameInputViewController.m; path = ViewControllers/NameSurnameInputViewController/NameSurnameInputViewController.m; sourceTree = "<group>"; };
 		2B46BC211E020057007C244E /* YearInputTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YearInputTableViewController.h; path = ViewControllers/YearInputTableViewController/YearInputTableViewController.h; sourceTree = "<group>"; };
@@ -792,7 +792,7 @@
 		2BB9481E1E05E94A003E1310 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				2B039BA41E0727C600C778AB /* ShinAshiato.db */,
+				2B4394661E26E572007A8E56 /* Sokuseki.db */,
 			);
 			name = Database;
 			sourceTree = "<group>";
@@ -1206,11 +1206,11 @@
 				2B4872D61E00820700A41572 /* ASJTag.xib in Resources */,
 				2B4872A71E006A8800A41572 /* Assets.xcassets in Resources */,
 				2B4089D81E060BF8000B645E /* ImmigrantsResultsTableViewFooter.xib in Resources */,
+				2B4394671E26E572007A8E56 /* Sokuseki.db in Resources */,
 				2B5947A81E1488E0002AADC8 /* PrefectureRegionDetailsTableViewCell.xib in Resources */,
 				2B4872A51E006A8800A41572 /* Main.storyboard in Resources */,
 				2B46BC371E020127007C244E /* ShipTableViewCell.xib in Resources */,
 				2B039B9C1E06EAF600C778AB /* ImmigrantDetailTableViewCell.xib in Resources */,
-				2B039BA51E0727E000C778AB /* ShinAshiato.db in Resources */,
 				2B4089D21E060028000B645E /* ImmigrantsResultsTableViewCell.xib in Resources */,
 				2B5947A21E148891002AADC8 /* PrefectureNameTableViewCell.xib in Resources */,
 				2B039BA21E06EB1E00C778AB /* GroupDetailTableViewHeaderCell.xib in Resources */,
