@@ -28,11 +28,11 @@
     self.searchController.delegate = self;
     
     
-    self.resultsTableController = [[UITableView alloc] init];
-    self.searchController = [[UISearchController alloc] initWithSearchResultsController:self.resultsTableController];
-    self.searchController.searchResultsUpdater = self;
-    [self.searchController.searchBar sizeToFit];
-    self.tableView.tableHeaderView = self.searchController.searchBar;
+//    self.resultsTableController = [[UITableView alloc] init];
+//    self.searchController = [[UISearchController alloc] initWithSearchResultsController:self.resultsTableController];
+//    self.searchController.searchResultsUpdater = self;
+//    [self.searchController.searchBar sizeToFit];
+//    self.tableView.tableHeaderView = self.searchController.searchBar;
     
 
 }

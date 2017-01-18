@@ -23,8 +23,7 @@
     
     // Configure the view for the selected state
 }
--(void
-  ) setPrefectureDataWithName: (NSString*) prefectureName withNumberOfImmigrants: (NSNumber*) numberOfImmigrants
+-(void) setPrefectureDataWithName: (NSString*) prefectureName withNumberOfImmigrants: (NSNumber*) numberOfImmigrants
 {
     numberOfPeople = [numberOfImmigrants integerValue];
     NSString* prefectureInfo = [NSString stringWithFormat: @"%@ • %@", prefectureName,  [numberOfImmigrants stringValue]];
@@ -43,10 +42,13 @@
     imgPrefectureFlag.image = [Utilities flagForPrefectureName:prefecture.name];
 }
 
+
 -(void) setBarColor: (UIColor*) color
 {
     vwBarView.backgroundColor = color;
 }
+
+
 
 -(void) resizePercentageBarWithTotalValue: (NSNumber*) totalValue
 {
@@ -54,16 +56,15 @@
     float total = [totalValue floatValue];
     float percentage = (currentNumber*100)/total;
     
-    CGFloat barNewWidth = vwBarView.frame.size.width*percentage/100;
+    CGFloat barNewWidth = MAXIMUM_BAR_WIDTH*percentage/100;
     
-    if(barNewWidth<4)
+    if(barNewWidth<MINIMUM_BAR_WIDTH)
     {
-        barNewWidth = 4;
+        barNewWidth = MINIMUM_BAR_WIDTH;
     }
-    
     vwBarView.frame = CGRectMake(vwBarView.frame.origin.x, vwBarView.frame.origin.y, barNewWidth, vwBarView.frame.size.height);
     
- }
+}
 +(float) rowHeight
 {
     return 44.0f;

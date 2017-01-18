@@ -10,6 +10,9 @@
 
 #import "PrefectureStatistics.h"
 
+#define MAXIMUM_BAR_WIDTH 240.0f
+#define MINIMUM_BAR_WIDTH 10.0f
+
 @interface PrefectureStatsTopTableViewCell : UITableViewCell
 @property(nonatomic, weak) IBOutlet UILabel *lblPrefectureName;
 @property(nonatomic, weak) IBOutlet UIImageView *imgPrefectureFlag;

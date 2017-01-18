@@ -132,12 +132,8 @@
             }
             
             [cell setPrefectureDataWithPrefecture: prefecture];
-            
-//            dispatch_queue_t main_queue = dispatch_get_main_queue();
-//            dispatch_async(main_queue, ^{
-//                NSLog(@"main thread");
-                [cell resizePercentageBarWithTotalValue: [NSNumber numberWithInteger: self.topMostNumberOfImmigrants]];
-            //});
+            [cell resizePercentageBarWithTotalValue: [NSNumber numberWithInteger: self.topMostNumberOfImmigrants]];
+
             
             return cell;
         }
@@ -151,8 +147,9 @@
                 cell = [nib objectAtIndex:0];
 
             }
-            [cell setPrefectureDataWithPrefecture: prefecture];
             
+            [cell setPrefectureDataWithPrefecture: prefecture];
+            [cell resizePercentageBarWithTotalValue: [NSNumber numberWithInteger: self.topMostNumberOfImmigrants]];
             return cell;
         }
     }
@@ -203,19 +200,6 @@
     
 }
 
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if([cell isKindOfClass:[PrefectureStatsTableViewCell class]])
-    {
-        PrefectureStatsTableViewCell* prefectureCell = (PrefectureStatsTableViewCell*)cell;
-        
-        dispatch_queue_t main_queue = dispatch_get_main_queue();
-        dispatch_async(main_queue, ^{
-            
-            [prefectureCell resizePercentageBarWithTotalValue: [NSNumber numberWithInteger: self.topMostNumberOfImmigrants]];
-        });
-    }
-}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {

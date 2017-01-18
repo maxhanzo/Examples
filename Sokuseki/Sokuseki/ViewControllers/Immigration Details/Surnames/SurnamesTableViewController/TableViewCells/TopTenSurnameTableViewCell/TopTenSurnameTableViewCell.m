@@ -35,7 +35,7 @@
 
 -(void) setRanking: (NSInteger) ranking
 {
-    [self.lblRankingPosition setText:[NSString stringWithFormat: @"%li", ranking]];
+    [self.lblRankingPosition setText:[NSString stringWithFormat: @"%li", (long)ranking]];
 }
 -(void) resizePercentageBarWithTotalValue: (NSNumber*) totalValue
 {

@@ -28,7 +28,7 @@
                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oYJ-GE-u9U">
                         <rect key="frame" x="58" y="26" width="240" height="10"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="0.48171404179999999" green="0.67541079879999999" blue="0.87362120210000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Flag_of_Yamagata" translatesAutoresizingMaskIntoConstraints="NO" id="U8B-AA-wIU">
                         <rect key="frame" x="7" y="6" width="45" height="30"/>
