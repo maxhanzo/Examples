@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "SWRevealViewController.h"
+#import "TopTenSurnameTableViewCell.h"
+#import "RegularSurnameTableViewCell.h"
+#import "Surname.h"
 
-@interface SurnamesTableViewController : UITableViewController<SWRevealViewControllerDelegate>
+
+@interface SurnamesTableViewController : UITableViewController<SWRevealViewControllerDelegate, UISearchDisplayDelegate>
 
 
 @end

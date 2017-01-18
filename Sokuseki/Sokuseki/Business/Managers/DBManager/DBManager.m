@@ -372,61 +372,43 @@ static DBManager *sharedInstance = nil;
     
 }
 
+//Legacy adaptation
+-(NSArray*) retrieveAllSurnames
+{
+    NSString *dbPath = [DBManager getDatabasePath];
+    FMDatabase *db = [FMDatabase databaseWithPath: dbPath];
+    [db open];
+    
+    NSMutableArray* surnamesArray = [NSMutableArray array];
+    
+    NSString* surnameQuery = @"SELECT ID, Romaji, NumberOfImmigrants FROM Surnames ORDER BY NumberOfImmigrants DESC";
+    FMResultSet *resultsWithSurnameData = [db executeQuery:surnameQuery];
 
-//-(PrefectureInfo*) retrievePrefectureInfoWithName: (NSString*) prefectureName
-//{
-//
-//        __block BOOL success;
-//        __block PrefectureInfo *prefectureInfo = nil;
-//        NSString *dbPath = [[NSBundle mainBundle] pathForResource:@"ShinAshiato" ofType:@"sqlite"];
-//        FMDatabaseQueue *queue = [FMDatabaseQueue databaseQueueWithPath:dbPath];
-//    
-//        [queue inDatabase:^(FMDatabase *db) {
-//            NSString* prefectureQuery = [NSString stringWithFormat: @"SELECT Name, Capital, Area, Map, Flag, Region, Kanji, Island from Prefecture WHERE Name = '%@'", prefectureName];
-//            
-//            if(![database open] )
-//            {
-//                NSLog(@"%s: %@", __FUNCTION__, [db lastErrorMessage]);
-//                success = NO;     // set the value inside the block
-//                return;
-//            }
-//            FMResultSet *resultsWithPrefectureData = [db executeQuery:prefectureQuery];
-//            if (!resultsWithPrefectureData)
-//            {
-//                NSLog(@"%s: %@", __FUNCTION__, [db lastErrorMessage]);
-//                success = NO;     // set the value inside the block
-//                return;           // note, this doesn't exit the method; this exits this `inDatabase` block
-//            }
-//            
-//            NSNumberFormatter *areaFormatter = [[NSNumberFormatter alloc] init];
-//            [areaFormatter setLocale: [NSLocale currentLocale]];
-//            [areaFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
-//            [areaFormatter setMinimumFractionDigits:2];
-//            [areaFormatter setMaximumFractionDigits:2];
-//            [areaFormatter setGeneratesDecimalNumbers:YES];
-//            [areaFormatter setAlwaysShowsDecimalSeparator:YES];
-//            //Refactor
-//            while ([resultsWithPrefectureData next])
-//            {
-//                NSString* prefectureName = [resultsWithPrefectureData stringForColumn: @"Name"];
-//                NSString* prefectureCapital = [resultsWithPrefectureData stringForColumn: @"Capital"];
-//                NSNumber* prefectureArea = [areaFormatter numberFromString:[resultsWithPrefectureData stringForColumn: @"Area"]];
-//                NSString* prefectureMap = [resultsWithPrefectureData stringForColumn: @"Map"];
-//                NSString* prefectureFlag = [resultsWithPrefectureData stringForColumn: @"Flag"];
-//                NSString* prefectureRegion = [resultsWithPrefectureData stringForColumn: @"Region"];
-//                NSString* prefectureKanji = [resultsWithPrefectureData stringForColumn: @"Kanji"];
-//                NSString* prefectureIsland = [resultsWithPrefectureData stringForColumn: @"Island"];
-//                
-//                prefectureInfo = [PrefectureInfo prefectureInfoWithName: prefectureName withCapital:prefectureCapital withRegion:prefectureRegion withIsland:prefectureIsland withArea:prefectureArea withFlag:prefectureFlag withMap:prefectureMap withKanji:prefectureKanji];
-//            }
-//            
-//            areaFormatter = nil;
-//            [resultsWithPrefectureData close];
-//            success = YES;        // another example of setting that `success` variable
-//        }];
-//    return prefectureInfo;
-//}
+    
+    if (!resultsWithSurnameData)
+    {
+        NSLog(@"%s: %@", __FUNCTION__, [db lastErrorMessage]);
+    }
+        
+    while ([resultsWithSurnameData next])
+    {
+        NSString* surnameID = [resultsWithSurnameData stringForColumn: @"ID"];
+        NSString* romaji = [resultsWithSurnameData stringForColumn: @"Romaji"];
+        NSString* numberOfImmigrants = [resultsWithSurnameData stringForColumn:@"NumberOfImmigrants"];
+            
+        Surname  *surname = [Surname surnameWithRomaji:romaji withNumberOfImmigrants:[NSNumber numberWithInteger: [numberOfImmigrants integerValue]] withID:[surnameID integerValue]];
+            [surnamesArray addObject: surname];
+            
+    }
+    [resultsWithSurnameData close];
 
+    return surnamesArray;
+}
+
+
+
+
+/*
 -(NSArray*) retrieveAllSurnames
 {
     __block BOOL success;
@@ -464,7 +446,7 @@ static DBManager *sharedInstance = nil;
     }];
     return surnamesArray;
 }
-
+*/
 -(NSArray*) retrieveSurnameDetailsFromSurname: (Surname*) surname
 {
     __block BOOL success;
