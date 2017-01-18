@@ -14,7 +14,6 @@
 @property(nonatomic, weak) IBOutlet UILabel *lblPrefectureName;
 @property(nonatomic, weak) IBOutlet UIImageView *imgPrefectureFlag;
 @property(nonatomic, weak) IBOutlet UIView *vwBarView;
-@property(nonatomic, weak) IBOutlet UILabel *lblNumberOfPeople;
 @property(nonatomic, assign) NSUInteger numberOfPeople;
 
 

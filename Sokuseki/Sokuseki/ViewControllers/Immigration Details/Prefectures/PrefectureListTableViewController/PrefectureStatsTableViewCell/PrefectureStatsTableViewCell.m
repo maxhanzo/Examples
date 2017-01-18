@@ -10,13 +10,8 @@
 #import "Utilities.h"
 
 
-#define barWidth 136.0f
-#define barHeight 22.0f
-#define labelX 271
-#define labelY 4
-#define barPoint CGPointMake(133, 4)
 @implementation PrefectureStatsTableViewCell
-@synthesize lblNumberOfPeople, lblPrefectureName, vwBarView, imgPrefectureFlag, numberOfPeople;
+@synthesize lblPrefectureName, vwBarView, imgPrefectureFlag, numberOfPeople;
 - (void)awakeFromNib
 {
     [super awakeFromNib];
@@ -28,21 +23,25 @@
     
     // Configure the view for the selected state
 }
--(void) setPrefectureDataWithName: (NSString*) prefectureName withNumberOfImmigrants: (NSNumber*) numberOfImmigrants
+-(void
+  ) setPrefectureDataWithName: (NSString*) prefectureName withNumberOfImmigrants: (NSNumber*) numberOfImmigrants
 {
     numberOfPeople = [numberOfImmigrants integerValue];
-    lblNumberOfPeople.text = [numberOfImmigrants stringValue];
-    lblPrefectureName.text = prefectureName;
+    NSString* prefectureInfo = [NSString stringWithFormat: @"%@ • %@", prefectureName,  [numberOfImmigrants stringValue]];
+    
+    lblPrefectureName.text = prefectureInfo;
+    
 }
 
 -(void) setPrefectureDataWithPrefecture: (PrefectureStatistics*) prefecture
 {
     numberOfPeople = [prefecture.numberOfImmigrants integerValue];
-    lblNumberOfPeople.text = [prefecture.numberOfImmigrants stringValue];
-    lblPrefectureName.text = prefecture.name;
+    
+    NSString* prefectureInfo = [NSString stringWithFormat: @"%@ • %@", prefecture.name,  [prefecture.numberOfImmigrants stringValue]];
+    
+    lblPrefectureName.text = prefectureInfo;
     imgPrefectureFlag.image = [Utilities flagForPrefectureName:prefecture.name];
 }
-
 
 -(void) setBarColor: (UIColor*) color
 {
@@ -55,21 +54,18 @@
     float total = [totalValue floatValue];
     float percentage = (currentNumber*100)/total;
     
-    CGFloat barNewWidth = barWidth*percentage/100;
+    CGFloat barNewWidth = vwBarView.frame.size.width*percentage/100;
     
     if(barNewWidth<4)
     {
         barNewWidth = 4;
     }
-    vwBarView.frame = CGRectMake(barPoint.x, barPoint.y, barNewWidth, barHeight);
     
-    CGFloat delta = barWidth - barNewWidth;
+    vwBarView.frame = CGRectMake(vwBarView.frame.origin.x, vwBarView.frame.origin.y, barNewWidth, vwBarView.frame.size.height);
     
-    CGSize lblNumberOfPeopleSize = lblNumberOfPeople.frame.size;
-    lblNumberOfPeople.frame = CGRectMake(labelX - delta, labelY, lblNumberOfPeopleSize.width, lblNumberOfPeopleSize.height);
-}
+ }
 +(float) rowHeight
 {
-    return 30.0f;
+    return 44.0f;
 }
 @end

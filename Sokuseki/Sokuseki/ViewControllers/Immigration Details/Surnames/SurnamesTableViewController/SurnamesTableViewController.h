@@ -13,7 +13,9 @@
 #import "Surname.h"
 
 
-@interface SurnamesTableViewController : UITableViewController<SWRevealViewControllerDelegate, UISearchDisplayDelegate>
+@interface SurnamesTableViewController : UITableViewController<SWRevealViewControllerDelegate, UISearchBarDelegate, UISearchControllerDelegate, UISearchResultsUpdating>
+@property(nonatomic, strong)  UISearchController *searchController;
+@property(nonatomic, strong) UITableView *resultsTableController;
 
 
 @end

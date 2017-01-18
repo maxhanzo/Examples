@@ -25,6 +25,16 @@
     
     [self.tableView registerNib:[UINib nibWithNibName:@"TopTenSurnameTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"TopTenSurnameTableViewCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"RegularSurnameTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"RegularSurnameTableViewCell"];
+    self.searchController.delegate = self;
+    
+    
+    self.resultsTableController = [[UITableView alloc] init];
+    self.searchController = [[UISearchController alloc] initWithSearchResultsController:self.resultsTableController];
+    self.searchController.searchResultsUpdater = self;
+    [self.searchController.searchBar sizeToFit];
+    self.tableView.tableHeaderView = self.searchController.searchBar;
+    
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,7 +50,6 @@
     [self.revealButtonItem setAction: @selector( revealToggle: )];
     [self.navigationController.view addGestureRecognizer: self.revealViewController.panGestureRecognizer];
     
-    [self.searchDisplayController.searchResultsTableView reloadData];
     [self.tableView reloadData];
 }
 
@@ -66,26 +75,16 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    if (self.tableView == self.searchDisplayController.searchResultsTableView)
-    {
-        return [self.searchResults count];
-    }
-    else
-    {
-        return [self.surnamesArray count];
-    }
+{  
+    return [self.surnamesArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
     NSInteger totalNumberOfImmigrants = [self calculateTotalNumberOfImmigrants];
-
-    
     Surname  *surname = nil;
-    if (self.tableView != self.searchDisplayController.searchResultsTableView)
-    {
+
         surname = [self.surnamesArray objectAtIndex: indexPath.row];
         if(indexPath.row <10)
         {
@@ -118,27 +117,7 @@
         return cell;
 
     
-    }
-    
-    else
-    {
-        surname  = [self.searchResults objectAtIndex: indexPath.row];
-  
-        NSInteger totalNumberOfImmigrants = [self calculateTotalNumberOfImmigrants];
-        RegularSurnameTableViewCell *cell = (RegularSurnameTableViewCell*)[self.tableView dequeueReusableCellWithIdentifier:@"RegularSurnameTableViewCell"];
-        
-        if(!cell)
-        {
-            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"RegularSurnameTableViewCell" owner:self options:nil];
-            cell = [nib objectAtIndex:0];
-        }
 
-        
-        [cell setDataWithSurname: surname];
-        [cell resizePercentageBarWithTotalValue: [NSNumber numberWithInteger: totalNumberOfImmigrants]];
-        return cell;
-    }
-    
     return nil;
 }
 
@@ -199,25 +178,6 @@
     }
 }
 
-#pragma mark SearchDisplay Delegate
-- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
-{
-    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"romaji contains[cdu] %@", searchText];
-    self.searchResults = [NSMutableArray arrayWithArray:[_surnamesArray filteredArrayUsingPredicate:resultPredicate]];
-    [self.searchDisplayController.searchResultsTableView reloadData];
-    
-    
-}
-
--(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
-{
-    dispatch_queue_t main_queue = dispatch_get_main_queue();
-    dispatch_async(main_queue, ^{
-        [self filterContentForSearchText:searchString scope:[[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
-        
-    });
-    return NO;
-}
 
 
 

@@ -39,6 +39,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="YiO-yv-Y8D">
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
@@ -61,10 +62,19 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="revealButtonItem" destination="bH3-O4-8AM" id="PgE-6O-Bbt"/>
+                        <outlet property="searchDisplayController" destination="Mtd-gG-s9w" id="ZM4-5X-Haf"/>
                         <segue destination="oC2-23-JTf" kind="presentation" id="QN9-yw-WMr"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kr6-3x-Ph4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="Mtd-gG-s9w">
+                    <connections>
+                        <outlet property="delegate" destination="7kB-dk-QbP" id="L4T-Er-eqa"/>
+                        <outlet property="searchContentsController" destination="7kB-dk-QbP" id="Ddd-kX-yNN"/>
+                        <outlet property="searchResultsDataSource" destination="7kB-dk-QbP" id="Req-Ac-pyW"/>
+                        <outlet property="searchResultsDelegate" destination="7kB-dk-QbP" id="ZZ3-fc-zHs"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="-3356" y="996"/>
         </scene>
