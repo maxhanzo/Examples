@@ -21,6 +21,10 @@
 		2B43947B1E2ED2DF007A8E56 /* RegularSurnameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B4394791E2ED2DF007A8E56 /* RegularSurnameTableViewCell.xib */; };
 		2B4394801E2ED321007A8E56 /* TopTenSurnameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B43947E1E2ED321007A8E56 /* TopTenSurnameTableViewCell.m */; };
 		2B4394811E2ED321007A8E56 /* TopTenSurnameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B43947F1E2ED321007A8E56 /* TopTenSurnameTableViewCell.xib */; };
+		2B43948F1E316204007A8E56 /* SurnameDetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B43948D1E316204007A8E56 /* SurnameDetailsTableViewCell.m */; };
+		2B4394901E316204007A8E56 /* SurnameDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B43948E1E316204007A8E56 /* SurnameDetailsTableViewCell.xib */; };
+		2B4394941E316257007A8E56 /* SurnameDetailsHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4394921E316257007A8E56 /* SurnameDetailsHeaderTableViewCell.m */; };
+		2B4394951E316257007A8E56 /* SurnameDetailsHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B4394931E316257007A8E56 /* SurnameDetailsHeaderTableViewCell.xib */; };
 		2B46BC1F1E01E9B1007C244E /* NameSurnameInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B46BC1E1E01E9B1007C244E /* NameSurnameInputViewController.m */; };
 		2B46BC231E020057007C244E /* YearInputTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B46BC221E020057007C244E /* YearInputTableViewController.m */; };
 		2B46BC261E020079007C244E /* PrefectureShipInputTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B46BC251E020079007C244E /* PrefectureShipInputTableViewController.m */; };
@@ -145,6 +149,12 @@
 		2B43947D1E2ED321007A8E56 /* TopTenSurnameTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopTenSurnameTableViewCell.h; path = "ViewControllers/Immigration Details/Surnames/SurnamesTableViewController/TableViewCells/TopTenSurnameTableViewCell/TopTenSurnameTableViewCell.h"; sourceTree = "<group>"; };
 		2B43947E1E2ED321007A8E56 /* TopTenSurnameTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopTenSurnameTableViewCell.m; path = "ViewControllers/Immigration Details/Surnames/SurnamesTableViewController/TableViewCells/TopTenSurnameTableViewCell/TopTenSurnameTableViewCell.m"; sourceTree = "<group>"; };
 		2B43947F1E2ED321007A8E56 /* TopTenSurnameTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TopTenSurnameTableViewCell.xib; path = "ViewControllers/Immigration Details/Surnames/SurnamesTableViewController/TableViewCells/TopTenSurnameTableViewCell/TopTenSurnameTableViewCell.xib"; sourceTree = "<group>"; };
+		2B43948C1E316204007A8E56 /* SurnameDetailsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SurnameDetailsTableViewCell.h; path = "ViewControllers/Immigration Details/Surnames/SurnameDetailsTableViewController/SurnameDetailsTableViewCell/SurnameDetailsTableViewCell.h"; sourceTree = "<group>"; };
+		2B43948D1E316204007A8E56 /* SurnameDetailsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SurnameDetailsTableViewCell.m; path = "ViewControllers/Immigration Details/Surnames/SurnameDetailsTableViewController/SurnameDetailsTableViewCell/SurnameDetailsTableViewCell.m"; sourceTree = "<group>"; };
+		2B43948E1E316204007A8E56 /* SurnameDetailsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SurnameDetailsTableViewCell.xib; path = "ViewControllers/Immigration Details/Surnames/SurnameDetailsTableViewController/SurnameDetailsTableViewCell/SurnameDetailsTableViewCell.xib"; sourceTree = "<group>"; };
+		2B4394911E316257007A8E56 /* SurnameDetailsHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SurnameDetailsHeaderTableViewCell.h; path = "ViewControllers/Immigration Details/Surnames/SurnameDetailsTableViewController/SurnameDetailsHeaderTableViewCell/SurnameDetailsHeaderTableViewCell.h"; sourceTree = "<group>"; };
+		2B4394921E316257007A8E56 /* SurnameDetailsHeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SurnameDetailsHeaderTableViewCell.m; path = "ViewControllers/Immigration Details/Surnames/SurnameDetailsTableViewController/SurnameDetailsHeaderTableViewCell/SurnameDetailsHeaderTableViewCell.m"; sourceTree = "<group>"; };
+		2B4394931E316257007A8E56 /* SurnameDetailsHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SurnameDetailsHeaderTableViewCell.xib; path = "ViewControllers/Immigration Details/Surnames/SurnameDetailsTableViewController/SurnameDetailsHeaderTableViewCell/SurnameDetailsHeaderTableViewCell.xib"; sourceTree = "<group>"; };
 		2B46BC1D1E01E9B1007C244E /* NameSurnameInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NameSurnameInputViewController.h; path = ViewControllers/NameSurnameInputViewController/NameSurnameInputViewController.h; sourceTree = "<group>"; };
 		2B46BC1E1E01E9B1007C244E /* NameSurnameInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NameSurnameInputViewController.m; path = ViewControllers/NameSurnameInputViewController/NameSurnameInputViewController.m; sourceTree = "<group>"; };
 		2B46BC211E020057007C244E /* YearInputTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YearInputTableViewController.h; path = ViewControllers/YearInputTableViewController/YearInputTableViewController.h; sourceTree = "<group>"; };
@@ -405,6 +415,16 @@
 				2B43947F1E2ED321007A8E56 /* TopTenSurnameTableViewCell.xib */,
 			);
 			name = TopTenSurnameTableViewCell;
+			sourceTree = "<group>";
+		};
+		2B43948B1E3161BF007A8E56 /* SurnameDetailsHeaderTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2B4394911E316257007A8E56 /* SurnameDetailsHeaderTableViewCell.h */,
+				2B4394921E316257007A8E56 /* SurnameDetailsHeaderTableViewCell.m */,
+				2B4394931E316257007A8E56 /* SurnameDetailsHeaderTableViewCell.xib */,
+			);
+			name = SurnameDetailsHeaderTableViewCell;
 			sourceTree = "<group>";
 		};
 		2B46BC1C1E01E93A007C244E /* NameSurnameViewController */ = {
@@ -723,7 +743,10 @@
 		2B7D96EA1E11CBE900818754 /* Surnames */ = {
 			isa = PBXGroup;
 			children = (
+				2B43948B1E3161BF007A8E56 /* SurnameDetailsHeaderTableViewCell */,
 				2BFD5CE41E17015D00AF18B9 /* SurnameDetailsTableViewController */,
+				2BFD5CE51E17018300AF18B9 /* SurnameDetailsTableViewController.h */,
+				2BFD5CE61E17018300AF18B9 /* SurnameDetailsTableViewController.m */,
 				2BFD5CE01E17012000AF18B9 /* SurnamesTableViewController */,
 			);
 			name = Surnames;
@@ -1047,8 +1070,9 @@
 		2BFD5CE41E17015D00AF18B9 /* SurnameDetailsTableViewController */ = {
 			isa = PBXGroup;
 			children = (
-				2BFD5CE51E17018300AF18B9 /* SurnameDetailsTableViewController.h */,
-				2BFD5CE61E17018300AF18B9 /* SurnameDetailsTableViewController.m */,
+				2B43948C1E316204007A8E56 /* SurnameDetailsTableViewCell.h */,
+				2B43948D1E316204007A8E56 /* SurnameDetailsTableViewCell.m */,
+				2B43948E1E316204007A8E56 /* SurnameDetailsTableViewCell.xib */,
 			);
 			name = SurnameDetailsTableViewController;
 			sourceTree = "<group>";
@@ -1234,7 +1258,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B46BC321E02010C007C244E /* PrefectureTableViewCell.xib in Resources */,
+				2B4394951E316257007A8E56 /* SurnameDetailsHeaderTableViewCell.xib in Resources */,
 				2B7D97161E11E36A00818754 /* PrefectureStatsTableViewFooter.xib in Resources */,
+				2B4394901E316204007A8E56 /* SurnameDetailsTableViewCell.xib in Resources */,
 				2B4872D81E00820700A41572 /* Resources.bundle in Resources */,
 				2B8DAE581E10C466007603F2 /* GroupDetailTableViewFooterCell.xib in Resources */,
 				2B5947AD1E14892B002AADC8 /* PrefectureFlagTableViewCell.xib in Resources */,
@@ -1324,6 +1350,7 @@
 				2B7D97031E11CF6F00818754 /* PrefectureStatsTableViewCell.m in Sources */,
 				2BFD5CFB1E170D1700AF18B9 /* FacebookTwitterViewController.m in Sources */,
 				2BB948701E05EE11003E1310 /* DBManager.m in Sources */,
+				2B43948F1E316204007A8E56 /* SurnameDetailsTableViewCell.m in Sources */,
 				2B4872D51E00820700A41572 /* ASJTag.m in Sources */,
 				2B4089D11E060028000B645E /* ImmigrantsResultsTableViewCell.m in Sources */,
 				2B4089D71E060BF8000B645E /* ImmigrantsResultsTableViewFooter.m in Sources */,
@@ -1356,6 +1383,7 @@
 				2BB948651E05EE11003E1310 /* Group.m in Sources */,
 				2B4E21011E034F1700502C32 /* SearchParameters.m in Sources */,
 				2B46BC3C1E0204C6007C244E /* YearTableViewCell.m in Sources */,
+				2B4394941E316257007A8E56 /* SurnameDetailsHeaderTableViewCell.m in Sources */,
 				2BB948671E05EE11003E1310 /* Parameter.m in Sources */,
 				2B4394801E2ED321007A8E56 /* TopTenSurnameTableViewCell.m in Sources */,
 				2BB948E61E05F784003E1310 /* NSString+Japanese.m in Sources */,

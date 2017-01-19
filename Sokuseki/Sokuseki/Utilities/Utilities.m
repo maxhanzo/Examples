@@ -740,4 +740,44 @@
     return headerTitles;
 }
 
+
++(NSString*) cardinalNumber: (NSNumber*) number
+{
+    NSInteger integerNumber = [number integerValue];
+    NSString * language = [[NSLocale preferredLanguages] objectAtIndex:0];
+    if([language containsString:@"en"])
+    {
+        switch (integerNumber)
+        {
+            case 0:
+                return @"";
+                break;
+            case 1:
+                return [NSString stringWithFormat: @"%@st", [number stringValue]];
+                break;
+            case 2:
+                return [NSString stringWithFormat: @"%@nd", [number stringValue]];
+                break;
+            case 3:
+                return [NSString stringWithFormat: @"%@rd", [number stringValue]];
+                break;
+            default:
+                return [NSString stringWithFormat: @"%@th", [number stringValue]];
+                break;
+            
+        }
+    }
+    
+    else if([language containsString:@"en"])
+    {
+        return [NSString stringWithFormat: @"%@番", [number stringValue]];
+    }
+    
+    else if([language containsString:@"pt"])
+    {
+        return [NSString stringWithFormat: @"%@°", [number stringValue]];
+    }
+    
+    else return [number stringValue];
+}
 @end

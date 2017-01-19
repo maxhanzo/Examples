@@ -405,71 +405,18 @@ static DBManager *sharedInstance = nil;
     return surnamesArray;
 }
 
-
-
-
-/*
--(NSArray*) retrieveAllSurnames
-{
-    __block BOOL success;
-    NSString *dbPath = [[NSBundle mainBundle] pathForResource:@"ShinAshiato" ofType:@"sqlite"];
-    FMDatabaseQueue *queue = [FMDatabaseQueue databaseQueueWithPath:dbPath];
-    
-    NSMutableArray* surnamesArray = [NSMutableArray array];
-    [queue inDatabase:^(FMDatabase *db) {
-        NSString* surnameQuery = @"SELECT ID, Romaji, NumberOfImmigrants FROM Surnames ORDER BY NumberOfImmigrants DESC";
-        if(![database open] )
-        {
-            NSLog(@"%s: %@", __FUNCTION__, [db lastErrorMessage]);
-            success = NO;     // set the value inside the block
-            return;
-        }
-        FMResultSet *resultsWithSurnameData = [db executeQuery:surnameQuery];
-        if (!resultsWithSurnameData)
-        {
-            NSLog(@"%s: %@", __FUNCTION__, [db lastErrorMessage]);
-            success = NO;     // set the value inside the block
-            return;           // note, this doesn't exit the method; this exits this `inDatabase` block
-        }
-        
-        while ([resultsWithSurnameData next])
-        {
-            NSString* surnameID = [resultsWithSurnameData stringForColumn: @"ID"];
-            NSString* romaji = [resultsWithSurnameData stringForColumn: @"Romaji"];
-            NSString* numberOfImmigrants = [resultsWithSurnameData stringForColumn:@"NumberOfImmigrants"];
-            
-            Surname  *surname = [Surname surnameWithRomaji:romaji withNumberOfImmigrants:[NSNumber numberWithInteger: [numberOfImmigrants integerValue]] withID:[surnameID integerValue]];
-            [surnamesArray addObject: surname];
-            
-        }[resultsWithSurnameData close];
-        success = YES;        // another example of setting that `success` variable
-    }];
-    return surnamesArray;
-}
-*/
 -(NSArray*) retrieveSurnameDetailsFromSurname: (Surname*) surname
 {
-    __block BOOL success;
-    NSString *dbPath = [[NSBundle mainBundle] pathForResource:@"ShinAshiato" ofType:@"sqlite"];
-    FMDatabaseQueue *queue = [FMDatabaseQueue databaseQueueWithPath:dbPath];
+    NSString *dbPath = [DBManager getDatabasePath];
+    FMDatabase *db = [FMDatabase databaseWithPath: dbPath];
+    [db open];
     
     NSMutableArray* surnamesArray = [NSMutableArray array];
-    [queue inDatabase:^(FMDatabase *db) {
+   
         NSString* surnameDetailsQuery = [NSString stringWithFormat: @"SELECT surnameID, KanjiReading, Occurences FROM SurnameDetails WHERE surnameID = %lu ORDER BY Occurences DESC", (unsigned long)surname.surnameID];
-        if(![database open] )
-        {
-            NSLog(@"%s: %@", __FUNCTION__, [db lastErrorMessage]);
-            success = NO;     // set the value inside the block
-            return;
-        }
+
         FMResultSet *resultsWithSurnameDetailsData = [db executeQuery:surnameDetailsQuery];
-        if (!resultsWithSurnameDetailsData)
-        {
-            NSLog(@"%s: %@", __FUNCTION__, [db lastErrorMessage]);
-            success = NO;     // set the value inside the block
-            return;           // note, this doesn't exit the method; this exits this `inDatabase` block
-        }
-        
+    
         while ([resultsWithSurnameDetailsData next])
         {
             //NSString* surnameID = [resultsWithSurnameDetailsData stringForColumn: @"ID"];
@@ -480,10 +427,9 @@ static DBManager *sharedInstance = nil;
             [surnamesArray addObject: surnameDetail];
             
         }[resultsWithSurnameDetailsData close];
-        success = YES;        // another example of setting that `success` variable
-    }];
+    
+    
     return surnamesArray;
-
 }
 
 

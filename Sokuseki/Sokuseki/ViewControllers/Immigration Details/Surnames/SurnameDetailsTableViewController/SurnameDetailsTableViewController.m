@@ -7,6 +7,10 @@
 //
 
 #import "SurnameDetailsTableViewController.h"
+#import "SurnameDetailsHeaderTableViewCell.h"
+#import "SurnameDetailsTableViewCell.h"
+#import "SurnameDetail.h"
+#import "DBManager.h"
 
 @interface SurnameDetailsTableViewController ()
 
@@ -16,12 +20,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    DBManager *dbManager = [DBManager getSharedInstance];
+    self.surnamesArray = [NSArray array];
+    if(self.surname)
+    {
+        self.surnamesArray = [dbManager retrieveSurnameDetailsFromSurname: self.surname];
+    }
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    if(!self.ranking)
+    {
+        self.ranking = @0;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,67 +41,78 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return [self.surnamesArray count] + 1;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
+
+    if(indexPath.row == 0)
+    {
+        SurnameDetailsHeaderTableViewCell *cell = (SurnameDetailsHeaderTableViewCell*)[self.tableView dequeueReusableCellWithIdentifier:@"SurnameDetailsHeaderTableViewCell"];
+        
+        if(!cell)
+        {
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"SurnameDetailsHeaderTableViewCell" owner:self options:nil];
+            cell = [nib objectAtIndex:0];
+        }
+        NSNumber* possibleWritings = [NSNumber numberWithInteger: [self.surnamesArray count]];
+        
+        [cell setHeaderWithRomaji:self.surname.romaji withRanking:self.ranking withPossibleWritings: possibleWritings withOccurences:self.surname.numberOfImmigrants];
+        
+        return cell;
+    }
     
-    return cell;
+    else
+    {
+        SurnameDetailsTableViewCell *cell = (SurnameDetailsTableViewCell*)[self.tableView dequeueReusableCellWithIdentifier:@"SurnameDetailsTableViewCell"];
+    
+        if(!cell)
+        {
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"SurnameDetailsTableViewCell" owner:self options:nil];
+            cell = [nib objectAtIndex:0];
+        }
+        
+        NSInteger surnameIndex = indexPath.row - 1;
+        SurnameDetail* surnameDetail = [self.surnamesArray objectAtIndex: surnameIndex];
+       
+        if(surnameDetail)
+        {
+            [cell setSurnameKanji:surnameDetail.kanjiReading withNumberOfPeople:surnameDetail.numberOfImmigrants];
+        }
+        
+        return cell;
+        
+    }
+    
+    return nil;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.row != 0)
+    {
+        return [SurnameDetailsTableViewCell rowHeight];
+    }
+    
+    return [SurnameDetailsHeaderTableViewCell rowHeight];
+    
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 0.01f;
 }
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 0.01f;
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

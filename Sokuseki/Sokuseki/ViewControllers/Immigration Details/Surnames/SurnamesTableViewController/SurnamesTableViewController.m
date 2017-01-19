@@ -7,6 +7,7 @@
 //
 
 #import "SurnamesTableViewController.h"
+#import "SurnameDetailsTableViewController.h"
 #import "DBManager.h"
 
 @interface SurnamesTableViewController ()
@@ -22,12 +23,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initWithAllData];
-    
+    self.selectedSurname = nil;
+    self.surnameRanking = @0;
     [self.tableView registerNib:[UINib nibWithNibName:@"TopTenSurnameTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"TopTenSurnameTableViewCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"RegularSurnameTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"RegularSurnameTableViewCell"];
-    self.searchController.delegate = self;
-    
-    
+  
+//    self.searchController.delegate = self;
 //    self.resultsTableController = [[UITableView alloc] init];
 //    self.searchController = [[UISearchController alloc] initWithSearchResultsController:self.resultsTableController];
 //    self.searchController.searchResultsUpdater = self;
@@ -36,6 +37,27 @@
     
 
 }
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    UINavigationController* surnameDetailNavigationViewController = (UINavigationController*)segue.destinationViewController;
+    
+    surnameDetailNavigationViewController.navigationItem.title = @"Surname Details";
+    SurnameDetailsTableViewController* surnameDetailsTableViewController = (SurnameDetailsTableViewController*)[surnameDetailNavigationViewController.childViewControllers firstObject];
+    
+    if(surnameDetailsTableViewController)
+    {
+        [surnameDetailsTableViewController setSurname: self.selectedSurname];
+        [surnameDetailsTableViewController setRanking:self.surnameRanking];
+    }
+}
+
+-(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue
+{
+    
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -121,6 +143,15 @@
     return nil;
 }
 
+//selectedSurname
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    self.selectedSurname = [self.surnamesArray objectAtIndex: indexPath.row];
+    NSInteger ranking = indexPath.row + 1;
+    self.surnameRanking = [NSNumber numberWithInteger:ranking];
+    [self performSegueWithIdentifier:@"SurnameDetailsSegue" sender:self];
+}
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

@@ -35,4 +35,5 @@
 +(UIImage*) flagForShipName: (NSString*) shipName;
 +(NSString*) prefectureSuffix: (NSString*) prefectureName;
 +(NSString*) removePrefectureSuffix: (NSString*) prefectureName;
++(NSString*) cardinalNumber: (NSNumber*) number;
 @end
