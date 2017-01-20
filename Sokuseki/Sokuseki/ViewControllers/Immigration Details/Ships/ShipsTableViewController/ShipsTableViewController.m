@@ -7,6 +7,9 @@
 //
 
 #import "ShipsTableViewController.h"
+#import "DBManager.h"
+#import "Steamer.h"
+#import "ShipTableViewCell.h"
 
 @interface ShipsTableViewController ()
 @property (nonatomic) IBOutlet UIBarButtonItem* revealButtonItem;
@@ -17,11 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    DBManager *dbManager = [DBManager getSharedInstance];
+    self.shipsArray = [dbManager retrieveAllSteamers];
 }
 
 -(void) viewWillAppear:(BOOL)animated
@@ -42,14 +42,42 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
+    if(self.shipsArray)
+    {
+        return [self.shipsArray count];
+    }
+    
     return 0;
 }
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    Steamer* steamer = [self.shipsArray objectAtIndex: indexPath.row];
+    
+    if(steamer){
+        ShipTableViewCell *cell = (ShipTableViewCell*)[self.tableView dequeueReusableCellWithIdentifier:@"ShipTableViewCell"];
+        
+        if(!cell)
+        {
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"ShipTableViewCell" owner:self options:nil];
+            cell = [nib objectAtIndex:0];
+        }
+        
+        [cell setDataWithName:steamer.shipName];
+        return cell;
+    }
+    
+
+    
+    return nil;
+}
+
 
 #pragma mark - SWRevealViewController stuff
 - (void)revealController:(SWRevealViewController *)revealController didMoveToPosition:(FrontViewPosition)position

@@ -27,6 +27,7 @@
     [self.imgPrefectureFlag setImage: flag];
 }
 
+
 +(float) rowHeight
 {
     return 43.5f;

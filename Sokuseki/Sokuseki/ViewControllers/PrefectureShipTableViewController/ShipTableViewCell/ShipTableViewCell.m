@@ -31,7 +31,12 @@
 {
     [self.lblShipName setText: name];
     UIImage *shipFlag = [Utilities flagForShipName:name];
-    [self.imgShipFlag setImage: shipFlag];
+    
+    if(shipFlag)
+    {
+        [self.imgShipFlag setImage: shipFlag];
+    }
+    
 }
 
 

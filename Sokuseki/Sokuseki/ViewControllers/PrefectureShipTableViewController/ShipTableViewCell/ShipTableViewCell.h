@@ -15,4 +15,5 @@
 +(float) rowHeight;
 -(void) setName: (NSString*) name withFlag: (UIImage*) flag;
 -(void) setDataWithName: (NSString*) name;
+
 @end

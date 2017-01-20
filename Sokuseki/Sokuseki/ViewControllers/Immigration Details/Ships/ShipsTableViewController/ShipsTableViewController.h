@@ -10,6 +10,6 @@
 #import "SWRevealViewController.h"
 
 @interface ShipsTableViewController : UITableViewController<SWRevealViewControllerDelegate>
-
+@property(nonatomic, strong) NSArray *shipsArray;
 
 @end

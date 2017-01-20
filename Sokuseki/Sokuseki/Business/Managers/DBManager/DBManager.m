@@ -212,38 +212,34 @@ static DBManager *sharedInstance = nil;
 
 -(NSArray*) retrieveAllSteamers
 {
-    __block BOOL success;
-    NSString *dbPath = [[NSBundle mainBundle] pathForResource:@"ShinAshiato" ofType:@"sqlite"];
-    FMDatabaseQueue *queue = [FMDatabaseQueue databaseQueueWithPath:dbPath];
- 
-    NSMutableArray* steamersArray = [NSMutableArray array];
-    [queue inDatabase:^(FMDatabase *db) {
-        NSString* shipQuery = @"SELECT ID, Name FROM Ship ORDER BY Name";
-        if(![database open] )
-        {
-            NSLog(@"%s: %@", __FUNCTION__, [db lastErrorMessage]);
-            success = NO;     // set the value inside the block
-            return;
-        }
-        FMResultSet *resultsWithShipData = [db executeQuery:shipQuery];
-        if (!resultsWithShipData)
-        {
-            NSLog(@"%s: %@", __FUNCTION__, [db lastErrorMessage]);
-            success = NO;     // set the value inside the block
-            return;           // note, this doesn't exit the method; this exits this `inDatabase` block
-        }
-   
-        while ([resultsWithShipData next])
-        {
-            NSString* shipID = [resultsWithShipData stringForColumn: @"ID"];
-            NSString* shipName = [resultsWithShipData stringForColumn: @"Name"];
-     
-            Steamer *steamer = [Steamer steamerWithID: [shipID intValue] withName: shipName];
-            [steamersArray addObject: steamer];
+    NSString *dbPath = [DBManager getDatabasePath];
+    FMDatabase *db = [FMDatabase databaseWithPath: dbPath];
+    [db open];
+    
+    NSString* shipQuery = @"SELECT ID, Name FROM Ship ORDER BY Name";
+    if(![db open] )
+    {
+        NSLog(@"%s: %@", __FUNCTION__, [db lastErrorMessage]);
+        return nil;
+    }
+    FMResultSet *resultsWithShipData = [db executeQuery:shipQuery];
+    if (!resultsWithShipData)
+    {
+        NSLog(@"%s: %@", __FUNCTION__, [db lastErrorMessage]);
+        return nil;           // note, this doesn't exit the method; this exits this `inDatabase` block
+    }
+    NSMutableArray *steamersArray = [NSMutableArray array];
+    while ([resultsWithShipData next])
+    {
+        NSString* shipID = [resultsWithShipData stringForColumn: @"ID"];
+        NSString* shipName = [resultsWithShipData stringForColumn: @"Name"];
         
-        }[resultsWithShipData close];
-            success = YES;        // another example of setting that `success` variable
-    }];
+        Steamer *steamer = [Steamer steamerWithID: [shipID intValue] withName: shipName];
+        [steamersArray addObject: steamer];
+        
+    }
+    
+    [db close];
     return steamersArray;
 }
 //TODO: Think of a more "generic" way of retrieving this data. Name comparison is not a
