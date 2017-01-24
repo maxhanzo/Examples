@@ -780,4 +780,410 @@
     
     else return [number stringValue];
 }
+
++(UIImage*) pictureForShipName: (NSString*) shipName withJourneyDate: (NSDate*)date
+{
+    if ([shipName isEqualToString: @"AFRICA-MARU"])
+    {
+        //21 October 1942 - Africa Maru I was sunk.
+        //http://www.combinedfleet.com/Africa_t.htm
+        NSDate *sunkDate = [Utilities dateFromString:@"21/10/1942"];
+        if([date compare: sunkDate])
+        {
+            return [UIImage imageNamed: @"Steamer_Africa_Maru_II"];
+        }
+        
+        return [UIImage imageNamed: @"Steamer_Africa_Maru_I"];
+    }
+    
+    else if ([shipName isEqualToString:@"CHICAGO-MARU"])
+    {
+        return [UIImage imageNamed:@"Steamer_Chicago_Maru"];
+    }
+
+    else if ([shipName isEqualToString:@"TEIKOKU-MARU"])
+    {
+        return [UIImage imageNamed:@"Steamer_Teikoku_Maru"];
+    }
+
+    else if ([shipName isEqualToString:@"VARIG    RG - 083"])
+    {
+        return nil;
+    }
+
+    else if ([shipName isEqualToString:@"MANILA-MARU"])
+    {
+        return [UIImage imageNamed:@"Steamer_Manila_Maru"];
+    }
+
+    else if ([shipName isEqualToString:@"WAKASA-MARU"])
+    {
+        return nil;
+    }
+
+    else if ([shipName isEqualToString:@"JAPAN AIRLINES"])
+    {
+        return nil;
+    }
+
+    else if ([shipName isEqualToString:@"JAPAN AIRLINES    JAL - 1008"])
+    {
+        return nil;
+    }
+
+    else if ([shipName isEqualToString:@"BOLIVIA MARU"])
+    {
+        return [UIImage imageNamed:@"Steamer_Bolivia_Maru"];
+    }
+
+    else if ([shipName isEqualToString:@"PAN AMERICAN    PN - 008"])
+    {
+        return nil;
+    }
+
+    else if ([shipName isEqualToString:@"JAPAN AIRLINES    JAL - 006"])
+    {
+        return nil;
+    }
+
+    else if ([shipName isEqualToString:@"NIPPON-MARU"])
+    {
+        return [UIImage imageNamed:@"Steamer_Nippon_Maru"];
+    }
+
+    else if ([shipName isEqualToString:@"LA PLATA-MARU"])
+    {
+        //12 January 1945 - Sunk
+        //http://www.wrecksite.eu/wreck.aspx?178008
+        NSDate *sunkDate = [Utilities dateFromString:@"12/01/1945"];
+        if([date compare: sunkDate])
+        {
+            return [UIImage imageNamed: @"Steamer_La_Plata_Maru_II"];
+        }
+        
+        return [UIImage imageNamed: @"Steamer_La_Plata_Maru_I"];
+    }
+
+    else if ([shipName isEqualToString:@"ARY PARREIRAS"])
+    {
+        return [UIImage imageNamed: @"Steamer_Ary_Parreiras"];
+    }
+
+    else if ([shipName isEqualToString:@"JAPAN AIRLINES    JAL - 022"])
+    {
+        return nil;
+    }
+
+    else if ([shipName isEqualToString:@"VARIG    RG - 815"])
+    {
+        return nil;
+    }
+
+    else if ([shipName isEqualToString:@"TACOMA-MARU"])
+    {
+        return [UIImage imageNamed: @"Steamer_Tacoma_Maru"];
+    }
+
+    else if ([shipName isEqualToString:@"MEXICO-MARU"])
+    {
+        return [UIImage imageNamed: @"Steamer_Mexico_Maru"];
+    }
+
+    else if ([shipName isEqualToString:@"AMERICA-MARU"])
+    {
+        return [UIImage imageNamed: @"Steamer_America_Maru"];
+    }
+
+    else if ([shipName isEqualToString:@"HAKATA-MARU"])
+    {
+        return [UIImage imageNamed: @"Steamer_Hakata_Maru"];
+    }
+
+    else if ([shipName isEqualToString:@"KOREAN AIRLINES    KE  -  002"])
+    {
+        return nil;
+    }
+
+    else if ([shipName isEqualToString:@"TOSA-MARU"])
+    {
+        return nil;
+    }
+
+    else if ([shipName isEqualToString:@"SEATTLE-MARU"])
+    {
+        return [UIImage imageNamed: @"Steamer_Seattle_Maru"];
+    }
+
+    else if ([shipName isEqualToString:@"CANADA-MARU"])
+    {
+        return [UIImage imageNamed: @"Steamer_Canada_Maru"];
+    }
+
+    else if ([shipName isEqualToString:@"サンラスピュー号"])
+    {
+        return nil;
+    }
+
+    else if ([shipName isEqualToString:@"JAPAN AIRLINES    JAL - 062"])
+    {
+        return nil;
+    }
+
+    else if ([shipName isEqualToString:@"HAWAII-MARU"])
+    {
+        return [UIImage imageNamed: @"Steamer_Hawaii_Maru_I"];
+    }
+
+    else if ([shipName isEqualToString:@"KANAGAWA-MARU"])
+    {
+        return nil;
+    }
+
+    else if ([shipName isEqualToString:@"LOIDE PARAGUAY"])
+    {
+        return [UIImage imageNamed: @"Steamer_LoideParaguay"];
+    }
+
+    else if ([shipName isEqualToString:@"JAPAN AIRLINES    JAL - 064"])
+    {
+        return nil;
+    }
+
+    else if ([shipName isEqualToString:@"AIR FRANCE     AF - 100"])
+    {
+        return nil;
+    }
+
+    else if ([shipName isEqualToString:@"AIR FRANCE     "])
+    {
+        return nil;
+    }
+
+    else if ([shipName isEqualToString:@"JAPAN AIRLINES    JAL - 074"])
+    {
+        return nil;
+    }
+
+    else if ([shipName isEqualToString:@"TJISADANE"])
+    {
+        return [UIImage imageNamed: @"Steamer_Tsjisadane"];
+    }
+
+    else if ([shipName isEqualToString:@"VARIG    RG - 831"])
+    {
+        return nil;
+    }
+
+    else if ([shipName isEqualToString:@"CHINA AIRLINES   CHINA - 002"])
+    {
+        return nil;
+    }
+
+    else if ([shipName isEqualToString:@"MONTEVIDEO-MARU"])
+    {
+        //1 July 1942 - Sunk
+        //http://www.wrecksite.eu/wreck.aspx?137052
+        NSDate *sunkDate = [Utilities dateFromString:@"01/07/1942"];
+        if([date compare: sunkDate])
+        {
+            return [UIImage imageNamed: @"Steamer_Montevideo_Maru_II"];
+        }
+        
+        return [UIImage imageNamed: @"Steamer_Montevideo_Maru_I"];
+    }
+
+    else if ([shipName isEqualToString:@"TEGELBERG"])
+    {
+        return [UIImage imageNamed: @"Steamer_Tegelberg"];
+    }
+
+    else if ([shipName isEqualToString:@"DAIZUI-MARU"])
+    {
+        return [UIImage imageNamed: @"SteameSteamer_Daizui_Marur_Tegelberg"];
+    }
+
+    else if ([shipName isEqualToString:@"SAKURA-MARU"])
+    {
+        return [UIImage imageNamed: @"Steamer_Sakura_Maru"];
+    }
+
+    else if ([shipName isEqualToString:@"BRASIL-MARU"])
+    {
+        return [UIImage imageNamed: @"Steamer_Brasil_Maru"];
+    }
+
+    else if ([shipName isEqualToString:@"SANTOS-MARU"])
+    {
+        {
+            //25 November 1944 - Sunk
+            //http://www.wrecksite.eu/wreck.aspx?137052
+            NSDate *sunkDate = [Utilities dateFromString:@"25/11/1944"];
+            if([date compare: sunkDate])
+            {
+                return [UIImage imageNamed: @"Steamer_Santos_Maru_II"];
+            }
+            
+            return [UIImage imageNamed: @"Steamer_Santos_Maru_I"];
+        }
+
+    }
+
+    else if ([shipName isEqualToString:@"PANAMA-MARU"])
+    {
+        return [UIImage imageNamed: @"Steamer_Tjitjalengka"];
+    }
+
+    else if ([shipName isEqualToString:@"TJITJALENGKA"])
+    {
+        return [UIImage imageNamed: @"Steamer_Tjitjalengka"];
+    }
+
+    else if ([shipName isEqualToString:@"BINGO-MARU"])
+    {
+        return [UIImage imageNamed: @"Steamer_Bingo_Maru"];
+    }
+
+    else if ([shipName isEqualToString:@"PAN AMERICAN"])
+    {
+        return nil;
+    }
+
+    else if ([shipName isEqualToString:@"ITSUKUSHIMA-MARU"])
+    {
+        return [UIImage imageNamed: @"Steamer_Itsukushima_Maru"];
+    }
+
+    else if ([shipName isEqualToString:@"KOHKA-MARU"])
+    {
+        return [UIImage imageNamed: @"Steamer_Kohka_Maru"];
+    }
+
+    else if ([shipName isEqualToString:@"VARIG    RG - 833"])
+    {
+        return nil;
+    }
+
+    else if ([shipName isEqualToString:@"KAWACHI-MARU"])
+    {
+        return [UIImage imageNamed: @"Steamer_Kawachi_Maru"];
+    }
+
+    else if ([shipName isEqualToString:@"BOISSEVAIN"])
+    {
+        return [UIImage imageNamed: @"Steamer_Boissevain"];
+    }
+
+    else if ([shipName isEqualToString:@"KASATO-MARU"])
+    {
+        return nil;
+    }
+
+    else if ([shipName isEqualToString:@"RIO DE JANEIRO-MARU"])
+    {
+        return [UIImage imageNamed: @"Steamer_Rio_de_Janeiro_Maru"];
+    }
+
+    else if ([shipName isEqualToString:@"RYOJUN-MARU"])
+    {
+        return nil;
+    }
+
+    else if ([shipName isEqualToString:@"BUENOS AIRES-MARU"])
+    {
+        //27 November 1943 - Sunk
+        //http://www.wrecksite.eu/wreck.aspx?138697
+        NSDate *sunkDate = [Utilities dateFromString:@"27/11/1943"];
+        if([date compare: sunkDate])
+        {
+            return [UIImage imageNamed: @"Steamer_Buenos_Aires_Maru_II"];
+        }
+        
+        return [UIImage imageNamed: @"Steamer_Buenos_Aires_Maru_I"];
+    }
+
+    else if ([shipName isEqualToString:@"CHILI"])
+    {
+        return [UIImage imageNamed: @"Steamer_Chili"];
+    }
+
+    else if ([shipName isEqualToString:@"AWA-MARU"])
+    {
+        return [UIImage imageNamed: @"Steamer_Awa_Maru"];
+    }
+
+    else if ([shipName isEqualToString:@"SANUKI-MARU"])
+    {
+        return [UIImage imageNamed: @"Steamer_Sanuki_Maru"];
+    }
+
+    else if ([shipName isEqualToString:@"VARIG  VIAÇÃO AÉREA RIO GRANDENSE"])
+    {
+        return nil;
+    }
+
+    else if ([shipName isEqualToString:@"PAN AMERICAN    PN - 020"])
+    {
+        return nil;
+    }
+
+    else if ([shipName isEqualToString:@"ARGENTINA-MARU"])
+    {
+        //1 September 1946 - Got scrapped
+        //https://en.wikipedia.org/wiki/Japanese_aircraft_carrier_Kaiy%C5%8D
+        NSDate *sunkDate = [Utilities dateFromString:@"1/9/1946"];
+        if([date compare: sunkDate])
+        {
+            return [UIImage imageNamed: @"Steamer_Argentina_Maru_II"];
+        }
+        
+        return [UIImage imageNamed: @"Steamer_Argentina_Maru_I"];
+    }
+
+    else if ([shipName isEqualToString:@"DAINIUNKAI-MARU"])
+    {
+        return [UIImage imageNamed: @"Steamer_Daini_Unkai_Maru"];
+    }
+
+    else if ([shipName isEqualToString:@"ARIZONA-MARU"])
+    {
+        return [UIImage imageNamed: @"Steamer_Arizona_Maru"];
+    }
+
+    else if ([shipName isEqualToString:@"FUSHIMI-MARU"])
+    {
+        return [UIImage imageNamed: @"Steamer_Fushimi_Maru"];
+    }
+
+    else if ([shipName isEqualToString:@"PAN AMERICAN    PN - 830"])
+    {
+        return nil;
+    }
+
+    else if ([shipName isEqualToString:@"RUYS"])
+    {
+        return [UIImage imageNamed: @"Steamer_Ruys"];
+    }
+
+    else if ([shipName isEqualToString:@"KAMAKURA-MARU"])
+    {
+        return [UIImage imageNamed: @"Steamer_Kamakura_Maru"];
+    }
+
+    else if ([shipName isEqualToString:@"ARABIA-MARU"])
+    {
+        return [UIImage imageNamed: @"Steamer_Arabia_Maru"];
+    }
+
+    else if ([shipName isEqualToString:@"OUTROS"])
+    {
+        return nil;
+    }
+
+    else if ([shipName isEqualToString:@"SEIUN-MARU"])
+    {
+        return [UIImage imageNamed: @"Steamer_Seiun_Maru"];
+    }
+    
+    return nil;
+}
 @end
