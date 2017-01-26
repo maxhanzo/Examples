@@ -47,6 +47,11 @@
 		2B4872D71E00820700A41572 /* ASJTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4872D31E00820700A41572 /* ASJTagsView.m */; };
 		2B4872D81E00820700A41572 /* Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2B4872D41E00820700A41572 /* Resources.bundle */; };
 		2B4872EA1E016A1100A41572 /* TagParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4872E91E016A1100A41572 /* TagParameters.m */; };
+		2B4D30A81E3A7EE50039B874 /* ShipDetailsTableViewHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4D30A61E3A7EE50039B874 /* ShipDetailsTableViewHeaderCell.m */; };
+		2B4D30A91E3A7EE50039B874 /* ShipDetailsTableViewHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B4D30A71E3A7EE50039B874 /* ShipDetailsTableViewHeaderCell.xib */; };
+		2B4D30AD1E3A7F1B0039B874 /* ShipJourneyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4D30AB1E3A7F1B0039B874 /* ShipJourneyTableViewCell.m */; };
+		2B4D30AE1E3A7F1B0039B874 /* ShipJourneyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B4D30AC1E3A7F1B0039B874 /* ShipJourneyTableViewCell.xib */; };
+		2B4D30B21E3A9F020039B874 /* JourneyDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4D30B11E3A9F020039B874 /* JourneyDetailsTableViewController.m */; };
 		2B4E21011E034F1700502C32 /* SearchParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E21001E034F1700502C32 /* SearchParameters.m */; };
 		2B4E21051E0354A000502C32 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E21041E0354A000502C32 /* SWRevealViewController.m */; };
 		2B4E21091E035D7800502C32 /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E21081E035D7800502C32 /* MenuTableViewController.m */; };
@@ -194,6 +199,14 @@
 		2B4872D41E00820700A41572 /* Resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resources.bundle; sourceTree = "<group>"; };
 		2B4872E81E016A1100A41572 /* TagParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TagParameters.h; path = "Shared Instances/TagParameters.h"; sourceTree = "<group>"; };
 		2B4872E91E016A1100A41572 /* TagParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TagParameters.m; path = "Shared Instances/TagParameters.m"; sourceTree = "<group>"; };
+		2B4D30A51E3A7EE50039B874 /* ShipDetailsTableViewHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShipDetailsTableViewHeaderCell.h; path = "ViewControllers/Immigration Details/Ships/ShipDetailsTableViewController/ShipDetailsTableViewHeaderCell/ShipDetailsTableViewHeaderCell.h"; sourceTree = "<group>"; };
+		2B4D30A61E3A7EE50039B874 /* ShipDetailsTableViewHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShipDetailsTableViewHeaderCell.m; path = "ViewControllers/Immigration Details/Ships/ShipDetailsTableViewController/ShipDetailsTableViewHeaderCell/ShipDetailsTableViewHeaderCell.m"; sourceTree = "<group>"; };
+		2B4D30A71E3A7EE50039B874 /* ShipDetailsTableViewHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ShipDetailsTableViewHeaderCell.xib; path = "ViewControllers/Immigration Details/Ships/ShipDetailsTableViewController/ShipDetailsTableViewHeaderCell/ShipDetailsTableViewHeaderCell.xib"; sourceTree = "<group>"; };
+		2B4D30AA1E3A7F1B0039B874 /* ShipJourneyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShipJourneyTableViewCell.h; path = "ViewControllers/Immigration Details/Ships/ShipDetailsTableViewController/ShipJourneyTableViewCell/ShipJourneyTableViewCell.h"; sourceTree = "<group>"; };
+		2B4D30AB1E3A7F1B0039B874 /* ShipJourneyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShipJourneyTableViewCell.m; path = "ViewControllers/Immigration Details/Ships/ShipDetailsTableViewController/ShipJourneyTableViewCell/ShipJourneyTableViewCell.m"; sourceTree = "<group>"; };
+		2B4D30AC1E3A7F1B0039B874 /* ShipJourneyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ShipJourneyTableViewCell.xib; path = "ViewControllers/Immigration Details/Ships/ShipDetailsTableViewController/ShipJourneyTableViewCell/ShipJourneyTableViewCell.xib"; sourceTree = "<group>"; };
+		2B4D30B01E3A9F020039B874 /* JourneyDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JourneyDetailsTableViewController.h; path = "ViewControllers/Immigration Details/Ships/JourneyDetailsTableViewController/JourneyDetailsTableViewController.h"; sourceTree = "<group>"; };
+		2B4D30B11E3A9F020039B874 /* JourneyDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JourneyDetailsTableViewController.m; path = "ViewControllers/Immigration Details/Ships/JourneyDetailsTableViewController/JourneyDetailsTableViewController.m"; sourceTree = "<group>"; };
 		2B4E20FF1E034F1700502C32 /* SearchParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchParameters.h; path = "Shared Instances/SearchParameters.h"; sourceTree = "<group>"; };
 		2B4E21001E034F1700502C32 /* SearchParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchParameters.m; path = "Shared Instances/SearchParameters.m"; sourceTree = "<group>"; };
 		2B4E21031E0354A000502C32 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -612,6 +625,35 @@
 				2B4E21001E034F1700502C32 /* SearchParameters.m */,
 			);
 			name = "Shared Instances";
+			sourceTree = "<group>";
+		};
+		2B4D30A31E3A7E7D0039B874 /* ShipDetailsTableViewHeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				2B4D30A51E3A7EE50039B874 /* ShipDetailsTableViewHeaderCell.h */,
+				2B4D30A61E3A7EE50039B874 /* ShipDetailsTableViewHeaderCell.m */,
+				2B4D30A71E3A7EE50039B874 /* ShipDetailsTableViewHeaderCell.xib */,
+			);
+			name = ShipDetailsTableViewHeaderCell;
+			sourceTree = "<group>";
+		};
+		2B4D30A41E3A7E890039B874 /* ShipJourneyTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2B4D30AA1E3A7F1B0039B874 /* ShipJourneyTableViewCell.h */,
+				2B4D30AB1E3A7F1B0039B874 /* ShipJourneyTableViewCell.m */,
+				2B4D30AC1E3A7F1B0039B874 /* ShipJourneyTableViewCell.xib */,
+			);
+			name = ShipJourneyTableViewCell;
+			sourceTree = "<group>";
+		};
+		2B4D30AF1E3A9ED10039B874 /* JourneyDetailsTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2B4D30B01E3A9F020039B874 /* JourneyDetailsTableViewController.h */,
+				2B4D30B11E3A9F020039B874 /* JourneyDetailsTableViewController.m */,
+			);
+			name = JourneyDetailsTableViewController;
 			sourceTree = "<group>";
 		};
 		2B4E21021E0354A000502C32 /* SWRevealViewController */ = {
@@ -1080,6 +1122,7 @@
 		2BFD5CE81E1701A300AF18B9 /* Ships */ = {
 			isa = PBXGroup;
 			children = (
+				2B4D30AF1E3A9ED10039B874 /* JourneyDetailsTableViewController */,
 				2BFD5CED1E1701F300AF18B9 /* ShipDetailsTableViewController */,
 				2BFD5CE91E1701B300AF18B9 /* ShipsTableViewController */,
 			);
@@ -1098,6 +1141,8 @@
 		2BFD5CED1E1701F300AF18B9 /* ShipDetailsTableViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2B4D30A41E3A7E890039B874 /* ShipJourneyTableViewCell */,
+				2B4D30A31E3A7E7D0039B874 /* ShipDetailsTableViewHeaderCell */,
 				2BFD5CEF1E17024200AF18B9 /* ShipDetailsTableViewController.h */,
 				2BFD5CF01E17024200AF18B9 /* ShipDetailsTableViewController.m */,
 			);
@@ -1261,6 +1306,7 @@
 				2B4394951E316257007A8E56 /* SurnameDetailsHeaderTableViewCell.xib in Resources */,
 				2B7D97161E11E36A00818754 /* PrefectureStatsTableViewFooter.xib in Resources */,
 				2B4394901E316204007A8E56 /* SurnameDetailsTableViewCell.xib in Resources */,
+				2B4D30AE1E3A7F1B0039B874 /* ShipJourneyTableViewCell.xib in Resources */,
 				2B4872D81E00820700A41572 /* Resources.bundle in Resources */,
 				2B8DAE581E10C466007603F2 /* GroupDetailTableViewFooterCell.xib in Resources */,
 				2B5947AD1E14892B002AADC8 /* PrefectureFlagTableViewCell.xib in Resources */,
@@ -1274,6 +1320,7 @@
 				2B4872A71E006A8800A41572 /* Assets.xcassets in Resources */,
 				2B4089D81E060BF8000B645E /* ImmigrantsResultsTableViewFooter.xib in Resources */,
 				2B4394671E26E572007A8E56 /* Sokuseki.db in Resources */,
+				2B4D30A91E3A7EE50039B874 /* ShipDetailsTableViewHeaderCell.xib in Resources */,
 				2B5947A81E1488E0002AADC8 /* PrefectureRegionDetailsTableViewCell.xib in Resources */,
 				2B4872A51E006A8800A41572 /* Main.storyboard in Resources */,
 				2B46BC371E020127007C244E /* ShipTableViewCell.xib in Resources */,
@@ -1342,8 +1389,10 @@
 				2BB948D51E05F55A003E1310 /* FMDatabase.m in Sources */,
 				2B5947961E148571002AADC8 /* PrefectureDetailsTableViewController.m in Sources */,
 				2BFD5CE31E17015800AF18B9 /* SurnamesTableViewController.m in Sources */,
+				2B4D30A81E3A7EE50039B874 /* ShipDetailsTableViewHeaderCell.m in Sources */,
 				2B4872D71E00820700A41572 /* ASJTagsView.m in Sources */,
 				2B5947A71E1488E0002AADC8 /* PrefectureRegionDetailsTableViewCell.m in Sources */,
+				2B4D30AD1E3A7F1B0039B874 /* ShipJourneyTableViewCell.m in Sources */,
 				2B8DAE571E10C466007603F2 /* GroupDetailTableViewFooterCell.m in Sources */,
 				2BB948681E05EE11003E1310 /* Passenger.m in Sources */,
 				2B5947A11E148891002AADC8 /* PrefectureNameTableViewCell.m in Sources */,
@@ -1359,6 +1408,7 @@
 				2BB9486A1E05EE11003E1310 /* PrefectureStatistic.m in Sources */,
 				2B7D96EE1E11CC8900818754 /* PrefectureListTableViewController.m in Sources */,
 				2BB948D91E05F55A003E1310 /* FMResultSet.m in Sources */,
+				2B4D30B21E3A9F020039B874 /* JourneyDetailsTableViewController.m in Sources */,
 				2BB948D81E05F55A003E1310 /* FMDatabaseQueue.m in Sources */,
 				2BB9486C1E05EE11003E1310 /* Surname.m in Sources */,
 				2B76BDFC1E01D05800E85BC7 /* ParameterViewController.m in Sources */,
