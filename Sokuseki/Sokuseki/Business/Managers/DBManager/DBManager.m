@@ -216,7 +216,7 @@ static DBManager *sharedInstance = nil;
     FMDatabase *db = [FMDatabase databaseWithPath: dbPath];
     [db open];
     
-    NSString* shipQuery = @"SELECT ID, Name FROM Ship ORDER BY Name";
+    NSString* shipQuery = @"SELECT ID, Name, Company FROM Ship ORDER BY Name";
     if(![db open] )
     {
         NSLog(@"%s: %@", __FUNCTION__, [db lastErrorMessage]);
@@ -233,8 +233,9 @@ static DBManager *sharedInstance = nil;
     {
         NSString* shipID = [resultsWithShipData stringForColumn: @"ID"];
         NSString* shipName = [resultsWithShipData stringForColumn: @"Name"];
+        NSString* companyName = [resultsWithShipData stringForColumn: @"Company"];
         
-        Steamer *steamer = [Steamer steamerWithID: [shipID intValue] withName: shipName];
+        Steamer *steamer = [Steamer steamerWithID: [shipID intValue] withName: shipName withCompanyName:companyName];
         [steamersArray addObject: steamer];
         
     }
@@ -246,43 +247,29 @@ static DBManager *sharedInstance = nil;
 //good way
 -(NSArray*) retrieveVoyageFromShipName: (NSString*) shipName
 {
-    //SELECT Ship, Arrival, Departure, Year,SUM(Immigrants) AS numberOfImmigrants FROM ShipVoyagePrefectureImmigrant  WHERE Ship LIKE '%WAKASA%' Group By Arrival, Ship
-    __block BOOL success;
-    NSString *dbPath = [[NSBundle mainBundle] pathForResource:@"ShinAshiato" ofType:@"sqlite"];
-    NSMutableArray* voyageArray = [NSMutableArray array];
-    FMDatabaseQueue *queue = [FMDatabaseQueue databaseQueueWithPath:dbPath];
-     [queue inDatabase:^(FMDatabase *db) {
-         NSString* voyageQuery = [NSString stringWithFormat: @"%@ WHERE Ship LIKE '%@%%' Group By Arrival, Ship", @"SELECT Ship, Arrival, Departure, Year, Company, SUM(Immigrants) AS numberOfImmigrants FROM ShipVoyagePrefectureImmigrant ", shipName];
-         if(![database open] )
-         {
-             NSLog(@"%s: %@", __FUNCTION__, [db lastErrorMessage]);
-             success = NO;     // set the value inside the block
-             return;
-         }
-         
-         FMResultSet *resultsWithVoyageData = [database executeQuery:voyageQuery];
-         if (!resultsWithVoyageData)
-         {
-             NSLog(@"%s: %@", __FUNCTION__, [db lastErrorMessage]);
-             success = NO;     // set the value inside the block
-             return;           // note, this doesn't exit the method; this exits this `inDatabase` block
-         }
-
-         while ([resultsWithVoyageData next])
-         {
-             NSString* shipName = [resultsWithVoyageData stringForColumn: @"Ship"];
-             NSString* arrivalDate = [resultsWithVoyageData stringForColumn: @"Arrival"];
-             NSString* departureDate = [resultsWithVoyageData stringForColumn: @"Departure"];
-             NSString* year = [resultsWithVoyageData stringForColumn: @"Year"];
-             NSString* numberOfImmigrants = [resultsWithVoyageData stringForColumn: @"numberOfImmigrants"];
-             NSString* shipCompany = [resultsWithVoyageData stringForColumn: @"Company"];
-
+    NSString *dbPath = [DBManager getDatabasePath];
+    FMDatabase *db = [FMDatabase databaseWithPath: dbPath];
+    [db open];
+    
+    NSString* voyageQuery = [NSString stringWithFormat: @"%@ WHERE Ship LIKE '%@%%' Group By Arrival, Ship", @"SELECT Ship, Arrival, Departure, Year, Company, SUM(Immigrants) AS numberOfImmigrants FROM ShipVoyagePrefectureImmigrant ", shipName];
+    
+    NSMutableArray *voyageArray = [NSMutableArray array];
+    FMResultSet *resultsWithVoyageData = [db executeQuery:voyageQuery];
+    // Query result
+    while ([resultsWithVoyageData next])
+    {
+        NSString* shipName = [resultsWithVoyageData stringForColumn: @"Ship"];
+        NSString* arrivalDate = [resultsWithVoyageData stringForColumn: @"Arrival"];
+        NSString* departureDate = [resultsWithVoyageData stringForColumn: @"Departure"];
+        NSString* year = [resultsWithVoyageData stringForColumn: @"Year"];
+        NSString* numberOfImmigrants = [resultsWithVoyageData stringForColumn: @"numberOfImmigrants"];
+        NSString* shipCompany = [resultsWithVoyageData stringForColumn: @"Company"];
         
-             Voyage *voyage = [Voyage voyageWithShipName: shipName withArrivalDate: arrivalDate withDepartureDate: departureDate withYear: year withNumberOfImmigrants: numberOfImmigrants withShipCompany: shipCompany];
+        
+        Voyage *voyage = [Voyage voyageWithShipName: shipName withArrivalDate: arrivalDate withDepartureDate: departureDate withYear: year withNumberOfImmigrants: numberOfImmigrants withShipCompany: shipCompany];
         [voyageArray addObject: voyage];
-    }[resultsWithVoyageData close];
-         success = YES;        // another example of setting that `success` variable
-     }];
+    }
+    [db close];
     return voyageArray;
     
 }
@@ -291,36 +278,21 @@ static DBManager *sharedInstance = nil;
 -(NSArray*) retrievePassengersFromVoyage:(Voyage*) voyage
 {
     //SELECT Ship, Prefecture, Arrival, Departure, Year, Immigrants FROM ShipVoyagePrefectureImmigrant WHERE Ship LIKE '%WAKASA%' AND Departure = '1918-04-25'
-    __block BOOL success;
-    NSString *dbPath = [[NSBundle mainBundle] pathForResource:@"ShinAshiato" ofType:@"sqlite"];
-    FMDatabaseQueue *queue = [FMDatabaseQueue databaseQueueWithPath:dbPath];
-    NSMutableArray* passengersArray = [NSMutableArray array];
-    [queue inDatabase:^(FMDatabase *db) {
-        if(![database open] )
-        {
-            NSLog(@"%s: %@", __FUNCTION__, [db lastErrorMessage]);
-            success = NO;     // set the value inside the block
-            return;
-        }
-        
-        NSString* voyageQuery = [NSString stringWithFormat: @"%@ WHERE Ship LIKE '%%%@%%' AND Departure = '%@'", @"SELECT  Prefecture, Immigrants FROM ShipVoyagePrefectureImmigrant  ", voyage.shipName, [Utilities  dbDateStringFromDate:voyage.departureDate]];
-        FMResultSet *resultsWithVoyageData = [database executeQuery:voyageQuery];
-        if (!resultsWithVoyageData)
-        {
-            NSLog(@"%s: %@", __FUNCTION__, [db lastErrorMessage]);
-            success = NO;     // set the value inside the block
-            return;           // note, this doesn't exit the method; this exits this `inDatabase` block
-        }
-        
-        while ([resultsWithVoyageData next])
-        {
-            NSString* prefectureName = [resultsWithVoyageData stringForColumn: @"Prefecture"];
-            NSString* numberOfImmigrants = [resultsWithVoyageData stringForColumn: @"Immigrants"];
-            Passenger *passenger = [Passenger passengerWithPrefectureName:prefectureName withNumberOfImmigrants:[numberOfImmigrants intValue]];
-            [passengersArray addObject: passenger];
-        }[resultsWithVoyageData close];
-        success = YES;        // another example of setting that `success` variable
-    }];
+    NSString *dbPath = [DBManager getDatabasePath];
+    FMDatabase *db = [FMDatabase databaseWithPath: dbPath];
+    [db open];
+    NSMutableArray *passengersArray = [NSMutableArray array];
+    NSString* voyageQuery = [NSString stringWithFormat: @"%@ WHERE Ship LIKE '%%%@%%' AND Departure = '%@'", @"SELECT  Prefecture, Immigrants FROM ShipVoyagePrefectureImmigrant  ", voyage.shipName, [Utilities  dbDateStringFromDate:voyage.departureDate]];
+    FMResultSet *resultsWithVoyageData = [db executeQuery:voyageQuery];
+    
+    while ([resultsWithVoyageData next])
+    {
+        NSString* prefectureName = [resultsWithVoyageData stringForColumn: @"Prefecture"];
+        NSString* numberOfImmigrants = [resultsWithVoyageData stringForColumn: @"Immigrants"];
+        Passenger *passenger = [Passenger passengerWithPrefectureName:prefectureName withNumberOfImmigrants:[numberOfImmigrants intValue]];
+        [passengersArray addObject: passenger];
+    }
+    [resultsWithVoyageData close];
     return passengersArray;
 }
 

@@ -11,5 +11,8 @@
 @interface GroupDetailTableViewFooterCell : UITableViewCell
 @property(nonatomic, weak) IBOutlet UILabel *lblTotalPeople;
 -(void) setTotalPeopleText: (NSString*) totalRecords;
+-(void) setTotalRecordsText: (NSString*) totalRecords;
+-(void) setTotalRecordsText: (NSString*) totalRecords withTotalPassengers: (NSString*) totalPassengers;
 +(float)rowHeight;
+
 @end

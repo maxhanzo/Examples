@@ -9,12 +9,13 @@
 #import "Passenger.h"
 
 @implementation Passenger
-@synthesize prefectureName, numberOfImmigrants;
-+(Passenger*) passengerWithPrefectureName: (NSString*) prefectureName withNumberOfImmigrants: (NSUInteger) numberOfImmigrants
+@synthesize prefectureName, numberOfImmigrants, totalNumberOfImmigrants;
++(Passenger*) passengerWithPrefectureName: (NSString*) prefectureName withNumberOfImmigrants: (NSInteger) numberOfImmigrants
 {
     Passenger *passenger = [[Passenger alloc] init];
     [passenger setPrefectureName: prefectureName];
     [passenger setNumberOfImmigrants: numberOfImmigrants];
+    [passenger setTotalNumberOfImmigrants:[NSNumber numberWithInteger: numberOfImmigrants]];
     return passenger;
 }
 @end

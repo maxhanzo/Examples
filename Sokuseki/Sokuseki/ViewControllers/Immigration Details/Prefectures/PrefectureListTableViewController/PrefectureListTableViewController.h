@@ -15,7 +15,7 @@
 @property(nonatomic, strong) NSMutableArray *prefectureArray;
 @property(nonatomic, strong) NSArray *prefectureDataSource;
 
-@property(nonatomic, assign) NSUInteger topMostNumberOfImmigrants;
+@property(nonatomic, assign) NSInteger topMostNumberOfImmigrants;
 @property(nonatomic, assign) BOOL desc;
 
 

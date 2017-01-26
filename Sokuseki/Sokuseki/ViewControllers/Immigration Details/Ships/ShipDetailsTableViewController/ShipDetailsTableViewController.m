@@ -7,21 +7,25 @@
 //
 
 #import "ShipDetailsTableViewController.h"
+#import "ShipJourneyTableViewCell.h"
+#import "ShipDetailsTableViewHeaderCell.h"
+#import "GroupDetailTableViewFooterCell.h"
+#import "DBManager.h"
+#import "Utilities.h"
+#import "JourneyDetailsTableViewController.h"
 
 @interface ShipDetailsTableViewController ()
-
+@property(nonatomic, strong) Voyage *selectedJourney;
 @end
 
 @implementation ShipDetailsTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    DBManager *dbManager = [DBManager getSharedInstance];
+    self.shipJourneys = [dbManager retrieveVoyageFromShipName:self.steamer.shipName];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.title = self.steamer.shipName;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,67 +36,155 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    if(self.shipJourneys)
+    {
+        return [self.shipJourneys count] + 2;
+    }
+    return 2;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    NSInteger results = [self.shipJourneys count];
     
-    // Configure the cell...
+    NSInteger footerIndex = results + 1;
     
-    return cell;
-}
-*/
+    if(indexPath.row == 0)
+    {
+        ShipDetailsTableViewHeaderCell* cell = [self.tableView dequeueReusableCellWithIdentifier:@"ShipDetailsTableViewHeaderCell"];
+        
+        if(!cell)
+        {
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"ShipDetailsTableViewHeaderCell" owner:self options:nil];
+            cell = [nib objectAtIndex:0];
+        }
+        
+        [cell.lblShipCompany setText: self.steamer.companyName];
+        UIImage *shipAvatar = [Utilities pictureForShipName:self.steamer.shipName withJourneyDate: [NSDate date]];
+        if(shipAvatar)
+            [cell.imgShipAvatar setImage: shipAvatar];
+        return cell;
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+    }
+    else if(indexPath.row == footerIndex)
+    {
+        GroupDetailTableViewFooterCell *cell = (GroupDetailTableViewFooterCell*)[tableView dequeueReusableCellWithIdentifier:@"GroupDetailTableViewFooterCell"];
+        
+        if(!cell)
+        {
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"GroupDetailTableViewFooterCell" owner:self options:nil];
+            cell = [nib objectAtIndex:0];
+        }
+        
+        [cell setTotalRecordsText: [NSString stringWithFormat: @"%li", (long)results] withTotalPassengers:[NSString stringWithFormat: @"%li", (long)[self totalPassengers]] ];
+        
+        return cell;
+        
+    }
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    Voyage* journey = [self.shipJourneys objectAtIndex: indexPath.row - 1];
+    
+    
+        ShipJourneyTableViewCell *cell = (ShipJourneyTableViewCell*)[self.tableView dequeueReusableCellWithIdentifier:@"ShipJourneyTableViewCell"];
+        
+        if(!cell)
+        {
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"ShipJourneyTableViewCell" owner:self options:nil];
+            cell = [nib objectAtIndex:0];
+        }
+    
+        if(journey)
+        {
+            NSString* textDate = [Utilities stringFromDate:journey.departureDate];
+            NSString *journeyInfo = [NSString stringWithFormat: @"%@ • %li passengers", textDate, (long)journey.numberOfImmigrants];
+            [cell.lblJourneyInfo setText: journeyInfo];
+        }
+        return cell;
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+-(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSInteger footerIndex = [self.shipJourneys count] + 1 ;
+    
+    if(indexPath.row == 0)
+    {
+        return [ShipDetailsTableViewHeaderCell rowHeight];
+    }
+
+    else if(indexPath.row == footerIndex)
+    {
+        return [GroupDetailTableViewFooterCell rowHeight];
+    }
+
+    return [ShipJourneyTableViewCell rowHeight];
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if(indexPath.row > 0)
+    {
+         NSInteger footerIndex = [self.shipJourneys count] + 1 ;
+        if(indexPath.row < footerIndex)
+        {
+            NSInteger index = indexPath.row - 1;
+            self.selectedJourney = (Voyage*) [self.shipJourneys objectAtIndex: index];
+            [self performSegueWithIdentifier:@"JourneyDetailsSegue" sender:self];
+        }
+    }
+    
+    
 }
-*/
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+//Prevent extra separators from appearing
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 0.01f;
 }
-*/
+
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    return [UIView new];
+}
+
+#pragma mark - Segue stuff
+-(IBAction)prepareforUnwind: (UIStoryboard*) segue
+{
+
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString: @"JourneyDetailsSegue"])
+    {
+        UINavigationController* journeyDetailNavigationViewController = (UINavigationController*)segue.destinationViewController;
+        
+        
+        JourneyDetailsTableViewController* journeyDetailsTableViewController = (JourneyDetailsTableViewController*)[journeyDetailNavigationViewController.childViewControllers firstObject];
+        
+        if(journeyDetailsTableViewController)
+        {
+            [journeyDetailsTableViewController setJourney:self.selectedJourney];
+        }
+    }
+}
+
+
+#pragma mark - Utilities
+-(NSInteger) totalPassengers
+{
+    NSInteger totalPassengers = 0;
+    for (Voyage *journey in self.shipJourneys)
+    {
+        totalPassengers += journey.numberOfImmigrants;
+    }
+    return totalPassengers;
+}
 
 @end

@@ -7,12 +7,14 @@
 //
 
 #import "ShipsTableViewController.h"
+#import "ShipDetailsTableViewController.h"
 #import "DBManager.h"
 #import "Steamer.h"
 #import "ShipTableViewCell.h"
 
 @interface ShipsTableViewController ()
 @property (nonatomic) IBOutlet UIBarButtonItem* revealButtonItem;
+@property(nonatomic, strong) Steamer *selectedShip;
 @end
 
 @implementation ShipsTableViewController
@@ -22,6 +24,7 @@
     
     DBManager *dbManager = [DBManager getSharedInstance];
     self.shipsArray = [dbManager retrieveAllSteamers];
+    self.selectedShip = nil;
 }
 
 -(void) viewWillAppear:(BOOL)animated
@@ -78,6 +81,16 @@
     return nil;
 }
 
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    Steamer *selectedSteamer = [self.shipsArray objectAtIndex:indexPath.row];
+    if(selectedSteamer){
+        self.selectedShip = selectedSteamer;
+    }
+    
+    [self performSegueWithIdentifier: @"ShipDetailsSegue" sender: self];
+}
 
 #pragma mark - SWRevealViewController stuff
 - (void)revealController:(SWRevealViewController *)revealController didMoveToPosition:(FrontViewPosition)position
@@ -112,5 +125,29 @@
         
     }
 }
+
+
+#pragma mark - Segue stuff
+-(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue
+{
+    
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString: @"ShipDetailsSegue"])
+    {
+        UINavigationController* shipDetailNavigationViewController = (UINavigationController*)segue.destinationViewController;
+        
+        
+        ShipDetailsTableViewController* shipDetailsTableViewController = (ShipDetailsTableViewController*)[shipDetailNavigationViewController.childViewControllers firstObject];
+        
+        if(shipDetailsTableViewController)
+        {
+            [shipDetailsTableViewController setSteamer:self.selectedShip];
+        }
+    }
+}
+
 
 @end

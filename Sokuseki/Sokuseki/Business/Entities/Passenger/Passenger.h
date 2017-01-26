@@ -10,7 +10,8 @@
 
 @interface Passenger : NSObject
 @property(nonatomic, strong) NSString *prefectureName;
-@property(nonatomic, assign) NSUInteger numberOfImmigrants;
+@property(nonatomic, assign) NSInteger numberOfImmigrants;
+@property(nonatomic, strong) NSNumber *totalNumberOfImmigrants;
 
-+(Passenger*) passengerWithPrefectureName: (NSString*) prefectureName withNumberOfImmigrants: (NSUInteger) numberOfImmigrants;
++(Passenger*) passengerWithPrefectureName: (NSString*) prefectureName withNumberOfImmigrants: (NSInteger) numberOfImmigrants;
 @end

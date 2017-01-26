@@ -808,7 +808,7 @@
 
     else if ([shipName isEqualToString:@"VARIG    RG - 083"])
     {
-        return nil;
+        return [UIImage imageNamed:@"Airplane_Varig"];
     }
 
     else if ([shipName isEqualToString:@"MANILA-MARU"])
@@ -818,17 +818,17 @@
 
     else if ([shipName isEqualToString:@"WAKASA-MARU"])
     {
-        return nil;
+         return [UIImage imageNamed: @"Steamer_Wakasa_Maru"];
     }
 
     else if ([shipName isEqualToString:@"JAPAN AIRLINES"])
     {
-        return nil;
+        return [UIImage imageNamed: @"Airplane_Japan_Airlines"];
     }
 
     else if ([shipName isEqualToString:@"JAPAN AIRLINES    JAL - 1008"])
     {
-        return nil;
+        return [UIImage imageNamed: @"Airplane_Japan_Airlines"];
     }
 
     else if ([shipName isEqualToString:@"BOLIVIA MARU"])
@@ -838,12 +838,12 @@
 
     else if ([shipName isEqualToString:@"PAN AMERICAN    PN - 008"])
     {
-        return nil;
+        return [UIImage imageNamed: @"Airplane_PanAmerican"];
     }
 
     else if ([shipName isEqualToString:@"JAPAN AIRLINES    JAL - 006"])
     {
-        return nil;
+        return [UIImage imageNamed: @"Airplane_Japan_Airlines"];
     }
 
     else if ([shipName isEqualToString:@"NIPPON-MARU"])
@@ -871,12 +871,12 @@
 
     else if ([shipName isEqualToString:@"JAPAN AIRLINES    JAL - 022"])
     {
-        return nil;
+        return [UIImage imageNamed: @"Airplane_Japan_Airlines"];
     }
 
     else if ([shipName isEqualToString:@"VARIG    RG - 815"])
     {
-        return nil;
+        return [UIImage imageNamed:@"Airplane_Varig"];
     }
 
     else if ([shipName isEqualToString:@"TACOMA-MARU"])
@@ -901,12 +901,12 @@
 
     else if ([shipName isEqualToString:@"KOREAN AIRLINES    KE  -  002"])
     {
-        return nil;
+        return [UIImage imageNamed:@"Airplane_Korean_Airlines"];
     }
 
     else if ([shipName isEqualToString:@"TOSA-MARU"])
     {
-        return nil;
+        return [UIImage imageNamed: @"Steamer_Tosa_Maru"];
     }
 
     else if ([shipName isEqualToString:@"SEATTLE-MARU"])
@@ -921,12 +921,12 @@
 
     else if ([shipName isEqualToString:@"サンラスピュー号"])
     {
-        return nil;
+        [UIImage imageNamed: @"Steamer_Other"];
     }
 
     else if ([shipName isEqualToString:@"JAPAN AIRLINES    JAL - 062"])
     {
-        return nil;
+        return [UIImage imageNamed: @"Airplane_Japan_Airlines"];
     }
 
     else if ([shipName isEqualToString:@"HAWAII-MARU"])
@@ -936,7 +936,7 @@
 
     else if ([shipName isEqualToString:@"KANAGAWA-MARU"])
     {
-        return nil;
+       return [UIImage imageNamed: @"Steamer_Kanagawa_Maru"];;
     }
 
     else if ([shipName isEqualToString:@"LOIDE PARAGUAY"])
@@ -946,22 +946,22 @@
 
     else if ([shipName isEqualToString:@"JAPAN AIRLINES    JAL - 064"])
     {
-        return nil;
+        return [UIImage imageNamed: @"Airplane_Japan_Airlines"];
     }
 
     else if ([shipName isEqualToString:@"AIR FRANCE     AF - 100"])
     {
-        return nil;
+        return [UIImage imageNamed: @"Airplane_Air_France"];
     }
 
     else if ([shipName isEqualToString:@"AIR FRANCE     "])
     {
-        return nil;
+        return [UIImage imageNamed: @"Airplane_Air_France"];
     }
 
     else if ([shipName isEqualToString:@"JAPAN AIRLINES    JAL - 074"])
     {
-        return nil;
+        return [UIImage imageNamed: @"Airplane_Japan_Airlines"];
     }
 
     else if ([shipName isEqualToString:@"TJISADANE"])
@@ -971,12 +971,12 @@
 
     else if ([shipName isEqualToString:@"VARIG    RG - 831"])
     {
-        return nil;
+        return [UIImage imageNamed:@"Airplane_Varig"];
     }
 
     else if ([shipName isEqualToString:@"CHINA AIRLINES   CHINA - 002"])
     {
-        return nil;
+        return [UIImage imageNamed:@"Airplane_China_Airlines"];
     }
 
     else if ([shipName isEqualToString:@"MONTEVIDEO-MARU"])
@@ -1045,7 +1045,7 @@
 
     else if ([shipName isEqualToString:@"PAN AMERICAN"])
     {
-        return nil;
+        return [UIImage imageNamed: @"Airplane_PanAmerican"];
     }
 
     else if ([shipName isEqualToString:@"ITSUKUSHIMA-MARU"])
@@ -1060,7 +1060,7 @@
 
     else if ([shipName isEqualToString:@"VARIG    RG - 833"])
     {
-        return nil;
+        return [UIImage imageNamed:@"Airplane_Varig"];
     }
 
     else if ([shipName isEqualToString:@"KAWACHI-MARU"])
@@ -1075,7 +1075,7 @@
 
     else if ([shipName isEqualToString:@"KASATO-MARU"])
     {
-        return nil;
+        return [UIImage imageNamed: @"Steamer_Kasato_Maru"];
     }
 
     else if ([shipName isEqualToString:@"RIO DE JANEIRO-MARU"])
@@ -1085,7 +1085,7 @@
 
     else if ([shipName isEqualToString:@"RYOJUN-MARU"])
     {
-        return nil;
+        return [UIImage imageNamed: @"Steamer_Ryojun_Maru"];
     }
 
     else if ([shipName isEqualToString:@"BUENOS AIRES-MARU"])
@@ -1118,12 +1118,12 @@
 
     else if ([shipName isEqualToString:@"VARIG  VIAÇÃO AÉREA RIO GRANDENSE"])
     {
-        return nil;
+        return [UIImage imageNamed: @"Airplane_Varig"];
     }
 
     else if ([shipName isEqualToString:@"PAN AMERICAN    PN - 020"])
     {
-        return nil;
+        return [UIImage imageNamed: @"Airplane_PanAmerican"];
     }
 
     else if ([shipName isEqualToString:@"ARGENTINA-MARU"])
@@ -1156,7 +1156,7 @@
 
     else if ([shipName isEqualToString:@"PAN AMERICAN    PN - 830"])
     {
-        return nil;
+         return [UIImage imageNamed: @"Airplane_PanAmerican"];
     }
 
     else if ([shipName isEqualToString:@"RUYS"])
@@ -1176,7 +1176,7 @@
 
     else if ([shipName isEqualToString:@"OUTROS"])
     {
-        return nil;
+        [UIImage imageNamed: @"Steamer_Other"];
     }
 
     else if ([shipName isEqualToString:@"SEIUN-MARU"])

@@ -36,4 +36,5 @@
 +(NSString*) prefectureSuffix: (NSString*) prefectureName;
 +(NSString*) removePrefectureSuffix: (NSString*) prefectureName;
 +(NSString*) cardinalNumber: (NSNumber*) number;
++(UIImage*) pictureForShipName: (NSString*) shipName withJourneyDate: (NSDate*)date;
 @end

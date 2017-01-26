@@ -18,4 +18,11 @@
     [steamer setShipName: shipName];
     return steamer;
 }
+
++(Steamer*) steamerWithID:(NSUInteger)shipID withName:(NSString *)shipName withCompanyName:(NSString *)companyName
+{
+    Steamer* steamer = [Steamer steamerWithID:shipID withName:shipName];
+    [steamer setCompanyName: companyName];
+    return steamer;
+}
 @end

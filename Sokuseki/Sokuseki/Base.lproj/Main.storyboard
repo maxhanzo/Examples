@@ -957,10 +957,11 @@
         <scene sceneID="5K8-OP-i0h">
             <objects>
                 <tableViewController storyboardIdentifier="ShipDetailsTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qnc-SN-fk2" customClass="ShipDetailsTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4PK-Oe-g8p">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4PK-Oe-g8p">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="C9L-4B-lgt">
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
@@ -977,10 +978,18 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Ship Details" id="zk0-dc-Snc">
-                        <barButtonItem key="leftBarButtonItem" image="Arrows-Back-icon" id="EWD-6i-mEV"/>
+                        <barButtonItem key="leftBarButtonItem" image="Arrows-Back-icon" id="EWD-6i-mEV">
+                            <connections>
+                                <segue destination="KRl-4V-J7i" kind="unwind" unwindAction="prepareForUnwind:" id="qip-rw-iuQ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="4c1-HO-G5V" kind="show" identifier="JourneyDetailsSegue" id="IbL-dx-TEx"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P92-1a-eE6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="KRl-4V-J7i" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-2451" y="-1439"/>
         </scene>
@@ -1106,6 +1115,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ehw-9J-n4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-864" y="-657"/>
+        </scene>
+        <!--Journey Details-->
+        <scene sceneID="325-Dh-tgH">
+            <objects>
+                <tableViewController storyboardIdentifier="JourneyDetailsTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5X4-7R-Qdk" customClass="JourneyDetailsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="sur-YB-iD3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="EDK-uB-RUM">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EDK-uB-RUM" id="BCt-oi-8gB">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5X4-7R-Qdk" id="N5F-jE-4OQ"/>
+                            <outlet property="delegate" destination="5X4-7R-Qdk" id="0Na-0h-IPK"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Journey Details" id="Wm0-PA-AAH">
+                        <barButtonItem key="leftBarButtonItem" image="Arrows-Back-icon" id="j2G-67-oHz">
+                            <connections>
+                                <segue destination="h3e-Aa-1kY" kind="unwind" unwindAction="prepareForUnwind:" id="X9e-uH-Mn9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="h3e-Aa-1kY" kind="unwind" unwindAction="prepareForUnwind:" id="lCO-PI-2NL"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NL7-yS-WD8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="h3e-Aa-1kY" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-465" y="-1441"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ysL-2a-TP8">
+            <objects>
+                <navigationController id="4c1-HO-G5V" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UqG-r7-gy3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5X4-7R-Qdk" kind="relationship" relationship="rootViewController" id="cYK-nX-cJP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PcN-sW-zjh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1478" y="-1441"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="g1C-Of-7bW">

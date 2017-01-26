@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Voyage.h"
+#import "Steamer.h"
 
 @interface ShipDetailsTableViewController : UITableViewController
-
+@property(nonatomic, strong) Steamer* steamer;
+@property(nonatomic, strong) NSArray *shipJourneys;
+-(NSInteger) totalPassengers;
 @end

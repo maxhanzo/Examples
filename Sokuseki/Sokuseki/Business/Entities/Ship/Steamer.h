@@ -11,6 +11,8 @@
 @interface Steamer : NSObject
 @property(nonatomic, assign) NSUInteger shipID;
 @property(nonatomic, strong) NSString *shipName;
+@property(nonatomic, strong) NSString *companyName;
 
 +(Steamer*) steamerWithID: (NSUInteger) shipID withName: (NSString*) shipName;
++(Steamer*) steamerWithID: (NSUInteger) shipID withName: (NSString*) shipName withCompanyName: (NSString*) companyName;
 @end

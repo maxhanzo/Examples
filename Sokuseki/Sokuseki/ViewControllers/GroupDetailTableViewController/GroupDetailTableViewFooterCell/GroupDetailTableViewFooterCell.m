@@ -26,6 +26,16 @@
     [self.lblTotalPeople setText: [NSString stringWithFormat:@"%@ people", totalRecords]];
 }
 
+-(void) setTotalRecordsText: (NSString*) totalRecords
+{
+    [self.lblTotalPeople setText: [NSString stringWithFormat:@"%@ records", totalRecords]];
+}
+
+-(void) setTotalRecordsText: (NSString*) totalRecords withTotalPassengers: (NSString*) totalPassengers
+{
+    [self.lblTotalPeople setText: [NSString stringWithFormat:@"%@ records • %@ passengers", totalRecords, totalPassengers]];
+}
+
 +(float)rowHeight
 {
     return 43.0f;
