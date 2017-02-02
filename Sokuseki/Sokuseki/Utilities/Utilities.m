@@ -41,6 +41,7 @@
     else return nil;
 }
 
+
 +(NSDate*) dateFromString: (NSString*) stringValue
 {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -787,8 +788,8 @@
     {
         //21 October 1942 - Africa Maru I was sunk.
         //http://www.combinedfleet.com/Africa_t.htm
-        NSDate *sunkDate = [Utilities dateFromString:@"21/10/1942"];
-        if([date compare: sunkDate])
+        NSDate *sunkDate = [Utilities dateFromString:@"21/10/1942" withLocale: nil];
+        if([date compare: sunkDate] == NSOrderedDescending)
         {
             return [UIImage imageNamed: @"Steamer_Africa_Maru_II"];
         }
@@ -855,8 +856,8 @@
     {
         //12 January 1945 - Sunk
         //http://www.wrecksite.eu/wreck.aspx?178008
-        NSDate *sunkDate = [Utilities dateFromString:@"12/01/1945"];
-        if([date compare: sunkDate])
+        NSDate *sunkDate = [Utilities dateFromString:@"12/01/1945" withLocale: nil];
+        if([date compare: sunkDate] == NSOrderedDescending)
         {
             return [UIImage imageNamed: @"Steamer_La_Plata_Maru_II"];
         }
@@ -983,8 +984,8 @@
     {
         //1 July 1942 - Sunk
         //http://www.wrecksite.eu/wreck.aspx?137052
-        NSDate *sunkDate = [Utilities dateFromString:@"01/07/1942"];
-        if([date compare: sunkDate])
+        NSDate *sunkDate = [Utilities dateFromString:@"01/07/1942" withLocale: nil];
+        if([date compare: sunkDate] == NSOrderedDescending)
         {
             return [UIImage imageNamed: @"Steamer_Montevideo_Maru_II"];
         }
@@ -1017,8 +1018,8 @@
         {
             //25 November 1944 - Sunk
             //http://www.wrecksite.eu/wreck.aspx?137052
-            NSDate *sunkDate = [Utilities dateFromString:@"25/11/1944"];
-            if([date compare: sunkDate])
+            NSDate *sunkDate = [Utilities dateFromString:@"25/11/1944" withLocale: nil];
+            if([date compare: sunkDate] == NSOrderedDescending)
             {
                 return [UIImage imageNamed: @"Steamer_Santos_Maru_II"];
             }
@@ -1092,8 +1093,8 @@
     {
         //27 November 1943 - Sunk
         //http://www.wrecksite.eu/wreck.aspx?138697
-        NSDate *sunkDate = [Utilities dateFromString:@"27/11/1943"];
-        if([date compare: sunkDate])
+        NSDate *sunkDate = [Utilities dateFromString:@"27/11/1943" withLocale: nil];
+        if([date compare: sunkDate] == NSOrderedDescending)
         {
             return [UIImage imageNamed: @"Steamer_Buenos_Aires_Maru_II"];
         }
@@ -1130,8 +1131,8 @@
     {
         //1 September 1946 - Got scrapped
         //https://en.wikipedia.org/wiki/Japanese_aircraft_carrier_Kaiy%C5%8D
-        NSDate *sunkDate = [Utilities dateFromString:@"1/9/1946"];
-        if([date compare: sunkDate])
+        NSDate *sunkDate = [Utilities dateFromString:@"1/9/1946" withLocale: nil];
+        if([date compare: sunkDate] == NSOrderedDescending)
         {
             return [UIImage imageNamed: @"Steamer_Argentina_Maru_II"];
         }

@@ -7,6 +7,8 @@
 //
 
 #import "JourneyDetailsTableViewController.h"
+#import "ShipDetailsTableViewHeaderCell.h"
+
 #import "PrefectureStatsTopTableViewCell.h"
 #import "PrefectureStatsTableViewCell.h"
 #import "PrefectureStatsTableViewFooter.h"
@@ -55,15 +57,50 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.passengersArray count] + 1;
+    return [self.passengersArray count] + 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(indexPath.row <[self.passengersArray count])
+    
+    if(indexPath.row == 0)
+    {
+        ShipDetailsTableViewHeaderCell* cell = [self.tableView dequeueReusableCellWithIdentifier:@"ShipDetailsTableViewHeaderCell"];
+        
+        if(!cell)
+        {
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"ShipDetailsTableViewHeaderCell" owner:self options:nil];
+            cell = [nib objectAtIndex:0];
+        }
+        
+        [cell.lblShipCompany setText: self.journey.shipCompany];
+        UIImage *shipAvatar = [Utilities pictureForShipName:self.journey.shipName withJourneyDate: self.journey.departureDate];
+        if(shipAvatar)
+            [cell.imgShipAvatar setImage: shipAvatar];
+        return cell;
+        
+    }
+    
+    else if(indexPath.row == [self.passengersArray count] + 1)
     {
         
-        Passenger *passenger = (Passenger*)[self.passengersArray objectAtIndex: indexPath.row];
+        PrefectureStatsTableViewFooter *cell = (PrefectureStatsTableViewFooter*)[self.tableView dequeueReusableCellWithIdentifier:@"PrefectureStatsTableViewFooter"];
+        
+        if(!cell)
+        {
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"PrefectureStatsTableViewFooter" owner:self options:nil];
+            cell = [nib objectAtIndex:0];
+            
+        }
+        
+        NSNumber* numberOfImmigrants = [self allPassengers];
+        [cell setTotalRecordsText: [numberOfImmigrants stringValue] withSuffix: @"People."];
+        return cell;
+        
+    }
+    
+    else{
+        Passenger *passenger = (Passenger*)[self.passengersArray objectAtIndex: indexPath.row - 1];
         
         if(passenger.numberOfImmigrants == self.topMostNumberOfImmigrants)
         {
@@ -97,26 +134,11 @@
             [cell.imgPrefectureFlag setImage: [Utilities flagForPrefectureName:passenger.prefectureName]];
             
             return cell;
-
+            
         }
     }
     
-    else
-    {
-        PrefectureStatsTableViewFooter *cell = (PrefectureStatsTableViewFooter*)[self.tableView dequeueReusableCellWithIdentifier:@"PrefectureStatsTableViewFooter"];
-        
-        if(!cell)
-        {
-            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"PrefectureStatsTableViewFooter" owner:self options:nil];
-            cell = [nib objectAtIndex:0];
-            
-        }
-        
-        NSNumber* numberOfImmigrants = [self allPassengers];
-        [cell setTotalRecordsText: [numberOfImmigrants stringValue] withSuffix: @"People."];
-        return cell;
-        
-    }
+    
     
     return nil;
 }
@@ -131,7 +153,12 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(indexPath.row <[self.passengersArray count])
+    if(indexPath.row == 0)
+    {
+        return [ShipDetailsTableViewHeaderCell rowHeight];
+    }
+    
+    else if(indexPath.row <[self.passengersArray count])
     {
         return [PrefectureStatsTableViewCell rowHeight];
     }

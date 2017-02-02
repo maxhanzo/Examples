@@ -25,7 +25,15 @@
     DBManager *dbManager = [DBManager getSharedInstance];
     self.shipJourneys = [dbManager retrieveVoyageFromShipName:self.steamer.shipName];
     
+    
     self.navigationItem.title = self.steamer.shipName;
+    
+    
+//    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"JapaneseImmigrationPoster"]];
+//    [tempImageView setFrame:self.tableView.frame];
+//    
+//    self.tableView.backgroundView = tempImageView;
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,35 +52,36 @@
 
     if(self.shipJourneys)
     {
-        return [self.shipJourneys count] + 2;
+        return [self.shipJourneys count] + 1;
     }
-    return 2;
+    return 1;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSInteger results = [self.shipJourneys count];
     
-    NSInteger footerIndex = results + 1;
-    
-    if(indexPath.row == 0)
-    {
-        ShipDetailsTableViewHeaderCell* cell = [self.tableView dequeueReusableCellWithIdentifier:@"ShipDetailsTableViewHeaderCell"];
-        
-        if(!cell)
-        {
-            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"ShipDetailsTableViewHeaderCell" owner:self options:nil];
-            cell = [nib objectAtIndex:0];
-        }
-        
-        [cell.lblShipCompany setText: self.steamer.companyName];
-        UIImage *shipAvatar = [Utilities pictureForShipName:self.steamer.shipName withJourneyDate: [NSDate date]];
-        if(shipAvatar)
-            [cell.imgShipAvatar setImage: shipAvatar];
-        return cell;
-
-    }
-    else if(indexPath.row == footerIndex)
+    NSInteger footerIndex = results;
+//    
+//    if(indexPath.row == 0)
+//    {
+//        ShipDetailsTableViewHeaderCell* cell = [self.tableView dequeueReusableCellWithIdentifier:@"ShipDetailsTableViewHeaderCell"];
+//        
+//        if(!cell)
+//        {
+//            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"ShipDetailsTableViewHeaderCell" owner:self options:nil];
+//            cell = [nib objectAtIndex:0];
+//        }
+//        
+//        [cell.lblShipCompany setText: self.steamer.companyName];
+//        UIImage *shipAvatar = [Utilities pictureForShipName:self.steamer.shipName withJourneyDate: [NSDate date]];
+//        if(shipAvatar)
+//            [cell.imgShipAvatar setImage: shipAvatar];
+//        return cell;
+//
+//    }
+//    else
+    if(indexPath.row == footerIndex)
     {
         GroupDetailTableViewFooterCell *cell = (GroupDetailTableViewFooterCell*)[tableView dequeueReusableCellWithIdentifier:@"GroupDetailTableViewFooterCell"];
         
@@ -87,8 +96,9 @@
         return cell;
         
     }
-
-    Voyage* journey = [self.shipJourneys objectAtIndex: indexPath.row - 1];
+    else
+    {
+        Voyage* journey = [self.shipJourneys objectAtIndex: indexPath.row];
     
     
         ShipJourneyTableViewCell *cell = (ShipJourneyTableViewCell*)[self.tableView dequeueReusableCellWithIdentifier:@"ShipJourneyTableViewCell"];
@@ -106,18 +116,19 @@
             [cell.lblJourneyInfo setText: journeyInfo];
         }
         return cell;
+    }
 }
 
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSInteger footerIndex = [self.shipJourneys count] + 1 ;
+    NSInteger footerIndex = [self.shipJourneys count] ;
     
-    if(indexPath.row == 0)
-    {
-        return [ShipDetailsTableViewHeaderCell rowHeight];
-    }
+//    if(indexPath.row == 0)
+//    {
+//        return [ShipDetailsTableViewHeaderCell rowHeight];
+//    }
 
-    else if(indexPath.row == footerIndex)
+     if(indexPath.row == footerIndex)
     {
         return [GroupDetailTableViewFooterCell rowHeight];
     }
@@ -128,18 +139,14 @@
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
      [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if(indexPath.row > 0)
-    {
-         NSInteger footerIndex = [self.shipJourneys count] + 1 ;
+
+         NSInteger footerIndex = [self.shipJourneys count]  ;
         if(indexPath.row < footerIndex)
         {
-            NSInteger index = indexPath.row - 1;
+            NSInteger index = indexPath.row;
             self.selectedJourney = (Voyage*) [self.shipJourneys objectAtIndex: index];
             [self performSegueWithIdentifier:@"JourneyDetailsSegue" sender:self];
         }
-    }
-    
-    
 }
 
 //Prevent extra separators from appearing
@@ -154,7 +161,8 @@
 }
 
 #pragma mark - Segue stuff
--(IBAction)prepareforUnwind: (UIStoryboard*) segue
+
+-(IBAction)prepareForUnwind: (UIStoryboard*) segue
 {
 
 }

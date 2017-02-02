@@ -278,7 +278,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ship-icon" translatesAutoresizingMaskIntoConstraints="NO" id="q3z-Nd-E51">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ship-icon" translatesAutoresizingMaskIntoConstraints="NO" id="q3z-Nd-E51">
                                             <rect key="frame" x="12" y="9" width="25" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -980,7 +980,7 @@
                     <navigationItem key="navigationItem" title="Ship Details" id="zk0-dc-Snc">
                         <barButtonItem key="leftBarButtonItem" image="Arrows-Back-icon" id="EWD-6i-mEV">
                             <connections>
-                                <segue destination="KRl-4V-J7i" kind="unwind" unwindAction="prepareForUnwind:" id="qip-rw-iuQ"/>
+                                <segue destination="KRl-4V-J7i" kind="unwind" identifier="UnwindToShipsScene" unwindAction="prepareForUnwind:" id="qip-rw-iuQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1120,7 +1120,7 @@
         <scene sceneID="325-Dh-tgH">
             <objects>
                 <tableViewController storyboardIdentifier="JourneyDetailsTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5X4-7R-Qdk" customClass="JourneyDetailsTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="sur-YB-iD3">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="sur-YB-iD3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1129,7 +1129,7 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EDK-uB-RUM" id="BCt-oi-8gB">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -1143,19 +1143,16 @@
                     <navigationItem key="navigationItem" title="Journey Details" id="Wm0-PA-AAH">
                         <barButtonItem key="leftBarButtonItem" image="Arrows-Back-icon" id="j2G-67-oHz">
                             <connections>
-                                <segue destination="h3e-Aa-1kY" kind="unwind" unwindAction="prepareForUnwind:" id="X9e-uH-Mn9"/>
+                                <segue destination="h3e-Aa-1kY" kind="unwind" identifier="UnwindToShipDetailsScene" unwindAction="prepareForUnwind:" id="fVE-vd-ABR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <segue destination="h3e-Aa-1kY" kind="unwind" unwindAction="prepareForUnwind:" id="lCO-PI-2NL"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NL7-yS-WD8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="h3e-Aa-1kY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-465" y="-1441"/>
+            <point key="canvasLocation" x="-649" y="-1806"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ysL-2a-TP8">
@@ -1497,7 +1494,7 @@
         <image name="information-icon" width="30" height="30"/>
         <image name="mobile" width="30" height="30"/>
         <image name="reveal-icon" width="22" height="17"/>
-        <image name="ship-icon" width="30" height="30"/>
+        <image name="ship-icon" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="RNz-BX-h13"/>
