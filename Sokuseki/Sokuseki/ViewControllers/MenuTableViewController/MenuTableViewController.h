@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MenuTableViewController : UITableViewController
-
+@property (nonatomic, strong) NSMutableDictionary *viewControllerCache;
 @end

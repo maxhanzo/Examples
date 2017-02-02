@@ -57,31 +57,37 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.passengersArray count] + 2;
+    return [self.passengersArray count] + 1;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    ShipDetailsTableViewHeaderCell* cell = [self.tableView dequeueReusableCellWithIdentifier:@"ShipDetailsTableViewHeaderCell"];
+    
+    if(!cell)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"ShipDetailsTableViewHeaderCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
+    
+    [cell.lblShipCompany setText: self.journey.shipCompany];
+    UIImage *shipAvatar = [Utilities pictureForShipName:self.journey.shipName withJourneyDate: self.journey.departureDate];
+    if(shipAvatar)
+        [cell.imgShipAvatar setImage: shipAvatar];
+    return cell;
+
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+
+    return [ShipDetailsTableViewHeaderCell rowHeight];
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    if(indexPath.row == 0)
-    {
-        ShipDetailsTableViewHeaderCell* cell = [self.tableView dequeueReusableCellWithIdentifier:@"ShipDetailsTableViewHeaderCell"];
-        
-        if(!cell)
-        {
-            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"ShipDetailsTableViewHeaderCell" owner:self options:nil];
-            cell = [nib objectAtIndex:0];
-        }
-        
-        [cell.lblShipCompany setText: self.journey.shipCompany];
-        UIImage *shipAvatar = [Utilities pictureForShipName:self.journey.shipName withJourneyDate: self.journey.departureDate];
-        if(shipAvatar)
-            [cell.imgShipAvatar setImage: shipAvatar];
-        return cell;
-        
-    }
-    
-    else if(indexPath.row == [self.passengersArray count] + 1)
+    if(indexPath.row ==[self.passengersArray count])
     {
         
         PrefectureStatsTableViewFooter *cell = (PrefectureStatsTableViewFooter*)[self.tableView dequeueReusableCellWithIdentifier:@"PrefectureStatsTableViewFooter"];
@@ -100,7 +106,7 @@
     }
     
     else{
-        Passenger *passenger = (Passenger*)[self.passengersArray objectAtIndex: indexPath.row - 1];
+        Passenger *passenger = (Passenger*)[self.passengersArray objectAtIndex: indexPath.row ];
         
         if(passenger.numberOfImmigrants == self.topMostNumberOfImmigrants)
         {
@@ -153,12 +159,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(indexPath.row == 0)
-    {
-        return [ShipDetailsTableViewHeaderCell rowHeight];
-    }
-    
-    else if(indexPath.row <[self.passengersArray count])
+    if(indexPath.row <[self.passengersArray count])
     {
         return [PrefectureStatsTableViewCell rowHeight];
     }
