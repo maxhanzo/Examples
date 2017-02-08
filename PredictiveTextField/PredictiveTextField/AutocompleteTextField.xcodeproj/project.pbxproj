@@ -1,0 +1,540 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B3BFE371E4B9AB800187E02 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3BFE361E4B9AB800187E02 /* main.m */; };
+		2B3BFE3A1E4B9AB800187E02 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3BFE391E4B9AB800187E02 /* AppDelegate.m */; };
+		2B3BFE3D1E4B9AB800187E02 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3BFE3C1E4B9AB800187E02 /* ViewController.m */; };
+		2B3BFE401E4B9AB800187E02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B3BFE3E1E4B9AB800187E02 /* Main.storyboard */; };
+		2B3BFE421E4B9AB800187E02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B3BFE411E4B9AB800187E02 /* Assets.xcassets */; };
+		2B3BFE451E4B9AB800187E02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B3BFE431E4B9AB800187E02 /* LaunchScreen.storyboard */; };
+		2B3BFE501E4B9AB800187E02 /* AutocompleteTextFieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3BFE4F1E4B9AB800187E02 /* AutocompleteTextFieldTests.m */; };
+		2B3BFE5B1E4B9AB800187E02 /* PredictiveTextFieldUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3BFE5A1E4B9AB800187E02 /* PredictiveTextFieldUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B3BFE4C1E4B9AB800187E02 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B3BFE2A1E4B9AB800187E02 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B3BFE311E4B9AB800187E02;
+			remoteInfo = PredictiveTextField;
+		};
+		2B3BFE571E4B9AB800187E02 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B3BFE2A1E4B9AB800187E02 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B3BFE311E4B9AB800187E02;
+			remoteInfo = PredictiveTextField;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2B3BFE321E4B9AB800187E02 /* AutocompleteTextField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutocompleteTextField.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B3BFE361E4B9AB800187E02 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2B3BFE381E4B9AB800187E02 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2B3BFE391E4B9AB800187E02 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2B3BFE3B1E4B9AB800187E02 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2B3BFE3C1E4B9AB800187E02 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2B3BFE3F1E4B9AB800187E02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2B3BFE411E4B9AB800187E02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B3BFE441E4B9AB800187E02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2B3BFE461E4B9AB800187E02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B3BFE4B1E4B9AB800187E02 /* AutocompleteTextFieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutocompleteTextFieldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B3BFE4F1E4B9AB800187E02 /* AutocompleteTextFieldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutocompleteTextFieldTests.m; sourceTree = "<group>"; };
+		2B3BFE511E4B9AB800187E02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B3BFE561E4B9AB800187E02 /* AutocompleteTextFieldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutocompleteTextFieldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B3BFE5A1E4B9AB800187E02 /* PredictiveTextFieldUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PredictiveTextFieldUITests.m; sourceTree = "<group>"; };
+		2B3BFE5C1E4B9AB800187E02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B3BFE2F1E4B9AB800187E02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B3BFE481E4B9AB800187E02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B3BFE531E4B9AB800187E02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B3BFE291E4B9AB800187E02 = {
+			isa = PBXGroup;
+			children = (
+				2B3BFE341E4B9AB800187E02 /* AutocompleteTextField */,
+				2B3BFE4E1E4B9AB800187E02 /* AutocompleteTextFieldTests */,
+				2B3BFE591E4B9AB800187E02 /* AutocompleteTextFieldUITests */,
+				2B3BFE331E4B9AB800187E02 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2B3BFE331E4B9AB800187E02 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B3BFE321E4B9AB800187E02 /* AutocompleteTextField.app */,
+				2B3BFE4B1E4B9AB800187E02 /* AutocompleteTextFieldTests.xctest */,
+				2B3BFE561E4B9AB800187E02 /* AutocompleteTextFieldUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B3BFE341E4B9AB800187E02 /* AutocompleteTextField */ = {
+			isa = PBXGroup;
+			children = (
+				2B3BFE381E4B9AB800187E02 /* AppDelegate.h */,
+				2B3BFE391E4B9AB800187E02 /* AppDelegate.m */,
+				2B3BFE3B1E4B9AB800187E02 /* ViewController.h */,
+				2B3BFE3C1E4B9AB800187E02 /* ViewController.m */,
+				2B3BFE3E1E4B9AB800187E02 /* Main.storyboard */,
+				2B3BFE411E4B9AB800187E02 /* Assets.xcassets */,
+				2B3BFE431E4B9AB800187E02 /* LaunchScreen.storyboard */,
+				2B3BFE461E4B9AB800187E02 /* Info.plist */,
+				2B3BFE351E4B9AB800187E02 /* Supporting Files */,
+			);
+			name = AutocompleteTextField;
+			path = PredictiveTextField;
+			sourceTree = "<group>";
+		};
+		2B3BFE351E4B9AB800187E02 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2B3BFE361E4B9AB800187E02 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2B3BFE4E1E4B9AB800187E02 /* AutocompleteTextFieldTests */ = {
+			isa = PBXGroup;
+			children = (
+				2B3BFE4F1E4B9AB800187E02 /* AutocompleteTextFieldTests.m */,
+				2B3BFE511E4B9AB800187E02 /* Info.plist */,
+			);
+			name = AutocompleteTextFieldTests;
+			path = PredictiveTextFieldTests;
+			sourceTree = "<group>";
+		};
+		2B3BFE591E4B9AB800187E02 /* AutocompleteTextFieldUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2B3BFE5A1E4B9AB800187E02 /* PredictiveTextFieldUITests.m */,
+				2B3BFE5C1E4B9AB800187E02 /* Info.plist */,
+			);
+			name = AutocompleteTextFieldUITests;
+			path = PredictiveTextFieldUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B3BFE311E4B9AB800187E02 /* AutocompleteTextField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B3BFE5F1E4B9AB800187E02 /* Build configuration list for PBXNativeTarget "AutocompleteTextField" */;
+			buildPhases = (
+				2B3BFE2E1E4B9AB800187E02 /* Sources */,
+				2B3BFE2F1E4B9AB800187E02 /* Frameworks */,
+				2B3BFE301E4B9AB800187E02 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AutocompleteTextField;
+			productName = PredictiveTextField;
+			productReference = 2B3BFE321E4B9AB800187E02 /* AutocompleteTextField.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2B3BFE4A1E4B9AB800187E02 /* AutocompleteTextFieldTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B3BFE621E4B9AB800187E02 /* Build configuration list for PBXNativeTarget "AutocompleteTextFieldTests" */;
+			buildPhases = (
+				2B3BFE471E4B9AB800187E02 /* Sources */,
+				2B3BFE481E4B9AB800187E02 /* Frameworks */,
+				2B3BFE491E4B9AB800187E02 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B3BFE4D1E4B9AB800187E02 /* PBXTargetDependency */,
+			);
+			name = AutocompleteTextFieldTests;
+			productName = PredictiveTextFieldTests;
+			productReference = 2B3BFE4B1E4B9AB800187E02 /* AutocompleteTextFieldTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2B3BFE551E4B9AB800187E02 /* AutocompleteTextFieldUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B3BFE651E4B9AB800187E02 /* Build configuration list for PBXNativeTarget "AutocompleteTextFieldUITests" */;
+			buildPhases = (
+				2B3BFE521E4B9AB800187E02 /* Sources */,
+				2B3BFE531E4B9AB800187E02 /* Frameworks */,
+				2B3BFE541E4B9AB800187E02 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B3BFE581E4B9AB800187E02 /* PBXTargetDependency */,
+			);
+			name = AutocompleteTextFieldUITests;
+			productName = PredictiveTextFieldUITests;
+			productReference = 2B3BFE561E4B9AB800187E02 /* AutocompleteTextFieldUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B3BFE2A1E4B9AB800187E02 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "UedaSoft IT Solutions";
+				TargetAttributes = {
+					2B3BFE311E4B9AB800187E02 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 628CH5N6UW;
+						ProvisioningStyle = Automatic;
+					};
+					2B3BFE4A1E4B9AB800187E02 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 628CH5N6UW;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2B3BFE311E4B9AB800187E02;
+					};
+					2B3BFE551E4B9AB800187E02 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 628CH5N6UW;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2B3BFE311E4B9AB800187E02;
+					};
+				};
+			};
+			buildConfigurationList = 2B3BFE2D1E4B9AB800187E02 /* Build configuration list for PBXProject "AutocompleteTextField" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B3BFE291E4B9AB800187E02;
+			productRefGroup = 2B3BFE331E4B9AB800187E02 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B3BFE311E4B9AB800187E02 /* AutocompleteTextField */,
+				2B3BFE4A1E4B9AB800187E02 /* AutocompleteTextFieldTests */,
+				2B3BFE551E4B9AB800187E02 /* AutocompleteTextFieldUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B3BFE301E4B9AB800187E02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B3BFE451E4B9AB800187E02 /* LaunchScreen.storyboard in Resources */,
+				2B3BFE421E4B9AB800187E02 /* Assets.xcassets in Resources */,
+				2B3BFE401E4B9AB800187E02 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B3BFE491E4B9AB800187E02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B3BFE541E4B9AB800187E02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B3BFE2E1E4B9AB800187E02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B3BFE3D1E4B9AB800187E02 /* ViewController.m in Sources */,
+				2B3BFE3A1E4B9AB800187E02 /* AppDelegate.m in Sources */,
+				2B3BFE371E4B9AB800187E02 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B3BFE471E4B9AB800187E02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B3BFE501E4B9AB800187E02 /* AutocompleteTextFieldTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B3BFE521E4B9AB800187E02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B3BFE5B1E4B9AB800187E02 /* PredictiveTextFieldUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2B3BFE4D1E4B9AB800187E02 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B3BFE311E4B9AB800187E02 /* AutocompleteTextField */;
+			targetProxy = 2B3BFE4C1E4B9AB800187E02 /* PBXContainerItemProxy */;
+		};
+		2B3BFE581E4B9AB800187E02 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B3BFE311E4B9AB800187E02 /* AutocompleteTextField */;
+			targetProxy = 2B3BFE571E4B9AB800187E02 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2B3BFE3E1E4B9AB800187E02 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B3BFE3F1E4B9AB800187E02 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2B3BFE431E4B9AB800187E02 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B3BFE441E4B9AB800187E02 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B3BFE5D1E4B9AB800187E02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2B3BFE5E1E4B9AB800187E02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B3BFE601E4B9AB800187E02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 628CH5N6UW;
+				INFOPLIST_FILE = PredictiveTextField/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.uedasoft-it.PredictiveTextField";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2B3BFE611E4B9AB800187E02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 628CH5N6UW;
+				INFOPLIST_FILE = PredictiveTextField/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.uedasoft-it.PredictiveTextField";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2B3BFE631E4B9AB800187E02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 628CH5N6UW;
+				INFOPLIST_FILE = PredictiveTextFieldTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.uedasoft-it.PredictiveTextFieldTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutocompleteTextField.app/AutocompleteTextField";
+			};
+			name = Debug;
+		};
+		2B3BFE641E4B9AB800187E02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 628CH5N6UW;
+				INFOPLIST_FILE = PredictiveTextFieldTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.uedasoft-it.PredictiveTextFieldTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutocompleteTextField.app/AutocompleteTextField";
+			};
+			name = Release;
+		};
+		2B3BFE661E4B9AB800187E02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 628CH5N6UW;
+				INFOPLIST_FILE = PredictiveTextFieldUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.uedasoft-it.PredictiveTextFieldUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PredictiveTextField;
+			};
+			name = Debug;
+		};
+		2B3BFE671E4B9AB800187E02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 628CH5N6UW;
+				INFOPLIST_FILE = PredictiveTextFieldUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.uedasoft-it.PredictiveTextFieldUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PredictiveTextField;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B3BFE2D1E4B9AB800187E02 /* Build configuration list for PBXProject "AutocompleteTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B3BFE5D1E4B9AB800187E02 /* Debug */,
+				2B3BFE5E1E4B9AB800187E02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B3BFE5F1E4B9AB800187E02 /* Build configuration list for PBXNativeTarget "AutocompleteTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B3BFE601E4B9AB800187E02 /* Debug */,
+				2B3BFE611E4B9AB800187E02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2B3BFE621E4B9AB800187E02 /* Build configuration list for PBXNativeTarget "AutocompleteTextFieldTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B3BFE631E4B9AB800187E02 /* Debug */,
+				2B3BFE641E4B9AB800187E02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2B3BFE651E4B9AB800187E02 /* Build configuration list for PBXNativeTarget "AutocompleteTextFieldUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B3BFE661E4B9AB800187E02 /* Debug */,
+				2B3BFE671E4B9AB800187E02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B3BFE2A1E4B9AB800187E02 /* Project object */;
+}
