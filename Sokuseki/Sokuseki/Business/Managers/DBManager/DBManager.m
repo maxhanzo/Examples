@@ -373,6 +373,140 @@ static DBManager *sharedInstance = nil;
     return surnamesArray;
 }
 
+#pragma mark - Predictive Searchbar Methods
+-(NSArray*) retrieveSurnamesPredictiveSearchbar
+{
+    NSString *dbPath = [DBManager getDatabasePath];
+    FMDatabase *db = [FMDatabase databaseWithPath: dbPath];
+    [db open];
+    
+    NSMutableArray* surnamesArray = [NSMutableArray array];
+    
+    NSString* surnameQuery = @" SELECT * FROM Surnames order by Romaji asc";
+    FMResultSet *resultsWithSurnameData = [db executeQuery:surnameQuery];
+    
+    
+    if (!resultsWithSurnameData)
+    {
+        NSLog(@"%s: %@", __FUNCTION__, [db lastErrorMessage]);
+    }
+    
+    while ([resultsWithSurnameData next])
+    {
+        //NSString* surnameID = [resultsWithSurnameData stringForColumn: @"ID"];
+        NSString* romaji = [resultsWithSurnameData stringForColumn: @"Romaji"];
+        //NSString* numberOfImmigrants = [resultsWithSurnameData stringForColumn:@"NumberOfImmigrants"];
+        
+       // Surname  *surname = [Surname surnameWithRomaji:romaji withNumberOfImmigrants:[NSNumber numberWithInteger: [numberOfImmigrants integerValue]] withID:[surnameID integerValue]];
+        //[surnamesArray addObject: surname];
+        [surnamesArray addObject: romaji];
+        
+    }
+    [resultsWithSurnameData close];
+    
+    return surnamesArray;
+}
+
+
+-(NSArray*) retrieveNamesPredictiveSearchbar
+{
+    NSString *dbPath = [DBManager getDatabasePath];
+    FMDatabase *db = [FMDatabase databaseWithPath: dbPath];
+    [db open];
+    
+    NSMutableArray* namesArray = [NSMutableArray array];
+    
+    NSString* namesQuery = @"SELECT * FROM Name order by Romaji asc";
+    FMResultSet *resultsWithNameData = [db executeQuery:namesQuery];
+    
+    
+    if (!resultsWithNameData)
+    {
+        NSLog(@"%s: %@", __FUNCTION__, [db lastErrorMessage]);
+    }
+    
+    while ([resultsWithNameData next])
+    {
+        //NSString* surnameID = [resultsWithSurnameData stringForColumn: @"ID"];
+        NSString* romaji = [resultsWithNameData stringForColumn: @"Romaji"];
+        //NSString* numberOfImmigrants = [resultsWithSurnameData stringForColumn:@"NumberOfImmigrants"];
+        
+        //Surname  *surname = [Surname surnameWithRomaji:romaji withNumberOfImmigrants:[NSNumber numberWithInteger: [numberOfImmigrants integerValue]] withID:[surnameID integerValue]];
+        //[surnamesArray addObject: surname];
+        [namesArray addObject: romaji];
+        
+    }
+    [resultsWithNameData close];
+    
+    return namesArray;
+}
+
+-(NSArray*) retrieveSurnamesKanjiPredictiveSearchbar
+{
+    NSString *dbPath = [DBManager getDatabasePath];
+    FMDatabase *db = [FMDatabase databaseWithPath: dbPath];
+    [db open];
+    
+    NSMutableArray* surnamesArray = [NSMutableArray array];
+    
+    NSString* surnameQuery = @"SELECT * FROM SurnameKanji";
+    FMResultSet *resultsWithSurnameData = [db executeQuery:surnameQuery];
+    
+    
+    if (!resultsWithSurnameData)
+    {
+        NSLog(@"%s: %@", __FUNCTION__, [db lastErrorMessage]);
+    }
+    
+    while ([resultsWithSurnameData next])
+    {
+        //NSString* surnameID = [resultsWithSurnameData stringForColumn: @"ID"];
+        NSString* kanji = [resultsWithSurnameData stringForColumn: @"SurnameKanji"];
+        //NSString* numberOfImmigrants = [resultsWithSurnameData stringForColumn:@"NumberOfImmigrants"];
+        
+        //Surname  *surname = [Surname surnameWithRomaji:romaji withNumberOfImmigrants:[NSNumber numberWithInteger: [numberOfImmigrants integerValue]] withID:[surnameID integerValue]];
+        //[surnamesArray addObject: surname];
+        [surnamesArray addObject: kanji];
+        
+    }
+    [resultsWithSurnameData close];
+    
+    return surnamesArray;
+}
+
+-(NSArray*) retrieveNamesKanjiPredictiveSearchbar
+{
+    NSString *dbPath = [DBManager getDatabasePath];
+    FMDatabase *db = [FMDatabase databaseWithPath: dbPath];
+    [db open];
+    
+    NSMutableArray* namesArray = [NSMutableArray array];
+    
+    NSString* nameQuery = @"SELECT * FROM NameKanji";
+    FMResultSet *resultsWithNameData = [db executeQuery:nameQuery];
+    
+    
+    if (!resultsWithNameData)
+    {
+        NSLog(@"%s: %@", __FUNCTION__, [db lastErrorMessage]);
+    }
+    
+    while ([resultsWithNameData next])
+    {
+        //NSString* surnameID = [resultsWithNameData stringForColumn: @"ID"];
+        NSString* nameKanji = [resultsWithNameData stringForColumn: @"NameKanji"];
+        //NSString* numberOfImmigrants = [resultsWithNameData stringForColumn:@"NumberOfImmigrants"];
+        
+        //Surname  *surname = [Surname surnameWithRomaji:romaji withNumberOfImmigrants:[NSNumber numberWithInteger: [numberOfImmigrants integerValue]] withID:[surnameID integerValue]];
+        [namesArray addObject: nameKanji];
+        
+    }
+    [resultsWithNameData close];
+    
+    return namesArray;
+}
+
+#pragma mark - Surnames view controllers
 -(NSArray*) retrieveSurnameDetailsFromSurname: (Surname*) surname
 {
     NSString *dbPath = [DBManager getDatabasePath];

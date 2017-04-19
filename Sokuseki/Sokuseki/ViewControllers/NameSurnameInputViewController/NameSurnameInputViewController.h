@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NameSurnameInputViewController : UIViewController<UITextFieldDelegate>
+@interface NameSurnameInputViewController : UITableViewController<UISearchControllerDelegate, UISearchResultsUpdating, UISearchBarDelegate>
+
+@property(nonatomic, strong) NSArray *textEntries;
+@property(nonatomic, strong) NSMutableArray *textSuggestions;
 
 @property(nonatomic, weak) IBOutlet UITextField *txtInputNameSurname;
 @property(nonatomic, strong) NSString *segueID;

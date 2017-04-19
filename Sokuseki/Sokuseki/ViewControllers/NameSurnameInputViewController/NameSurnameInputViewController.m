@@ -9,9 +9,10 @@
 #import "NameSurnameInputViewController.h"
 #import "TagParameters.h"
 #import "MainViewController.h"
+#import "DBManager.h"
 
 @interface NameSurnameInputViewController ()
-
+@property(nonatomic, strong) UISearchController *searchController;
 @end
 
 @implementation NameSurnameInputViewController
@@ -32,10 +33,24 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.txtInputNameSurname.delegate =self;
-    [self.txtInputNameSurname becomeFirstResponder];
+//    self.txtInputNameSurname.delegate =self;
+//    [self.txtInputNameSurname becomeFirstResponder];
     
- 
+    self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+    self.searchController.searchResultsUpdater = self;
+    self.searchController.dimsBackgroundDuringPresentation = NO;
+    
+    self.searchController.searchBar.delegate = self;
+    
+    self.tableView.tableHeaderView = self.searchController.searchBar;
+    
+    self.definesPresentationContext = YES;
+    
+    //If your collection of data is sorted, you won't need this.
+    self.textEntries =  [self.textEntries sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    
+    self.textSuggestions = [NSMutableArray array];
+
     //Blurred effect
     UIBlurEffect * blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight];
     UIVisualEffectView *beView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
@@ -46,24 +61,33 @@
     //Placeholder text
     NSString *placeHolderText = nil;
     
+    DBManager *dbManager = [DBManager getSharedInstance];
+
+    
     if([self.segueID isEqualToString:@"InputNameSegue"])
     {
+        //self.textEntries = @[@"HIROSHI", @"SATOSHI", @"MITSUYOSHI", @"TETSUO", @"YOSHIO", @"AKIRA", @"KAZUO", @"SEIJI", @"MAKOTO", @"TSUTOMU", @"TOSHIRO", @"MASAO", @"MITSUMASA"];
+        self.textEntries = [dbManager retrieveNamesPredictiveSearchbar];
         placeHolderText = @"Ex: Toshiro, Hiroko, Yoshio, Akemi";
     }
     else if([self.segueID isEqualToString:@"InputSurnameSegue"])
     {
+        
+        self.textEntries = [dbManager retrieveNamesPredictiveSearchbar];
         placeHolderText = @"Ex: Sato, Tanaka, Watanabe";
     }
     else if([self.segueID isEqualToString:@"InputNameKanjiSegue"])
     {
+        self.textEntries = [dbManager retrieveNamesKanjiPredictiveSearchbar];
         placeHolderText = @"Ex: 利郎, ひろ子, 義雄, 明美";
     }
     else if ([self.segueID isEqualToString:@"InputSurnameKanjiSegue"])
     {
+        self.textEntries = [dbManager retrieveSurnamesKanjiPredictiveSearchbar];
         placeHolderText = @"Ex: 佐藤, 田中, 渡邉";
     }
     
-    [self.txtInputNameSurname setPlaceholder:placeHolderText];
+    [self.searchController.searchBar setPlaceholder:placeHolderText];
     
 }
 
@@ -119,12 +143,78 @@
 }
 
 
-#pragma mark - UITextFieldDelegate
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
+#pragma mark - UISearchBar delegate
+-(void) searchData: (NSString*) data
 {
-    [self inputNameSurname:nil];
-    [self.txtInputNameSurname resignFirstResponder];
-    return YES;
+    [self.textSuggestions removeAllObjects];
+    
+    for (NSString* item in self.textEntries)
+    {
+        if ([item rangeOfString:data
+                        options:(NSAnchoredSearch | NSCaseInsensitiveSearch)].location != NSNotFound)
+            [self.textSuggestions addObject:item];
+    }
+    
+    [self.tableView reloadData];
+}
+
+
+-(void) clearData
+{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        [self.searchController.searchBar resignFirstResponder];
+        [self.textSuggestions removeAllObjects];
+        [self.tableView reloadData];
+    });
+    
+}
+
+
+#pragma mark - Table view data source
+
+#pragma mark - UITableViewDelegate & DataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+-(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if(self.textSuggestions)
+    {
+        return [self.textSuggestions count];
+    }
+    
+    return 0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
+    
+    
+    NSString* cellText = [self.textSuggestions objectAtIndex:indexPath.row];
+    [cell.textLabel setText: cellText];
+    
+    return cell;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    self.searchController.searchBar.text = [self.textSuggestions objectAtIndex: indexPath.row];
+    [self clearData];
+}
+
+-(void) updateSearchResultsForSearchController:(UISearchController *)searchController
+{
+    NSString* substring = searchController.searchBar.text;
+    [self searchData:substring];
 }
 
 

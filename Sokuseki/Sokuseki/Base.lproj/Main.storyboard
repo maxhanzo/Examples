@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mSe-vC-eRg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mSe-vC-eRg">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1287,7 +1287,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="AxV-Z9-bCC" kind="relationship" relationship="rootViewController" id="ABA-qT-arR"/>
+                        <segue destination="CgQ-E9-Ni6" kind="relationship" relationship="rootViewController" id="smK-Cg-GgH"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xnl-mE-cT0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1405,69 +1405,49 @@
             <point key="canvasLocation" x="459" y="1891"/>
         </scene>
         <!--Name/Surname-->
-        <scene sceneID="XPx-jM-RmW">
+        <scene sceneID="G7J-Iu-OEW">
             <objects>
-                <viewController storyboardIdentifier="NameSurnameInputViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AxV-Z9-bCC" customClass="NameSurnameInputViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="I4E-C7-hKf"/>
-                        <viewControllerLayoutGuide type="bottom" id="2hC-xL-E72"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tIY-s9-ZrK">
+                <tableViewController restorationIdentifier="NameSurnameInputViewController" storyboardIdentifier="NameSurnameInputViewController" id="CgQ-E9-Ni6" customClass="NameSurnameInputViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fQU-yR-xgq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mMn-WP-BlD">
-                                <rect key="frame" x="3" y="72" width="314" height="109"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter a text" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DQU-od-48K">
-                                        <rect key="frame" x="11" y="22" width="292" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JPq-AN-SO7">
-                                        <rect key="frame" x="11" y="57" width="292" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.74908639020000001" green="1" blue="0.71635190719999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="OK"/>
-                                        <connections>
-                                            <action selector="inputNameSurname:" destination="AxV-Z9-bCC" eventType="touchUpInside" id="fk7-ci-H9D"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="5"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </view>
-                    <navigationItem key="navigationItem" title="Name/Surname" id="Jhe-Vj-Pgp">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="mMB-NX-gz0">
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="5cs-vA-c2t">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5cs-vA-c2t" id="2Vo-kf-tXi">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sagara" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yaa-pp-Bom">
+                                            <rect key="frame" x="21" y="11" width="153" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="CgQ-E9-Ni6" id="w4x-El-078"/>
+                            <outlet property="delegate" destination="CgQ-E9-Ni6" id="ibm-GT-24D"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Name/Surname" id="UvQ-zH-AOt">
+                        <barButtonItem key="rightBarButtonItem" title="OK" id="smh-V1-KWu">
                             <connections>
-                                <segue destination="4tA-xF-ov6" kind="unwind" identifier="CancelInputNameSurnameUnwindSegue" unwindAction="prepareForUnwind:" id="mKM-ST-4NF"/>
+                                <segue destination="B1U-JL-zjX" kind="unwind" unwindAction="prepareForUnwind:" id="tpq-g8-38c"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="txtInputNameSurname" destination="DQU-od-48K" id="akl-om-3LL"/>
-                        <segue destination="4tA-xF-ov6" kind="unwind" identifier="NameSurnameInputUnwindSegue" unwindAction="prepareForUnwind:" id="gBp-kU-Pr4"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Lu-Ry-4pn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="4tA-xF-ov6" userLabel="Exit" sceneMemberID="exit"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gi8-VR-kwC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="B1U-JL-zjX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1678.125" y="135.21126760563379"/>
+            <point key="canvasLocation" x="1734.375" y="135.21126760563379"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Til-sv-Pd6">

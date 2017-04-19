@@ -77,6 +77,10 @@
 -(PrefectureInfo*) retrievePrefectureInfoWithName: (NSString*) prefectureName;
 -(NSArray*) retrieveAllSurnames;
 -(NSArray*) retrieveSurnameDetailsFromSurname: (Surname*) surname;
+-(NSArray*) retrieveSurnamesPredictiveSearchbar;
+-(NSArray*) retrieveNamesPredictiveSearchbar;
+-(NSArray*) retrieveSurnamesKanjiPredictiveSearchbar;
+-(NSArray*) retrieveNamesKanjiPredictiveSearchbar;
 //Legacy adaptation
 +(NSArray*) searchImmigrantWithGroupID: (NSInteger) immigrantGroupID;
 +(NSArray*) searchImmigrantWithData: (NSDictionary*) searchData;
