@@ -41,7 +41,7 @@
     self.searchController.dimsBackgroundDuringPresentation = NO;
     
     self.searchController.searchBar.delegate = self;
-    
+    self.searchController.delegate =self; 
     self.tableView.tableHeaderView = self.searchController.searchBar;
     
     self.definesPresentationContext = YES;
@@ -73,7 +73,7 @@
     else if([self.segueID isEqualToString:@"InputSurnameSegue"])
     {
         
-        self.textEntries = [dbManager retrieveNamesPredictiveSearchbar];
+        self.textEntries = [dbManager retrieveSurnamesPredictiveSearchbar];
         placeHolderText = @"Ex: Sato, Tanaka, Watanabe";
     }
     else if([self.segueID isEqualToString:@"InputNameKanjiSegue"])
@@ -90,6 +90,7 @@
     [self.searchController.searchBar setPlaceholder:placeHolderText];
     
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -205,16 +206,40 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    self.searchController.searchBar.text = [self.textSuggestions objectAtIndex: indexPath.row];
-    [self clearData];
+    
+    NSString* inputValue = [self.textSuggestions objectAtIndex: indexPath.row];
+    if(inputValue)
+    {
+        TagParameters *tagParameters = [TagParameters getSharedInstance];
+        NSString *trimmedInputValue =[inputValue stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceCharacterSet]];
+        
+        if (![trimmedInputValue isEqualToString: @""])
+        {
+            [tagParameters setParameter: [trimmedInputValue uppercaseString]];
+            [self performSegueWithIdentifier:@"NameSurnameInputUnwindSegue" sender:self];
+        }
+ 
+    }
 }
 
 -(void) updateSearchResultsForSearchController:(UISearchController *)searchController
 {
     NSString* substring = searchController.searchBar.text;
     [self searchData:substring];
+}
+
+
+//Workarround
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self performSelector:@selector(showKeyboard) withObject:nil afterDelay:0.1];
+}
+
+- (void) showKeyboard
+{
+    [self.searchController.searchBar becomeFirstResponder];
 }
 
 
