@@ -16,4 +16,5 @@
 
 +(NSArray*) generateShipNames;
 +(NSArray*) generatePrefectureNames;
+-(NSDictionary*) sectionsWithHeadersFromData: (NSArray*) data;
 @end

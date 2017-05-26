@@ -15,6 +15,8 @@
 @property (nonatomic) IBOutlet UIBarButtonItem* revealButtonItem;
 @property(nonatomic, strong) NSArray *surnamesArray;
 @property(nonatomic, strong) NSArray *searchResults;
+@property(nonatomic, strong) NSArray *sectionTitles;
+@property(nonatomic, strong) NSDictionary *sectionHeaders;
 
 @end
 
@@ -28,6 +30,9 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"TopTenSurnameTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"TopTenSurnameTableViewCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"RegularSurnameTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"RegularSurnameTableViewCell"];
   
+    self.sectionTitles = TEN_INDEXED_TITLES;
+    
+    self.sectionHeaders = [self sectionsWithHeadersFromData:self.surnamesArray];
 //    self.searchController.delegate = self;
 //    self.resultsTableController = [[UITableView alloc] init];
 //    self.searchController = [[UISearchController alloc] initWithSearchResultsController:self.resultsTableController];
@@ -92,38 +97,43 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
+{
+    return self.sectionTitles;
 }
 
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return [self.sectionTitles count];
+}
+
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//{
+//    return [self.sectionTitles objectAtIndex:section];
+//}
+
+
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{  
-    return [self.surnamesArray count];
+{
+    NSString *sectionKey = [self.sectionTitles objectAtIndex: section];
+    NSArray *sectionCollection = [self.sectionHeaders objectForKey: sectionKey];
+    if(sectionCollection)
+        return [sectionCollection count];
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
     NSInteger totalNumberOfImmigrants = [self calculateTotalNumberOfImmigrants];
+    NSString *sectionKey = [self.sectionTitles objectAtIndex: indexPath.section];
     Surname  *surname = nil;
-
-        surname = [self.surnamesArray objectAtIndex: indexPath.row];
-        if(indexPath.row <10)
-        {
-            TopTenSurnameTableViewCell *cell = (TopTenSurnameTableViewCell*)[self.tableView dequeueReusableCellWithIdentifier:@"TopTenSurnameTableViewCell"];
-            
-            if(!cell)
-            {
-                NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TopTenSurnameTableViewCell" owner:self options:nil];
-                cell = [nib objectAtIndex:0];
-            }
-
-            [cell setDataWithSurname: surname withRankingPosition: [NSNumber numberWithInteger: (indexPath.row + 1)]];
-            [cell resizePercentageBarWithTotalValue: [NSNumber numberWithInteger: totalNumberOfImmigrants]];
-            [cell setRanking: (indexPath.row + 1)];
-            
-            return cell;
-        }
+    //surname = [self.surnamesArray objectAtIndex: indexPath.row];
+    NSArray *sectionData = [self.sectionHeaders objectForKey: sectionKey];
+    surname = [sectionData objectAtIndex: indexPath.row];
+    
+    if(indexPath.section!=0){
         
         RegularSurnameTableViewCell *cell = (RegularSurnameTableViewCell*)[self.tableView dequeueReusableCellWithIdentifier:@"RegularSurnameTableViewCell"];
         
@@ -132,23 +142,59 @@
             NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"RegularSurnameTableViewCell" owner:self options:nil];
             cell = [nib objectAtIndex:0];
         }
-
+        
         
         [cell setDataWithSurname: surname];
         [cell resizePercentageBarWithTotalValue: [NSNumber numberWithInteger: totalNumberOfImmigrants]];
         return cell;
-
+    }
     
-
-    return nil;
+    if(indexPath.row <10)
+    {
+        TopTenSurnameTableViewCell *cell = (TopTenSurnameTableViewCell*)[self.tableView dequeueReusableCellWithIdentifier:@"TopTenSurnameTableViewCell"];
+        
+        if(!cell)
+        {
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TopTenSurnameTableViewCell" owner:self options:nil];
+            cell = [nib objectAtIndex:0];
+        }
+        
+        [cell setDataWithSurname: surname withRankingPosition: [NSNumber numberWithInteger: (indexPath.row + 1)]];
+        [cell resizePercentageBarWithTotalValue: [NSNumber numberWithInteger: totalNumberOfImmigrants]];
+        [cell setRanking: (indexPath.row + 1)];
+        
+        return cell;
+    }
+    
+    RegularSurnameTableViewCell *cell = (RegularSurnameTableViewCell*)[self.tableView dequeueReusableCellWithIdentifier:@"RegularSurnameTableViewCell"];
+    
+    if(!cell)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"RegularSurnameTableViewCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
+    
+    
+    [cell setDataWithSurname: surname];
+    [cell resizePercentageBarWithTotalValue: [NSNumber numberWithInteger: totalNumberOfImmigrants]];
+    return cell;
+    
 }
+
+
 
 //selectedSurname
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     self.selectedSurname = [self.surnamesArray objectAtIndex: indexPath.row];
-    NSInteger ranking = indexPath.row + 1;
+    
+    NSString *sectionKey = [self.sectionTitles objectAtIndex: indexPath.section];
+    NSArray *sectionData = [self.sectionHeaders objectForKey: sectionKey];
+    
+    self.selectedSurname = [sectionData objectAtIndex: indexPath.row];
+    //This is wrong.
+    NSInteger ranking = (indexPath.section!=0)? (indexPath.row + 1)*indexPath.section: (indexPath.row + 1);
     self.surnameRanking = [NSNumber numberWithInteger:ranking];
     [self performSegueWithIdentifier:@"SurnameDetailsSegue" sender:self];
 }
@@ -175,6 +221,29 @@
     self.searchResults = [NSMutableArray arrayWithCapacity:[self.surnamesArray count]];
 
 }
+
+-(NSDictionary*) sectionsWithHeadersFromData: (NSArray*) data
+{
+    NSInteger totalRecords = [data count];
+    NSInteger totalPages = [self.sectionTitles count];
+    NSInteger pageSize = totalRecords/totalPages;
+    NSInteger extraPageSize = totalRecords%totalPages;
+    
+    totalPages = (extraPageSize ==0)? totalPages +1 : totalPages;
+    
+    NSMutableDictionary *sectionDataWithHeaders = [NSMutableDictionary dictionary];
+    
+    for (NSInteger i=0; i<totalPages; i++)
+    {
+        NSRange range = (i!=totalPages-1)? NSMakeRange(i*pageSize, pageSize): NSMakeRange(i*pageSize, pageSize+extraPageSize);
+        
+        NSArray *page = [data subarrayWithRange: range];
+        [sectionDataWithHeaders setObject: page forKey: [NSString stringWithFormat: @"%lu", (long)(i + 1)]];
+    }
+    
+    return sectionDataWithHeaders;
+}
+
 #pragma mark - SWRevealViewController stuff
 - (void)revealController:(SWRevealViewController *)revealController didMoveToPosition:(FrontViewPosition)position
 {

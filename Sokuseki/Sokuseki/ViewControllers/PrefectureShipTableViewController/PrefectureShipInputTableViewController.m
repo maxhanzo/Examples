@@ -181,6 +181,7 @@
     //return shipNames;
     return SHIPS_NAMES_ARRAY;
 }
+
 +(NSArray*) generatePrefectureNames
 {
     //NSMutableArray* prefectureNames = [NSMutableArray array];
