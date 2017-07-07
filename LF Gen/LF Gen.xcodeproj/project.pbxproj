@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B725DAE1F10044B008E9A0E /* streaks.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B725DAD1F10044B008E9A0E /* streaks.json */; };
 		2BB9E9071F0C2B6B0022E663 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB9E9061F0C2B6B0022E663 /* main.m */; };
 		2BB9E90A1F0C2B6B0022E663 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB9E9091F0C2B6B0022E663 /* AppDelegate.m */; };
 		2BB9E90D1F0C2B6B0022E663 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB9E90C1F0C2B6B0022E663 /* ViewController.m */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B725DAD1F10044B008E9A0E /* streaks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = streaks.json; path = Resources/streaks.json; sourceTree = "<group>"; };
 		2BB9E9021F0C2B6B0022E663 /* LF Gen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LF Gen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BB9E9061F0C2B6B0022E663 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2BB9E9081F0C2B6B0022E663 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B725DAC1F100429008E9A0E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2B725DAD1F10044B008E9A0E /* streaks.json */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		2BB9E8F91F0C2B6B0022E663 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +127,7 @@
 		2BB9E9051F0C2B6B0022E663 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2B725DAC1F100429008E9A0E /* Resources */,
 				2BB9E9061F0C2B6B0022E663 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -250,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BB9E9151F0C2B6B0022E663 /* LaunchScreen.storyboard in Resources */,
+				2B725DAE1F10044B008E9A0E /* streaks.json in Resources */,
 				2BB9E9121F0C2B6B0022E663 /* Assets.xcassets in Resources */,
 				2BB9E9101F0C2B6B0022E663 /* Main.storyboard in Resources */,
 			);
@@ -516,6 +528,7 @@
 				2BB9E9311F0C2B6B0022E663 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2BB9E9321F0C2B6B0022E663 /* Build configuration list for PBXNativeTarget "LF GenTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +537,7 @@
 				2BB9E9341F0C2B6B0022E663 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2BB9E9351F0C2B6B0022E663 /* Build configuration list for PBXNativeTarget "LF GenUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +546,7 @@
 				2BB9E9371F0C2B6B0022E663 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
